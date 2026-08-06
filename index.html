@@ -213,17 +213,17 @@ footer{
 
   <div class="metrics">
     <div class="metric">
-      <h3 class="counter" data-target="85">0</h3>
+      <h3 class="counter" data-target="85">0%</h3>
       <p>Improvement in Mastery</p>
     </div>
 
     <div class="metric">
-      <h3 class="counter" data-target="95">0</h3>
+      <h3 class="counter" data-target="95">0%</h3>
       <p>Student Engagement</p>
     </div>
 
     <div class="metric">
-      <h3 class="counter" data-target="100">0</h3>
+      <h3 class="counter" data-target="100">0%</h3>
       <p>Program Completion</p>
     </div>
   </div>
@@ -234,7 +234,6 @@ footer{
   <h2>Leadership & Coordination (DPDS)</h2>
 
   <div class="grid">
-
     <div class="card">
       <h3>Program Coordination</h3>
       <p>Managed school-based programs aligned with institutional development goals.</p>
@@ -252,7 +251,6 @@ footer{
         partnerships and acknowledge contributions to school programs.
       </p>
     </div>
-
   </div>
 </section>
 
@@ -270,36 +268,36 @@ footer{
 <script>
 // REVEAL
 function reveal(){
-  let reveals=document.querySelectorAll(".reveal");
+  let reveals = document.querySelectorAll(".reveal");
 
-  for(let i=0;i<reveals.length;i++){
-    let windowHeight=window.innerHeight;
-    let elementTop=reveals[i].getBoundingClientRect().top;
+  for(let i = 0; i < reveals.length; i++){
+    let windowHeight = window.innerHeight;
+    let elementTop = reveals[i].getBoundingClientRect().top;
 
     if(elementTop < windowHeight - 100){
       reveals[i].classList.add("active");
     }
   }
 }
-window.addEventListener("scroll",reveal);
+
+// Run reveal on scroll and on initial load
+window.addEventListener("scroll", reveal);
+window.addEventListener("DOMContentLoaded", reveal);
 
 // COUNTER
-const counters=document.querySelectorAll('.counter');
+const counters = document.querySelectorAll('.counter');
 
-counters.forEach(counter=>{
-  counter.innerText='0';
+counters.forEach(counter => {
+  const updateCounter = () => {
+    const target = +counter.getAttribute('data-target');
+    const current = parseInt(counter.innerText) || 0;
+    const increment = target / 100;
 
-  const updateCounter=()=>{
-    const target=+counter.getAttribute('data-target');
-    const c=+counter.innerText;
-
-    const increment=target/100;
-
-    if(c < target){
-      counter.innerText=`${Math.ceil(c + increment)}`;
-      setTimeout(updateCounter,20);
+    if(current < target){
+      counter.innerText = `${Math.ceil(current + increment)}%`;
+      setTimeout(updateCounter, 20);
     } else {
-      counter.innerText=target;
+      counter.innerText = `${target}%`;
     }
   };
 

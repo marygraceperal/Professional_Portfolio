@@ -1,12 +1,57 @@
-#dashboard{
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mary Grace Peral | Mathematics Teacher Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#0f172a;
+  color:#e2e8f0;
+  line-height:1.6;
+}
+
+/* HERO */
+header{
+  text-align:center;
+  padding:80px 20px;
+}
+
+header h1{
+  font-size:36px;
+}
+
+header p{
+  margin-top:10px;
+  color:#94a3b8;
+}
+
+/* SECTION */
+section{
   padding:60px 20px;
+}
+
+/* DASHBOARD */
+#dashboard{
   text-align:center;
 }
 
 .dashboard-metrics{
   display:flex;
-  justify-content:center;
   flex-wrap:wrap;
+  justify-content:center;
   gap:20px;
   margin-bottom:40px;
 }
@@ -23,10 +68,11 @@
   color:#22c55e;
 }
 
+/* ICON NAV */
 .dashboard-icons{
   display:flex;
-  justify-content:center;
   flex-wrap:wrap;
+  justify-content:center;
   gap:20px;
   margin-bottom:50px;
 }
@@ -34,7 +80,7 @@
 .icon-box{
   width:130px;
   height:130px;
-  background:#0f172a;
+  background:#1e293b;
   border-radius:16px;
   display:flex;
   flex-direction:column;
@@ -53,9 +99,9 @@
 
 .icon-box:hover{
   transform:scale(1.08);
-  background:#1e293b;
 }
 
+/* PREVIEW */
 .dashboard-previews{
   display:flex;
   flex-wrap:wrap;
@@ -76,3 +122,154 @@
   border:none;
   border-radius:8px;
 }
+
+/* FADE ANIMATION */
+.fade{
+  opacity:0;
+  transform:translateY(30px);
+  transition:all 0.8s ease;
+}
+
+.fade.show{
+  opacity:1;
+  transform:translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<header>
+  <h1>Mary Grace Peral</h1>
+  <p>Grade 11 Mathematics Teacher | ARAL Program Implementer | Data-Driven Educator</p>
+</header>
+
+<!-- INTRO -->
+<section>
+  <p style="max-width:700px;margin:auto;text-align:center;">
+    I am a Grade 11 Mathematics teacher focused on improving student understanding through 
+    targeted intervention (ARAL), differentiated instruction, and continuous progress monitoring. 
+    My teaching approach is data-informed, inclusive, and results-oriented.
+  </p>
+</section>
+
+<!-- DASHBOARD -->
+<section id="dashboard">
+
+  <h2>📊 Teaching Impact & Evidence</h2>
+
+  <!-- METRICS -->
+  <div class="dashboard-metrics">
+
+    <div class="metric-card fade">
+      <h3 class="counter" data-target="95">0</h3>
+      <p>Student Engagement</p>
+    </div>
+
+    <div class="metric-card fade">
+      <h3 class="counter" data-target="88">0</h3>
+      <p>Mastery Improvement</p>
+    </div>
+
+    <div class="metric-card fade">
+      <h3 class="counter" data-target="40">0</h3>
+      <p>Students Supported (ARAL)</p>
+    </div>
+
+    <div class="metric-card fade">
+      <h3 class="counter" data-target="100">0</h3>
+      <p>Lesson Completion</p>
+    </div>
+
+  </div>
+
+  <!-- ICON NAVIGATION -->
+  <div class="dashboard-icons">
+
+    <a href="https://drive.google.com/drive/folders/YOUR_ARAL_FOLDER" target="_blank" class="icon-box fade">
+      <i class="fas fa-chart-line"></i>
+      <span>ARAL Intervention</span>
+    </a>
+
+    <a href="https://drive.google.com/drive/folders/YOUR_DATA_FOLDER" target="_blank" class="icon-box fade">
+      <i class="fas fa-database"></i>
+      <span>Student Data</span>
+    </a>
+
+    <a href="https://drive.google.com/drive/folders/YOUR_DPDS_FOLDER" target="_blank" class="icon-box fade">
+      <i class="fas fa-users"></i>
+      <span>School Collaboration</span>
+    </a>
+
+    <a href="https://drive.google.com/drive/folders/YOUR_CERT_FOLDER" target="_blank" class="icon-box fade">
+      <i class="fas fa-award"></i>
+      <span>Project Initiative</span>
+    </a>
+
+    <a href="https://drive.google.com/drive/folders/YOUR_LESSON_FOLDER" target="_blank" class="icon-box fade">
+      <i class="fas fa-book"></i>
+      <span>Lesson Plans</span>
+    </a>
+
+  </div>
+
+  <!-- DOCUMENT PREVIEWS -->
+  <div class="dashboard-previews">
+
+    <div class="preview-card fade">
+      <h4>ARAL Intervention (Before–After)</h4>
+      <iframe src="https://drive.google.com/file/d/YOUR_DOC_ID/preview"></iframe>
+    </div>
+
+    <div class="preview-card fade">
+      <h4>Lesson Plan Sample</h4>
+      <iframe src="https://drive.google.com/file/d/YOUR_DOC_ID/preview"></iframe>
+    </div>
+
+    <div class="preview-card fade">
+      <h4>Student Progress Monitoring</h4>
+      <iframe src="https://drive.google.com/file/d/YOUR_DOC_ID/preview"></iframe>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- SCRIPTS -->
+
+<script>
+// COUNTER
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+  const update = () => {
+    const target = +counter.getAttribute('data-target');
+    const current = +counter.innerText;
+    const increment = target / 50;
+
+    if(current < target){
+      counter.innerText = Math.ceil(current + increment);
+      setTimeout(update, 30);
+    } else {
+      counter.innerText = target;
+    }
+  };
+  update();
+});
+
+// FADE IN
+const faders = document.querySelectorAll('.fade');
+
+window.addEventListener('scroll', () => {
+  faders.forEach(el => {
+    const rect = el.getBoundingClientRect().top;
+    if(rect < window.innerHeight - 50){
+      el.classList.add('show');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

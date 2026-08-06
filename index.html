@@ -3,254 +3,307 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Mary Grace Peral | Mathematics Educator</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
-
-/* GENERAL */
-body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    background: #f4f6f9;
-    color: #333;
-    line-height: 1.6;
-    scroll-behavior: smooth;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
 }
 
-/* HEADER */
-header {
-    background: linear-gradient(135deg, #1F3C88, #2c3e50);
-    color: white;
-    padding: 70px 20px;
-    text-align: center;
-    animation: fadeDown 1s ease;
+body{
+  background:#0f172a;
+  color:#e2e8f0;
+  scroll-behavior:smooth;
 }
 
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
+/* NAVBAR */
+nav{
+  position:fixed;
+  width:100%;
+  top:0;
+  background:rgba(15,23,42,0.85);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:space-between;
+  padding:15px 8%;
+  z-index:1000;
 }
 
-h2 {
-    color: #1F3C88;
+nav h2{
+  color:#38bdf8;
+  font-weight:700;
 }
 
-/* SECTION */
-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: auto;
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s ease;
+nav a{
+  color:#e2e8f0;
+  margin-left:20px;
+  text-decoration:none;
+  font-size:14px;
+  transition:.3s;
 }
 
-/* SHOW ON SCROLL */
-section.show {
-    opacity: 1;
-    transform: translateY(0);
+nav a:hover{
+  color:#38bdf8;
 }
 
-/* CARD */
-.card {
-    background: white;
-    padding: 20px;
-    margin-top: 15px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* HERO */
+.hero{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:0 20px;
 }
 
-.card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+.hero h1{
+  font-size:3rem;
+  background:linear-gradient(to right,#38bdf8,#22c55e);
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
-/* HIGHLIGHTS GRID */
-.highlight-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 15px;
+.hero p{
+  margin-top:10px;
+  opacity:.8;
 }
 
-.highlight-card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    border-left: 5px solid #1F3C88;
-    transition: transform 0.3s ease;
+.btn{
+  margin-top:20px;
+  padding:12px 28px;
+  border-radius:30px;
+  background:#38bdf8;
+  color:#0f172a;
+  text-decoration:none;
+  font-weight:600;
+  transition:.3s;
 }
 
-.highlight-card:hover {
-    transform: scale(1.05);
+.btn:hover{
+  transform:scale(1.05);
 }
 
-/* BUTTON */
-.btn {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 15px;
-    background: #1F3C88;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background 0.3s;
+/* SECTIONS */
+section{
+  padding:80px 8%;
 }
 
-.btn:hover {
-    background: #162d66;
+h2{
+  color:#38bdf8;
+  margin-bottom:20px;
 }
 
-/* ANIMATIONS */
-@keyframes fadeDown {
-    from { opacity: 0; transform: translateY(-40px); }
-    to { opacity: 1; transform: translateY(0); }
+/* GRID */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
 }
 
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  border-radius:15px;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* METRICS */
+.metrics{
+  display:flex;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.metric{
+  text-align:center;
+}
+
+.metric h3{
+  color:#22c55e;
+  font-size:2rem;
+}
+
+/* REVEAL */
+.reveal{
+  opacity:0;
+  transform:translateY(40px);
+  transition:1s;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:.6;
+}
 </style>
 </head>
 
 <body>
 
-<!-- HERO -->
-<header>
-<h1>Mary Grace Peral</h1>
-<h3>Secondary Mathematics Educator | Instructional Leader | Systems Innovator</h3>
-<p>
-Dedicated educator specializing in Mathematics instruction and intervention programs, 
-with experience in improving student outcomes and leading school-based systems.
-</p>
-<p>
-Aspiring to contribute to an inclusive and high-performing educational environment in New Zealand.
-</p>
-</header>
+<!-- NAV -->
+<nav>
+  <h2>MG Peral</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#impact">Impact</a>
+    <a href="#leadership">Leadership</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-<!-- HIGHLIGHTS -->
-<section>
-<h2>Key Professional Highlights</h2>
-<div class="highlight-grid">
-<div class="highlight-card">📊 Mathematics Educator (General Math & ARAL)</div>
-<div class="highlight-card">🧠 Instructional Innovator</div>
-<div class="highlight-card">📁 DPDS Coordinator</div>
-<div class="highlight-card">🚀 System Designer (Certificate System)</div>
-</div>
+<!-- HERO -->
+<section class="hero">
+  <h1>Mary Grace Peral</h1>
+  <p>Mathematics Educator • ARAL Specialist • DPDS Coordinator</p>
+  <a href="#contact" class="btn">Contact Me</a>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="reveal">
+  <h2>Professional Profile</h2>
+  <p>
+    Results-driven Mathematics educator with experience in General Mathematics and ARAL intervention.
+    I specialise in improving student mastery through data-informed instruction, targeted remediation,
+    and structured learning support systems.
+  </p>
 </section>
 
 <!-- TEACHING -->
-<section>
-<h2>Teaching Practice & Impact</h2>
-<div class="card">
-<p><strong>Subjects:</strong> General Mathematics (Grade 11) | ARAL Math Intervention</p>
+<section id="teaching" class="reveal">
+  <h2>Teaching Practice</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>General Mathematics</h3>
+      <p>Contextualised lessons focusing on financial literacy and real-world applications.</p>
+    </div>
 
-<p><strong>Teaching Approach:</strong><br>
-Structured, scaffolded instruction supported by continuous assessment and feedback.
-</p>
+    <div class="card">
+      <h3>ARAL Intervention</h3>
+      <p>Targeted support for struggling learners using structured remediation strategies.</p>
+    </div>
 
-<p><strong>Student Impact:</strong><br>
-• Improved learner engagement<br>
-• Strengthened conceptual understanding<br>
-• Increased confidence in problem-solving
-</p>
-
-<p><strong>Assessment Practices:</strong><br>
-• Formative assessments<br>
-• Data-driven instruction<br>
-• Continuous feedback for improvement
-</p>
-</div>
+    <div class="card">
+      <h3>Differentiated Instruction</h3>
+      <p>Inclusive teaching practices that adapt to varied student needs.</p>
+    </div>
+  </div>
 </section>
 
-<!-- INCLUSIVE -->
-<section>
-<h2>Inclusive & Culturally Responsive Practice</h2>
-<div class="card">
-<p>
-Committed to creating a classroom environment that supports diverse learners. 
-Adapts instruction to meet varying learning needs and promotes inclusivity.
-</p>
+<!-- IMPACT -->
+<section id="impact" class="reveal">
+  <h2>Student Impact</h2>
 
-<p>
-Continuously developing culturally responsive practices aligned with global teaching standards.
-</p>
-</div>
-</section>
+  <div class="metrics">
+    <div class="metric">
+      <h3 class="counter" data-target="85">0</h3>
+      <p>Improvement in Mastery</p>
+    </div>
 
-<!-- PROFESSIONAL GROWTH -->
-<section>
-<h2>Professional Growth & Reflection</h2>
-<div class="card">
-<p>
-Engages in reflective teaching practices to improve effectiveness and student outcomes.
-</p>
+    <div class="metric">
+      <h3 class="counter" data-target="95">0</h3>
+      <p>Student Engagement</p>
+    </div>
 
-<p><strong>Focus Areas:</strong><br>
-• Differentiated instruction<br>
-• Student-centered learning<br>
-• Intervention strategies
-</p>
-</div>
+    <div class="metric">
+      <h3 class="counter" data-target="100">0</h3>
+      <p>Program Completion</p>
+    </div>
+  </div>
 </section>
 
 <!-- LEADERSHIP -->
-<section>
-<h2>Leadership & Systems Contribution</h2>
-<div class="card">
-<p><strong>DPDS Coordinator:</strong><br>
-Managed school documentation, reporting, and program alignment.
-</p>
+<section id="leadership" class="reveal">
+  <h2>Leadership & Coordination (DPDS)</h2>
 
-<p><strong>Innovation Project:</strong><br>
-Designed a School-Based Certificate System to recognize sponsors and strengthen stakeholder engagement.
-</p>
+  <div class="grid">
 
-<p><strong>Leadership Skills:</strong><br>
-• Strategic planning<br>
-• System development<br>
-• Stakeholder coordination
-</p>
-</div>
+    <div class="card">
+      <h3>Program Coordination</h3>
+      <p>Managed school-based programs aligned with institutional development goals.</p>
+    </div>
+
+    <div class="card">
+      <h3>Monitoring & Evaluation</h3>
+      <p>Tracked performance using data-driven systems for accountability and improvement.</p>
+    </div>
+
+    <div class="card">
+      <h3>Certificate System Proposal</h3>
+      <p>
+        Developed a structured recognition system for sponsors and stakeholders to strengthen
+        partnerships and acknowledge contributions to school programs.
+      </p>
+    </div>
+
+  </div>
 </section>
 
-<!-- EVIDENCE -->
-<section>
-<h2>Professional Evidence</h2>
-<div class="card">
-<ul>
-<li>Lesson Plans</li>
-<li>Student Intervention Records</li>
-<li>Assessment Samples</li>
-<li>Program Documentation</li>
-<li>Certificate System Proposal</li>
-</ul>
-
-<a href="#" class="btn">View Documents</a>
-</div>
+<!-- CONTACT -->
+<section id="contact" class="reveal">
+  <h2>Contact</h2>
+  <p>Email: marygrace@example.com</p>
+  <p>Phone: +63 XXX XXX XXXX</p>
 </section>
 
-<!-- FINAL STATEMENT -->
-<section>
-<h2>Professional Statement</h2>
-<div class="card">
-<p>
-A committed educator focused on improving student learning outcomes through structured teaching, 
-innovation, and leadership. Ready to contribute to a collaborative and inclusive school environment in New Zealand.
-</p>
-</div>
-</section>
+<footer>
+  <p>© 2026 Mary Grace Peral | Professional Portfolio</p>
+</footer>
 
-<!-- SCRIPT -->
 <script>
-const sections = document.querySelectorAll("section");
+// REVEAL
+function reveal(){
+  let reveals=document.querySelectorAll(".reveal");
 
-window.addEventListener("scroll", () => {
-    sections.forEach(section => {
-        const top = section.getBoundingClientRect().top;
-        const trigger = window.innerHeight - 100;
+  for(let i=0;i<reveals.length;i++){
+    let windowHeight=window.innerHeight;
+    let elementTop=reveals[i].getBoundingClientRect().top;
 
-        if (top < trigger) {
-            section.classList.add("show");
-        }
-    });
+    if(elementTop < windowHeight - 100){
+      reveals[i].classList.add("active");
+    }
+  }
+}
+window.addEventListener("scroll",reveal);
+
+// COUNTER
+const counters=document.querySelectorAll('.counter');
+
+counters.forEach(counter=>{
+  counter.innerText='0';
+
+  const updateCounter=()=>{
+    const target=+counter.getAttribute('data-target');
+    const c=+counter.innerText;
+
+    const increment=target/100;
+
+    if(c < target){
+      counter.innerText=`${Math.ceil(c + increment)}`;
+      setTimeout(updateCounter,20);
+    } else {
+      counter.innerText=target;
+    }
+  };
+
+  updateCounter();
 });
 </script>
 

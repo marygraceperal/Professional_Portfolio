@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -14,12 +13,7 @@
 
 <style>
 
-/* =========================================================
-   ROOT
-========================================================= */
-
 :root {
-
   --bg-main: #faf7f8;
   --bg-card: #ffffff;
   --border-color: #f0e3e6;
@@ -39,251 +33,152 @@
   --text-primary: #34272a;
   --text-secondary: #79696d;
   --text-light: #9b898e;
-
 }
 
-
-/* =========================================================
-   GLOBAL
-========================================================= */
-
 * {
-
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
   font-family: 'Plus Jakarta Sans', sans-serif;
-
 }
-
 
 html {
-
   scroll-behavior: smooth;
-
 }
-
 
 body {
-
   background: var(--bg-main);
   color: var(--text-primary);
-
   line-height: 1.65;
-
 }
-
 
 a {
-
   color: inherit;
-
 }
-
 
 .container {
-
   max-width: 1180px;
   margin: auto;
-
   padding: 0 22px;
-
 }
 
 
-/* =========================================================
+/* =========================
    NAVIGATION
-========================================================= */
+========================= */
 
 .navbar {
-
   position: sticky;
   top: 0;
-
   z-index: 1000;
 
   background: rgba(255,255,255,0.94);
-
   backdrop-filter: blur(12px);
 
   border-bottom: 1px solid var(--border-color);
-
 }
 
-
 .nav-inner {
-
   max-width: 1180px;
-
   margin: auto;
-
   padding: 15px 22px;
 
   display: flex;
-
   justify-content: space-between;
-
   align-items: center;
-
   gap: 20px;
-
 }
-
 
 .brand {
-
   text-decoration: none;
-
   font-weight: 700;
-
   font-size: 15px;
-
   color: var(--text-primary);
-
 }
-
 
 .nav-links {
-
   display: flex;
-
   gap: 20px;
-
   flex-wrap: wrap;
-
   justify-content: flex-end;
-
 }
-
 
 .nav-links a {
-
   text-decoration: none;
-
   font-size: 12px;
-
   font-weight: 600;
-
   color: var(--text-secondary);
-
 }
-
 
 .nav-links a:hover {
-
   color: var(--accent);
-
 }
 
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero {
-
   padding: 90px 0 70px;
-
 }
 
-
 .hero-card {
-
   background: var(--bg-card);
-
   border: 1px solid var(--border-color);
-
   border-radius: 24px;
-
   padding: 55px;
 
   box-shadow: 0 10px 40px rgba(100,60,70,0.05);
-
 }
 
-
 .eyebrow {
-
   display: inline-block;
 
   background: var(--accent-light);
-
   color: var(--accent);
 
   padding: 7px 13px;
-
   border-radius: 20px;
 
   font-size: 11px;
-
   font-weight: 700;
-
   letter-spacing: 1px;
-
   text-transform: uppercase;
 
   margin-bottom: 20px;
-
 }
-
 
 .hero h1 {
-
   font-size: clamp(38px, 6vw, 62px);
-
   line-height: 1.05;
-
   letter-spacing: -2px;
-
   margin-bottom: 12px;
-
 }
-
 
 .hero h2 {
-
   font-size: 20px;
-
   font-weight: 600;
-
   color: var(--accent);
-
   margin-bottom: 22px;
-
 }
-
 
 .hero-description {
-
   max-width: 780px;
-
   color: var(--text-secondary);
-
   font-size: 15px;
-
 }
-
 
 .hero-buttons {
-
   display: flex;
-
   gap: 12px;
-
   flex-wrap: wrap;
-
   margin-top: 30px;
-
 }
 
-
 .button {
-
   display: inline-flex;
-
   align-items: center;
-
   gap: 8px;
 
   padding: 12px 18px;
@@ -293,326 +188,202 @@ a {
   text-decoration: none;
 
   font-size: 12px;
-
   font-weight: 700;
 
   transition: 0.2s ease;
-
 }
-
 
 .button-primary {
-
   background: var(--accent);
-
   color: white;
-
 }
-
 
 .button-secondary {
-
   background: var(--accent-light);
-
   color: var(--accent);
-
 }
-
 
 .button:hover {
-
   transform: translateY(-2px);
-
 }
 
 
-/* =========================================================
+/* =========================
    SECTIONS
-========================================================= */
+========================= */
 
 section {
-
   padding: 65px 0;
-
 }
-
 
 .section-heading {
-
   margin-bottom: 30px;
-
 }
-
 
 .section-number {
-
   font-size: 11px;
-
   font-weight: 700;
-
   letter-spacing: 1.5px;
-
   color: var(--accent);
-
   text-transform: uppercase;
-
   margin-bottom: 8px;
-
 }
-
 
 .section-heading h2 {
-
   font-size: 30px;
-
   letter-spacing: -0.7px;
-
   margin-bottom: 8px;
-
 }
-
 
 .section-heading p {
-
   max-width: 760px;
-
   color: var(--text-secondary);
-
   font-size: 14px;
-
 }
 
 
-/* =========================================================
+/* =========================
    FOCUS GRID
-========================================================= */
+========================= */
 
 .focus-grid {
-
   display: grid;
-
-  grid-template-columns:
-  repeat(auto-fit,minmax(220px,1fr));
-
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
   gap: 16px;
-
 }
-
 
 .focus-card {
-
   background: white;
-
   border: 1px solid var(--border-color);
-
   border-radius: 15px;
-
   padding: 24px;
-
 }
 
-
 .focus-icon {
-
   width: 42px;
-
   height: 42px;
 
   display: flex;
-
   align-items: center;
-
   justify-content: center;
 
   background: var(--accent-light);
-
   color: var(--accent);
 
   border-radius: 50%;
 
   margin-bottom: 16px;
-
 }
-
 
 .focus-card h3 {
-
   font-size: 15px;
-
   margin-bottom: 7px;
-
 }
-
 
 .focus-card p {
-
   font-size: 13px;
-
   color: var(--text-secondary);
-
 }
 
 
-/* =========================================================
+/* =========================
    EVIDENCE CARDS
-========================================================= */
+========================= */
 
 .evidence-grid {
-
   display: grid;
-
-  grid-template-columns:
-  repeat(auto-fit,minmax(300px,1fr));
-
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
   gap: 20px;
-
 }
 
-
 .evidence-card {
-
   background: white;
-
   border: 1px solid var(--border-color);
-
   border-radius: 16px;
-
   padding: 26px;
 
   transition: 0.2s ease;
-
 }
-
 
 .evidence-card:hover {
-
   transform: translateY(-3px);
-
   box-shadow: 0 8px 25px rgba(80,50,60,0.06);
-
 }
-
 
 .evidence-card h3 {
-
   font-size: 17px;
-
   margin-bottom: 10px;
-
 }
-
 
 .evidence-card p {
-
   font-size: 13px;
-
   color: var(--text-secondary);
-
   margin-bottom: 16px;
-
 }
-
 
 .evidence-card ul {
-
   padding-left: 18px;
-
   margin-bottom: 20px;
-
 }
-
 
 .evidence-card li {
-
   font-size: 12px;
-
   color: var(--text-secondary);
-
   margin-bottom: 5px;
-
 }
 
 
-/* =========================================================
+/* =========================
    STATUS
-========================================================= */
+========================= */
 
 .status {
-
   display: inline-flex;
-
   align-items: center;
-
   gap: 7px;
 
   padding: 6px 10px;
-
   border-radius: 20px;
 
   font-size: 10px;
-
   font-weight: 700;
 
   margin-bottom: 15px;
-
 }
-
 
 .status-active {
-
   background: var(--green-light);
-
   color: var(--green);
-
 }
-
 
 .status-approved {
-
   background: var(--blue-light);
-
   color: var(--blue);
-
 }
-
 
 .status-scheduled {
-
   background: var(--amber-light);
-
   color: var(--amber);
-
 }
-
 
 .status-completed {
-
   background: var(--green-light);
-
   color: var(--green);
-
 }
-
 
 .status-development {
-
   background: var(--accent-light);
-
   color: var(--accent);
-
 }
 
 
-/* =========================================================
-   EVIDENCE LINK
-========================================================= */
+/* =========================
+   EVIDENCE BUTTON
+========================= */
 
 .evidence-link {
-
   display: inline-flex;
-
   align-items: center;
-
   gap: 7px;
 
   color: var(--accent);
@@ -620,129 +391,84 @@ section {
   text-decoration: none;
 
   font-size: 12px;
-
   font-weight: 700;
-
 }
-
 
 .evidence-link:hover {
-
   text-decoration: underline;
-
 }
 
 
-/* =========================================================
+/* =========================
    FEATURE CARD
-========================================================= */
+========================= */
 
 .feature-card {
-
   background: white;
 
   border: 1px solid var(--border-color);
-
   border-radius: 20px;
 
   padding: 32px;
 
   display: grid;
-
   grid-template-columns: 1.4fr 0.6fr;
-
   gap: 35px;
 
   align-items: center;
-
 }
-
 
 .feature-card h3 {
-
   font-size: 21px;
-
   margin-bottom: 10px;
-
 }
-
 
 .feature-card p {
-
   color: var(--text-secondary);
-
   font-size: 13px;
-
 }
-
 
 .feature-side {
-
   background: var(--accent-light);
-
   border-radius: 15px;
-
   padding: 25px;
-
 }
-
 
 .feature-side strong {
-
   display: block;
-
   font-size: 13px;
-
   color: var(--accent);
-
   margin-bottom: 5px;
-
 }
-
 
 .feature-side span {
-
   font-size: 12px;
-
   color: var(--text-secondary);
-
 }
 
 
-/* =========================================================
+/* =========================
    TIMELINE
-========================================================= */
+========================= */
 
 .timeline {
-
   position: relative;
-
   border-left: 2px solid var(--border-color);
-
   margin-left: 10px;
-
   padding-left: 30px;
-
 }
-
 
 .timeline-item {
-
   position: relative;
-
   margin-bottom: 30px;
-
 }
 
-
 .timeline-item::before {
-
   content: "";
 
   position: absolute;
 
   width: 10px;
-
   height: 10px;
 
   background: var(--accent);
@@ -750,216 +476,140 @@ section {
   border-radius: 50%;
 
   left: -37px;
-
   top: 7px;
-
 }
-
 
 .timeline-year {
-
   font-size: 12px;
-
   font-weight: 700;
-
   color: var(--accent);
-
   margin-bottom: 4px;
-
 }
-
 
 .timeline-item h3 {
-
   font-size: 16px;
-
   margin-bottom: 5px;
-
 }
-
 
 .timeline-item p {
-
   font-size: 13px;
-
   color: var(--text-secondary);
-
 }
 
 
-/* =========================================================
+/* =========================
    FOLDER GRID
-========================================================= */
+========================= */
 
 .folder-grid {
-
   display: grid;
-
-  grid-template-columns:
-  repeat(auto-fit,minmax(230px,1fr));
-
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
   gap: 15px;
-
 }
 
-
 .folder-card {
-
   background: white;
-
   border: 1px solid var(--border-color);
-
   border-radius: 13px;
-
   padding: 20px;
 
   text-decoration: none;
 
   transition: 0.2s ease;
-
 }
-
 
 .folder-card:hover {
-
   border-color: var(--accent);
-
   transform: translateY(-2px);
-
 }
-
 
 .folder-icon {
-
   color: var(--accent);
-
   font-size: 20px;
-
   margin-bottom: 12px;
-
 }
-
 
 .folder-card h3 {
-
   font-size: 13px;
-
   margin-bottom: 5px;
-
 }
-
 
 .folder-card p {
-
   color: var(--text-secondary);
-
   font-size: 11px;
-
 }
 
 
-/* =========================================================
+/* =========================
    CLOSING
-========================================================= */
+========================= */
 
 .closing {
-
   text-align: center;
 
   background: white;
 
   border-top: 1px solid var(--border-color);
-
   border-bottom: 1px solid var(--border-color);
-
 }
-
 
 .closing h2 {
-
   font-size: 27px;
-
   margin-bottom: 12px;
-
 }
 
-
 .closing p {
-
   max-width: 750px;
-
   margin: auto;
 
   color: var(--text-secondary);
-
   font-size: 14px;
-
 }
 
 
-/* =========================================================
+/* =========================
    FOOTER
-========================================================= */
+========================= */
 
 footer {
-
   padding: 30px 0;
-
   text-align: center;
 
   color: var(--text-light);
-
   font-size: 11px;
-
 }
 
 
-/* =========================================================
+/* =========================
    MOBILE
-========================================================= */
+========================= */
 
 @media(max-width:760px) {
 
   .nav-inner {
-
     flex-direction: column;
-
     align-items: flex-start;
-
   }
-
 
   .nav-links {
-
     justify-content: flex-start;
-
   }
-
 
   .hero-card {
-
     padding: 32px 25px;
-
   }
-
 
   .feature-card {
-
     grid-template-columns: 1fr;
-
   }
 
-
   .hero {
-
     padding-top: 45px;
-
   }
 
 }
 
 </style>
-
 </head>
 
 
@@ -980,37 +630,21 @@ footer {
 
     <div class="nav-links">
 
-      <a href="#profile">
-        Profile
-      </a>
+      <a href="#profile">Profile</a>
 
-      <a href="#practice">
-        Teaching
-      </a>
+      <a href="#practice">Teaching</a>
 
-      <a href="#digital">
-        Digital Learning
-      </a>
+      <a href="#digital">Digital Learning</a>
 
-      <a href="#support">
-        Learner Support
-      </a>
+      <a href="#support">Learner Support</a>
 
-      <a href="#leadership">
-        Leadership
-      </a>
+      <a href="#leadership">Leadership</a>
 
-      <a href="#development">
-        Professional Development
-      </a>
+      <a href="#development">Professional Development</a>
 
-      <a href="#recognition">
-        Recognition
-      </a>
+      <a href="#recognition">Recognition</a>
 
-      <a href="#evidence">
-        Evidence
-      </a>
+      <a href="#evidence">Evidence</a>
 
     </div>
 
@@ -1056,9 +690,7 @@ footer {
 
       <div class="hero-buttons">
 
-        <a
-          href="#evidence"
-          class="button button-primary">
+        <a href="#evidence" class="button button-primary">
 
           <i class="fas fa-folder-open"></i>
 
@@ -1067,9 +699,7 @@ footer {
         </a>
 
 
-        <a
-          href="#development"
-          class="button button-secondary">
+        <a href="#development" class="button button-secondary">
 
           <i class="fas fa-graduation-cap"></i>
 
@@ -1220,9 +850,8 @@ footer {
     </div>
 
 
-    <!-- GENERAL MATHEMATICS WEBSITE -->
-
     <div class="feature-card">
+
 
       <div>
 
@@ -1259,6 +888,7 @@ footer {
         <a
           href="https://marygraceperal.github.io/GeneralMathematicsSHS/"
           target="_blank"
+          rel="noopener noreferrer"
           class="evidence-link">
 
           <i class="fas fa-globe"></i>
@@ -1272,8 +902,9 @@ footer {
 
 
         <a
-          href="https://drive.google.com/drive/folders/1bDYrwBY3vh6c-O8n1XzaEC5SEKHsC67N?usp=drive_link"
+          href="https://drive.google.com/drive/folders/1joKCojSZEj7plWIhHpD-PKFXT99Egrpx?usp=drive_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="evidence-link">
 
           <i class="fas fa-folder-open"></i>
@@ -1304,9 +935,8 @@ footer {
     <br><br>
 
 
-    <!-- TEACHING EVIDENCE -->
-
     <div class="evidence-grid">
+
 
       <div class="evidence-card">
 
@@ -1340,10 +970,10 @@ footer {
 
         </ul>
 
-
         <a
           href="https://drive.google.com/drive/folders/1joKCojSZEj7plWIhHpD-PKFXT99Egrpx?usp=drive_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="evidence-link">
 
           View teaching evidence →
@@ -1351,6 +981,7 @@ footer {
         </a>
 
       </div>
+
 
     </div>
 
@@ -1360,7 +991,7 @@ footer {
 
 
 <!-- =========================================================
-     02 MATHEMATICS & DIGITAL LEARNING
+     02 DIGITAL LEARNING
 ========================================================= -->
 
 <section id="digital">
@@ -1380,7 +1011,7 @@ footer {
       <p>
         Evidence of using technology not simply as a technical
         skill, but as a practical means of improving access,
-        organization and professional learning.
+        organization and learning.
       </p>
 
     </div>
@@ -1394,16 +1025,12 @@ footer {
       <div class="evidence-card">
 
         <span class="status status-scheduled">
-
           Scheduled · Aug 27, 2026
-
         </span>
-
 
         <h3>
           LAC Session: GitHub as a Tool for Teaching
         </h3>
-
 
         <p>
 
@@ -1412,7 +1039,6 @@ footer {
           publishing and sharing educational resources.
 
         </p>
-
 
         <ul>
 
@@ -1430,13 +1056,53 @@ footer {
 
         </ul>
 
+        <a
+          href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+
+          Leadership & LAC evidence →
+
+        </a>
+
+      </div>
+
+
+      <!-- CERTIFICATE SYSTEM -->
+
+      <div class="evidence-card">
+
+        <span class="status status-scheduled">
+          First Use · Aug 27, 2026
+        </span>
+
+        <h3>
+          LAC Session Certificate System
+        </h3>
+
+        <p>
+
+          A school-based digital certificate system developed
+          to streamline preparation and documentation of
+          LAC Session certificates.
+
+        </p>
+
+        <p>
+
+          The system is scheduled for its first actual use
+          on August 27, 2026.
+
+        </p>
 
         <a
           href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="evidence-link">
 
-          Leadership & LAC evidence →
+          View project evidence →
 
         </a>
 
@@ -1448,16 +1114,12 @@ footer {
       <div class="evidence-card">
 
         <span class="status status-completed">
-
           Completed · 2024
-
         </span>
-
 
         <h3>
           Computer Literacy Activity
         </h3>
-
 
         <p>
 
@@ -1466,7 +1128,6 @@ footer {
           community and partner institutions.
 
         </p>
-
 
         <ul>
 
@@ -1488,10 +1149,10 @@ footer {
 
         </ul>
 
-
         <a
           href="https://drive.google.com/drive/folders/1bDYrwBY3vh6c-O8n1XzaEC5SEKHsC67N?usp=drive_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="evidence-link">
 
           View documentation →
@@ -1546,9 +1207,7 @@ footer {
       <div class="evidence-card">
 
         <span class="status status-approved">
-
           Approved · Implementation
-
         </span>
 
 
@@ -1568,9 +1227,7 @@ footer {
 
         <p>
 
-          <strong>
-            Evidence stage:
-          </strong>
+          <strong>Evidence stage:</strong>
 
           Approved for use and entering implementation.
           Evidence of efficacy and learner outcomes is still
@@ -1579,14 +1236,45 @@ footer {
         </p>
 
 
-        <a
-          href="https://drive.google.com/drive/folders/1cJFG5y2HBA34f3aIjuAiwBUzVnQmTJl?usp=drive_link"
-          target="_blank"
-          class="evidence-link">
+        <div style="
+          display:flex;
+          gap:16px;
+          flex-wrap:wrap;
+          margin-top:10px;
+        ">
 
-          View ARAL evidence →
 
-        </a>
+          <!-- ARAL WEBSITE -->
+
+          <a
+            href="https://marygraceperal.github.io/ParejaIS_ARAL_Math/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="evidence-link">
+
+            <i class="fas fa-globe"></i>
+
+            View Website →
+
+          </a>
+
+
+          <!-- ARAL DRIVE -->
+
+          <a
+            href="https://drive.google.com/drive/folders/1cJFG5y2HBA34f3aIjuAiwBUzVnQmTJl?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="evidence-link">
+
+            <i class="fas fa-folder-open"></i>
+
+            View ARAL Evidence →
+
+          </a>
+
+
+        </div>
 
       </div>
 
@@ -1596,9 +1284,7 @@ footer {
       <div class="evidence-card">
 
         <span class="status status-development">
-
           Under Approval / Implementation Preparation
-
         </span>
 
 
@@ -1628,6 +1314,7 @@ footer {
         <a
           href="https://drive.google.com/drive/folders/1cJFG5y2HBA34f3aIjuAiwBUzVnQmTJl?usp=drive_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="evidence-link">
 
           View intervention evidence →
@@ -1645,7 +1332,7 @@ footer {
 
 
 <!-- =========================================================
-     04 LEADERSHIP & COLLABORATION
+     04 LEADERSHIP
 ========================================================= -->
 
 <section id="leadership">
@@ -1681,16 +1368,12 @@ footer {
       <div class="evidence-card">
 
         <span class="status status-scheduled">
-
           Scheduled · Aug 27, 2026
-
         </span>
-
 
         <h3>
           LAC Session Speaker
         </h3>
-
 
         <p>
 
@@ -1700,21 +1383,18 @@ footer {
 
         </p>
 
-
         <p>
 
-          <strong>
-            Role:
-          </strong>
+          <strong>Role:</strong>
 
           Professional learning contributor and session speaker.
 
         </p>
 
-
         <a
           href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="evidence-link">
 
           View leadership evidence →
@@ -1729,16 +1409,12 @@ footer {
       <div class="evidence-card">
 
         <span class="status status-scheduled">
-
           First Use · Aug 27, 2026
-
         </span>
-
 
         <h3>
           LAC Certificate System
         </h3>
-
 
         <p>
 
@@ -1748,18 +1424,10 @@ footer {
 
         </p>
 
-
-        <p>
-
-          The system is scheduled for its first actual use
-          on August 27, 2026.
-
-        </p>
-
-
         <a
           href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="evidence-link">
 
           View system evidence →
@@ -1769,21 +1437,17 @@ footer {
       </div>
 
 
-      <!-- SCHOOL COLLABORATION -->
+      <!-- COLLABORATION -->
 
       <div class="evidence-card">
 
         <span class="status status-active">
-
           Current
-
         </span>
-
 
         <h3>
           School-Based Collaboration
         </h3>
-
 
         <p>
 
@@ -1793,10 +1457,10 @@ footer {
 
         </p>
 
-
         <a
           href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="evidence-link">
 
           View collaboration evidence →
@@ -1846,8 +1510,6 @@ footer {
     <div class="timeline">
 
 
-      <!-- 2025 -->
-
       <div class="timeline-item">
 
         <div class="timeline-year">
@@ -1869,8 +1531,6 @@ footer {
       </div>
 
 
-      <!-- 2021 -->
-
       <div class="timeline-item">
 
         <div class="timeline-year">
@@ -1890,8 +1550,6 @@ footer {
 
       </div>
 
-
-      <!-- 2020 -->
 
       <div class="timeline-item">
 
@@ -1915,8 +1573,6 @@ footer {
       </div>
 
 
-      <!-- 2016–2017 -->
-
       <div class="timeline-item">
 
         <div class="timeline-year">
@@ -1936,8 +1592,6 @@ footer {
 
       </div>
 
-
-      <!-- 2015 -->
 
       <div class="timeline-item">
 
@@ -1960,8 +1614,6 @@ footer {
       </div>
 
 
-      <!-- 2013 -->
-
       <div class="timeline-item">
 
         <div class="timeline-year">
@@ -1981,8 +1633,6 @@ footer {
 
       </div>
 
-
-      <!-- 2010–2012 -->
 
       <div class="timeline-item">
 
@@ -2004,8 +1654,6 @@ footer {
 
       </div>
 
-
-      <!-- 2009 -->
 
       <div class="timeline-item">
 
@@ -2036,6 +1684,7 @@ footer {
     <a
       href="https://drive.google.com/drive/folders/1RiDZ7Fr0dGpKA90r7PgTraN3IWr_0xo2?usp=drive_link"
       target="_blank"
+      rel="noopener noreferrer"
       class="button button-secondary">
 
       <i class="fas fa-folder-open"></i>
@@ -2050,7 +1699,7 @@ footer {
 
 
 <!-- =========================================================
-     06 RECOGNITION & SPECIAL ROLES
+     06 RECOGNITION
 ========================================================= -->
 
 <section id="recognition">
@@ -2081,7 +1730,7 @@ footer {
     <div class="evidence-grid">
 
 
-      <!-- REGIONAL DEMONSTRATOR -->
+      <!-- REGIONAL DEMONSTRATION TEACHER -->
 
       <div class="evidence-card">
 
@@ -2099,18 +1748,16 @@ footer {
 
         <p>
 
-          <strong>
-            Evidence:
-          </strong>
+          <strong>Evidence:</strong>
 
           Official certificate available.
 
         </p>
 
-
         <a
           href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="evidence-link">
 
           View certificate →
@@ -2136,10 +1783,10 @@ footer {
 
         </p>
 
-
         <a
           href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="evidence-link">
 
           View recognition evidence →
@@ -2164,7 +1811,6 @@ footer {
 
         </p>
 
-
         <ul>
 
           <li>
@@ -2177,10 +1823,10 @@ footer {
 
         </ul>
 
-
         <a
           href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="evidence-link">
 
           View supporting evidence →
@@ -2206,10 +1852,10 @@ footer {
 
         </p>
 
-
         <a
           href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
           target="_blank"
+          rel="noopener noreferrer"
           class="evidence-link">
 
           View recognition repository →
@@ -2264,12 +1910,11 @@ footer {
       <a
         href="https://drive.google.com/drive/folders/1JnJQAUvSc_fA4ano4BECDeZJRXswXflK?usp=drive_link"
         target="_blank"
+        rel="noopener noreferrer"
         class="folder-card">
 
         <div class="folder-icon">
-
           <i class="fas fa-folder-open"></i>
-
         </div>
 
         <h3>
@@ -2286,14 +1931,13 @@ footer {
       <!-- 01 -->
 
       <a
-        href="https://drive.google.com/drive/folders/17KdWw6QwoiMyv0Vt5RnUcEBZnBkfx-Sh?usp=drive_link"
+        href="https://drive.google.com/drive/folders/17KdWw6QwoiMyv0vT5rnUcEBZnBkfx-Sh?usp=drive_link"
         target="_blank"
+        rel="noopener noreferrer"
         class="folder-card">
 
         <div class="folder-icon">
-
           <i class="fas fa-file-user"></i>
-
         </div>
 
         <h3>
@@ -2312,12 +1956,11 @@ footer {
       <a
         href="https://drive.google.com/drive/folders/1joKCojSZEj7plWIhHpD-PKFXT99Egrpx?usp=drive_link"
         target="_blank"
+        rel="noopener noreferrer"
         class="folder-card">
 
         <div class="folder-icon">
-
           <i class="fas fa-chalkboard-user"></i>
-
         </div>
 
         <h3>
@@ -2336,12 +1979,11 @@ footer {
       <a
         href="https://drive.google.com/drive/folders/1bDYrwBY3vh6c-O8n1XzaEC5SEKHsC67N?usp=drive_link"
         target="_blank"
+        rel="noopener noreferrer"
         class="folder-card">
 
         <div class="folder-icon">
-
           <i class="fas fa-laptop-code"></i>
-
         </div>
 
         <h3>
@@ -2360,12 +2002,11 @@ footer {
       <a
         href="https://drive.google.com/drive/folders/1cJFG5y2HBA34f3aIjuAiwBUzVnQmTJl?usp=drive_link"
         target="_blank"
+        rel="noopener noreferrer"
         class="folder-card">
 
         <div class="folder-icon">
-
           <i class="fas fa-user-check"></i>
-
         </div>
 
         <h3>
@@ -2384,12 +2025,11 @@ footer {
       <a
         href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
         target="_blank"
+        rel="noopener noreferrer"
         class="folder-card">
 
         <div class="folder-icon">
-
           <i class="fas fa-people-group"></i>
-
         </div>
 
         <h3>
@@ -2408,12 +2048,11 @@ footer {
       <a
         href="https://drive.google.com/drive/folders/1RiDZ7Fr0dGpKA90r7PgTraN3IWr_0xo2?usp=drive_link"
         target="_blank"
+        rel="noopener noreferrer"
         class="folder-card">
 
         <div class="folder-icon">
-
           <i class="fas fa-graduation-cap"></i>
-
         </div>
 
         <h3>
@@ -2432,12 +2071,11 @@ footer {
       <a
         href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
         target="_blank"
+        rel="noopener noreferrer"
         class="folder-card">
 
         <div class="folder-icon">
-
           <i class="fas fa-award"></i>
-
         </div>
 
         <h3>
@@ -2512,5 +2150,4 @@ footer {
 
 
 </body>
-
 </html>

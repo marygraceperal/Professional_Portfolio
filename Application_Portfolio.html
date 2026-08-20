@@ -26,37 +26,30 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 :root {
 
   --bg-main: #faf7f8;
-
   --bg-card: #ffffff;
 
   --border: #eadde0;
 
   --accent: #b85c68;
-
   --accent-dark: #8f3f4b;
-
   --accent-light: #f9edef;
 
   --text: #33272a;
-
   --muted: #76666b;
 
   --green: #3f8060;
-
   --green-bg: #edf7f1;
 
   --orange: #b77938;
-
   --orange-bg: #fbf3e8;
 
   --purple: #765f9a;
-
   --purple-bg: #f3eff8;
 
   --blue: #557aa3;
-
   --blue-bg: #eef4fa;
 
+  --gray-bg: #f3f1f2;
 }
 
 
@@ -65,24 +58,15 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 ========================================================= */
 
 * {
-
   margin: 0;
-
   padding: 0;
-
   box-sizing: border-box;
-
   font-family: 'Plus Jakarta Sans', sans-serif;
-
 }
-
 
 html {
-
   scroll-behavior: smooth;
-
 }
-
 
 body {
 
@@ -94,13 +78,9 @@ body {
 
 }
 
-
 a {
-
   color: inherit;
-
 }
-
 
 .container {
 
@@ -114,7 +94,7 @@ a {
 
 
 /* =========================================================
-   HEADER
+   HERO
 ========================================================= */
 
 header {
@@ -127,7 +107,7 @@ header {
 
   padding: 42px;
 
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 
   display: grid;
 
@@ -140,7 +120,6 @@ header {
   box-shadow: 0 8px 30px rgba(50,35,40,.05);
 
 }
-
 
 .label {
 
@@ -166,17 +145,15 @@ header {
 
 }
 
-
 header h1 {
 
-  font-size: 36px;
+  font-size: 38px;
 
   line-height: 1.15;
 
   letter-spacing: -1px;
 
 }
-
 
 .subtitle {
 
@@ -190,12 +167,46 @@ header h1 {
 
 }
 
-
 .hero-description {
 
   color: var(--muted);
 
   font-size: 14px;
+
+}
+
+
+/* =========================================================
+   APPLICATION MESSAGE
+========================================================= */
+
+.application-note {
+
+  background: var(--accent-dark);
+
+  color: white;
+
+  border-radius: 16px;
+
+  padding: 22px 25px;
+
+  margin-bottom: 30px;
+
+}
+
+.application-note strong {
+
+  font-size: 14px;
+
+}
+
+.application-note p {
+
+  margin-top: 6px;
+
+  font-size: 11px;
+
+  opacity: .92;
 
 }
 
@@ -232,7 +243,6 @@ header h1 {
 
 }
 
-
 .navbar a {
 
   text-decoration: none;
@@ -251,7 +261,6 @@ header h1 {
 
 }
 
-
 .navbar a:hover {
 
   background: var(--accent-light);
@@ -267,10 +276,9 @@ header h1 {
 
 .section {
 
-  margin-bottom: 45px;
+  margin-bottom: 48px;
 
 }
-
 
 .section-heading {
 
@@ -288,7 +296,6 @@ header h1 {
 
 }
 
-
 .section-intro {
 
   color: var(--muted);
@@ -301,7 +308,7 @@ header h1 {
 
 
 /* =========================================================
-   QUICK PROFILE
+   PROFILE CARDS
 ========================================================= */
 
 .profile-grid {
@@ -313,7 +320,6 @@ header h1 {
   gap: 15px;
 
 }
-
 
 .profile-card {
 
@@ -327,7 +333,6 @@ header h1 {
 
 }
 
-
 .profile-card i {
 
   color: var(--accent);
@@ -338,7 +343,6 @@ header h1 {
 
 }
 
-
 .profile-card h3 {
 
   font-size: 13px;
@@ -347,12 +351,108 @@ header h1 {
 
 }
 
-
 .profile-card p {
 
   color: var(--muted);
 
   font-size: 11px;
+
+}
+
+
+/* =========================================================
+   FEATURED DIGITAL RESOURCE
+========================================================= */
+
+.featured-resource {
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 19px;
+
+  padding: 26px;
+
+  margin-bottom: 20px;
+
+  box-shadow: 0 5px 22px rgba(50,35,40,.04);
+
+}
+
+.featured-resource-top {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 20px;
+
+}
+
+.featured-icon {
+
+  width: 55px;
+
+  height: 55px;
+
+  background: var(--accent-light);
+
+  color: var(--accent);
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 14px;
+
+  font-size: 22px;
+
+  flex-shrink: 0;
+
+}
+
+.featured-title {
+
+  display: flex;
+
+  gap: 15px;
+
+}
+
+.featured-title h3 {
+
+  font-size: 18px;
+
+  margin-bottom: 4px;
+
+}
+
+.featured-title small {
+
+  color: var(--accent);
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+}
+
+.featured-resource p {
+
+  color: var(--muted);
+
+  font-size: 12px;
+
+  margin-top: 17px;
+
+  max-width: 850px;
 
 }
 
@@ -366,12 +466,11 @@ header h1 {
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit,minmax(320px,1fr));
+  repeat(auto-fit,minmax(320px,1fr));
 
   gap: 18px;
 
 }
-
 
 .document-card {
 
@@ -387,7 +486,6 @@ header h1 {
 
 }
 
-
 .document-card:hover {
 
   transform: translateY(-2px);
@@ -398,7 +496,6 @@ header h1 {
 
 }
 
-
 .document-top {
 
   display: flex;
@@ -408,7 +505,6 @@ header h1 {
   align-items: flex-start;
 
 }
-
 
 .document-icon {
 
@@ -432,7 +528,6 @@ header h1 {
 
 }
 
-
 .document-title {
 
   font-size: 15px;
@@ -440,7 +535,6 @@ header h1 {
   font-weight: 700;
 
 }
-
 
 .document-category {
 
@@ -453,7 +547,6 @@ header h1 {
   margin-top: 3px;
 
 }
-
 
 .document-description {
 
@@ -492,7 +585,6 @@ header h1 {
 
 }
 
-
 .status-ready {
 
   color: var(--green);
@@ -500,7 +592,6 @@ header h1 {
   background: var(--green-bg);
 
 }
-
 
 .status-approval {
 
@@ -510,7 +601,6 @@ header h1 {
 
 }
 
-
 .status-review {
 
   color: var(--purple);
@@ -518,7 +608,6 @@ header h1 {
   background: var(--purple-bg);
 
 }
-
 
 .status-scheduled {
 
@@ -528,18 +617,17 @@ header h1 {
 
 }
 
-
 .status-private {
 
   color: var(--muted);
 
-  background: #f3f1f2;
+  background: var(--gray-bg);
 
 }
 
 
 /* =========================================================
-   DOCUMENT ACTIONS
+   BUTTONS
 ========================================================= */
 
 .document-actions {
@@ -553,7 +641,6 @@ header h1 {
   flex-wrap: wrap;
 
 }
-
 
 .btn {
 
@@ -581,7 +668,6 @@ header h1 {
 
 }
 
-
 .btn-preview {
 
   background: var(--accent);
@@ -590,13 +676,11 @@ header h1 {
 
 }
 
-
 .btn-preview:hover {
 
   background: var(--accent-dark);
 
 }
-
 
 .btn-open {
 
@@ -606,15 +690,13 @@ header h1 {
 
 }
 
-
 .btn-download {
 
-  background: #f3f1f2;
+  background: var(--gray-bg);
 
   color: var(--text);
 
 }
-
 
 .btn:hover {
 
@@ -624,10 +706,10 @@ header h1 {
 
 
 /* =========================================================
-   FEATURED PROJECT
+   LEADERSHIP FEATURE
 ========================================================= */
 
-.featured {
+.leadership-feature {
 
   background: var(--bg-card);
 
@@ -641,8 +723,7 @@ header h1 {
 
 }
 
-
-.featured-header {
+.leadership-header {
 
   display: flex;
 
@@ -654,8 +735,7 @@ header h1 {
 
 }
 
-
-.featured h3 {
+.leadership-header h3 {
 
   font-size: 18px;
 
@@ -663,14 +743,26 @@ header h1 {
 
 }
 
-
-.featured p {
-
-  font-size: 12px;
+.leadership-header p {
 
   color: var(--muted);
 
-  max-width: 750px;
+  font-size: 12px;
+
+  max-width: 760px;
+
+}
+
+
+/* =========================================================
+   ADDITIONAL LEADERSHIP
+========================================================= */
+
+.future-card {
+
+  border: 1px dashed var(--border);
+
+  background: #fcfafb;
 
 }
 
@@ -689,7 +781,6 @@ header h1 {
 
 }
 
-
 .nz-card {
 
   background: var(--bg-card);
@@ -702,7 +793,6 @@ header h1 {
 
 }
 
-
 .nz-card i {
 
   color: var(--accent);
@@ -711,7 +801,6 @@ header h1 {
 
 }
 
-
 .nz-card h3 {
 
   font-size: 13px;
@@ -719,7 +808,6 @@ header h1 {
   margin-bottom: 8px;
 
 }
-
 
 .nz-card p {
 
@@ -733,7 +821,7 @@ header h1 {
 
 
 /* =========================================================
-   MODAL PREVIEW
+   MODAL
 ========================================================= */
 
 .modal {
@@ -752,7 +840,6 @@ header h1 {
 
 }
 
-
 .modal.active {
 
   display: flex;
@@ -763,12 +850,11 @@ header h1 {
 
 }
 
-
 .modal-box {
 
   background: white;
 
-  width: min(1000px,100%);
+  width: min(1050px,100%);
 
   height: min(90vh,850px);
 
@@ -781,7 +867,6 @@ header h1 {
   flex-direction: column;
 
 }
-
 
 .modal-header {
 
@@ -797,13 +882,11 @@ header h1 {
 
 }
 
-
 .modal-header strong {
 
   font-size: 13px;
 
 }
-
 
 .close-modal {
 
@@ -818,7 +901,6 @@ header h1 {
   color: var(--muted);
 
 }
-
 
 #previewFrame {
 
@@ -864,7 +946,6 @@ footer {
 
 }
 
-
 .fade.show {
 
   opacity: 1;
@@ -895,24 +976,23 @@ footer {
 
 }
 
-
 @media(max-width:600px) {
 
   .container {
 
-    padding: 20px 14px 50px;
+    padding:20px 14px 50px;
 
   }
 
   header {
 
-    padding: 28px 22px;
+    padding:28px 22px;
 
   }
 
   header h1 {
 
-    font-size: 29px;
+    font-size:29px;
 
   }
 
@@ -923,7 +1003,8 @@ footer {
 
   }
 
-  .featured-header {
+  .featured-resource-top,
+  .leadership-header {
 
     flex-direction:column;
 
@@ -931,13 +1012,13 @@ footer {
 
   .navbar {
 
-    position: static;
+    position:static;
 
   }
 
   .modal {
 
-    padding: 10px;
+    padding:10px;
 
   }
 
@@ -964,11 +1045,15 @@ footer {
   <div>
 
     <span class="label">
+
       Professional Teaching Portfolio
+
     </span>
 
     <h1>
+
       Mary Grace Peral
+
     </h1>
 
     <div class="subtitle">
@@ -986,19 +1071,49 @@ footer {
 
     Evidence-informed educator with experience in
     Mathematics teaching, learner intervention,
-    differentiated instruction, classroom practice,
-    professional leadership, and digital education.
+    digital learning, professional leadership and
+    school-based initiatives.
 
     <br><br>
 
     <strong>
-      Preparing for teaching opportunities in
-      Aotearoa New Zealand.
+
+      Preparing for teaching opportunities
+      in Aotearoa New Zealand.
+
     </strong>
 
   </div>
 
 </header>
+
+
+
+<!-- =====================================================
+     APPLICATION MESSAGE
+====================================================== -->
+
+<div class="application-note fade">
+
+  <strong>
+
+    For School Leaders & Hiring Teams
+
+  </strong>
+
+  <p>
+
+    This portfolio presents selected evidence of my
+    Mathematics teaching practice, learner intervention,
+    digital education, professional leadership and
+    continuing professional development.
+
+    Supporting documents may be previewed online or
+    provided for further review upon request.
+
+  </p>
+
+</div>
 
 
 
@@ -1014,8 +1129,13 @@ footer {
   </a>
 
   <a href="#teaching">
-    <i class="fas fa-chalkboard"></i>
+    <i class="fas fa-calculator"></i>
     Teaching
+  </a>
+
+  <a href="#digital">
+    <i class="fas fa-laptop-code"></i>
+    Digital
   </a>
 
   <a href="#classroom">
@@ -1026,11 +1146,6 @@ footer {
   <a href="#leadership">
     <i class="fas fa-star"></i>
     Leadership
-  </a>
-
-  <a href="#digital">
-    <i class="fas fa-laptop-code"></i>
-    Digital
   </a>
 
   <a href="#development">
@@ -1052,16 +1167,18 @@ footer {
 ====================================================== -->
 
 <section
-  id="profile"
-  class="section">
+id="profile"
+class="section">
 
   <div class="section-heading">
+
     Professional Profile
+
   </div>
 
   <div class="section-intro">
 
-    A concise overview of my professional experience
+    A concise overview of my professional strengths
     and areas of practice.
 
   </div>
@@ -1075,12 +1192,17 @@ footer {
       <i class="fas fa-calculator"></i>
 
       <h3>
+
         Mathematics Education
+
       </h3>
 
       <p>
-        Senior High School Mathematics teaching,
-        curriculum implementation and learner support.
+
+        Secondary Mathematics teaching,
+        curriculum implementation and
+        learner support.
+
       </p>
 
     </div>
@@ -1091,12 +1213,16 @@ footer {
       <i class="fas fa-chart-line"></i>
 
       <h3>
-        Evidence-Informed Practice
+
+        Learner Intervention
+
       </h3>
 
       <p>
-        Uses learner evidence and progress monitoring
-        to guide intervention and instruction.
+
+        Targeted intervention, differentiated
+        support and progress monitoring.
+
       </p>
 
     </div>
@@ -1107,12 +1233,16 @@ footer {
       <i class="fas fa-people-group"></i>
 
       <h3>
+
         Professional Leadership
+
       </h3>
 
       <p>
-        School initiatives, coordination,
-        collaboration and professional learning.
+
+        School coordination, collaboration,
+        professional learning and initiatives.
+
       </p>
 
     </div>
@@ -1123,12 +1253,16 @@ footer {
       <i class="fas fa-laptop-code"></i>
 
       <h3>
+
         Digital Education
+
       </h3>
 
       <p>
-        Uses digital platforms to organize,
-        present and share educational resources.
+
+        Teacher-developed digital resources
+        supporting teaching and learning.
+
       </p>
 
     </div>
@@ -1145,25 +1279,27 @@ footer {
 ====================================================== -->
 
 <section
-  id="teaching"
-  class="section">
+id="teaching"
+class="section">
 
   <div class="section-heading">
+
     Mathematics Teaching & Intervention
+
   </div>
 
   <div class="section-intro">
 
-    Evidence demonstrating Mathematics teaching,
-    intervention and learner progress.
+    Selected evidence of Mathematics teaching,
+    intervention and instructional practice.
 
   </div>
 
 
+  <!-- CV -->
+
   <div class="document-grid">
 
-
-    <!-- CV -->
 
     <div class="document-card fade">
 
@@ -1178,11 +1314,15 @@ footer {
         <div>
 
           <div class="document-title">
+
             Curriculum Vitae
+
           </div>
 
           <div class="document-category">
+
             APPLICATION DOCUMENT
+
           </div>
 
         </div>
@@ -1201,6 +1341,7 @@ footer {
       <span class="status status-ready">
 
         <i class="fas fa-circle-check"></i>
+
         Ready
 
       </span>
@@ -1209,31 +1350,34 @@ footer {
       <div class="document-actions">
 
         <button
-          class="btn btn-preview"
-          onclick="previewDocument('cv')">
+        class="btn btn-preview"
+        onclick="previewDocument('cv')">
 
           <i class="fas fa-eye"></i>
+
           Preview
 
         </button>
 
 
         <a
-          data-document="cv"
-          class="btn btn-open"
-          target="_blank">
+        data-document="cv"
+        class="btn btn-open"
+        target="_blank">
 
           <i class="fas fa-arrow-up-right-from-square"></i>
+
           Open
 
         </a>
 
 
         <a
-          data-download="cv"
-          class="btn btn-download">
+        data-download="cv"
+        class="btn btn-download">
 
           <i class="fas fa-download"></i>
+
           Download
 
         </a>
@@ -1259,11 +1403,15 @@ footer {
         <div>
 
           <div class="document-title">
+
             ARAL Mathematics Intervention
+
           </div>
 
           <div class="document-category">
+
             LEARNER INTERVENTION
+
           </div>
 
         </div>
@@ -1273,8 +1421,8 @@ footer {
 
       <div class="document-description">
 
-        Evidence of a structured Mathematics intervention
-        designed to identify learning gaps, provide targeted
+        A structured Mathematics intervention designed
+        to identify learning needs, provide targeted
         support and monitor learner progress.
 
       </div>
@@ -1283,6 +1431,7 @@ footer {
       <span class="status status-ready">
 
         <i class="fas fa-circle-check"></i>
+
         Ready for Presentation
 
       </span>
@@ -1291,412 +1440,34 @@ footer {
       <div class="document-actions">
 
         <button
-          class="btn btn-preview"
-          onclick="previewDocument('aral')">
+        class="btn btn-preview"
+        onclick="previewDocument('aral')">
 
           <i class="fas fa-eye"></i>
+
           Preview
 
         </button>
 
 
         <a
-          data-document="aral"
-          class="btn btn-open"
-          target="_blank">
+        data-document="aral"
+        class="btn btn-open"
+        target="_blank">
 
           <i class="fas fa-arrow-up-right-from-square"></i>
+
           Open
 
         </a>
 
 
         <a
-          data-download="aral"
-          class="btn btn-download">
+        data-download="aral"
+        class="btn btn-download">
 
           <i class="fas fa-download"></i>
-          Download
 
-        </a>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CLASSROOM
-====================================================== -->
-
-<section
-  id="classroom"
-  class="section">
-
-  <div class="section-heading">
-    Classroom Practice
-  </div>
-
-  <div class="section-intro">
-
-    Evidence of classroom management, learner support
-    and continuous improvement.
-
-  </div>
-
-
-  <div class="document-grid">
-
-
-    <div class="document-card fade">
-
-      <div class="document-top">
-
-        <div class="document-icon">
-
-          <i class="fas fa-users"></i>
-
-        </div>
-
-        <div>
-
-          <div class="document-title">
-            Classroom Behaviour Intervention Plan
-          </div>
-
-          <div class="document-category">
-            CLASSROOM MANAGEMENT
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="document-description">
-
-        A proposed classroom-based intervention framework
-        for addressing behaviour concerns and establishing
-        consistent monitoring procedures.
-
-      </div>
-
-
-      <span class="status status-approval">
-
-        <i class="fas fa-clock"></i>
-        For Approval
-
-      </span>
-
-
-      <div class="document-actions">
-
-        <button
-          class="btn btn-preview"
-          onclick="previewDocument('behaviour')">
-
-          <i class="fas fa-eye"></i>
-          Preview
-
-        </button>
-
-
-        <a
-          data-document="behaviour"
-          class="btn btn-open"
-          target="_blank">
-
-          <i class="fas fa-arrow-up-right-from-square"></i>
-          Open
-
-        </a>
-
-
-        <a
-          data-download="behaviour"
-          class="btn btn-download">
-
-          <i class="fas fa-download"></i>
-          Download
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- LESSON PLAN -->
-
-    <div class="document-card fade">
-
-      <div class="document-top">
-
-        <div class="document-icon">
-
-          <i class="fas fa-book-open"></i>
-
-        </div>
-
-        <div>
-
-          <div class="document-title">
-            Sample Mathematics Lesson Plan
-          </div>
-
-          <div class="document-category">
-            TEACHING PRACTICE
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="document-description">
-
-        Selected lesson planning evidence demonstrating
-        Mathematics instruction, learning activities,
-        assessment and differentiation.
-
-      </div>
-
-
-      <span class="status status-ready">
-
-        <i class="fas fa-circle-check"></i>
-        Selected Evidence
-
-      </span>
-
-
-      <div class="document-actions">
-
-        <button
-          class="btn btn-preview"
-          onclick="previewDocument('lessonPlan')">
-
-          <i class="fas fa-eye"></i>
-          Preview
-
-        </button>
-
-
-        <a
-          data-document="lessonPlan"
-          class="btn btn-open"
-          target="_blank">
-
-          <i class="fas fa-arrow-up-right-from-square"></i>
-          Open
-
-        </a>
-
-
-        <a
-          data-download="lessonPlan"
-          class="btn btn-download">
-
-          <i class="fas fa-download"></i>
-          Download
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     LEADERSHIP
-====================================================== -->
-
-<section
-  id="leadership"
-  class="section">
-
-  <div class="section-heading">
-    Professional Leadership & School Initiatives
-  </div>
-
-  <div class="section-intro">
-
-    Evidence of leadership, coordination, innovation
-    and contribution to school improvement.
-
-  </div>
-
-
-  <div class="document-grid">
-
-
-    <!-- LAC CERTIFICATE -->
-
-    <div class="document-card fade">
-
-      <div class="document-top">
-
-        <div class="document-icon">
-
-          <i class="fas fa-certificate"></i>
-
-        </div>
-
-        <div>
-
-          <div class="document-title">
-            LAC Session Certificate System
-          </div>
-
-          <div class="document-category">
-            DIGITAL SCHOOL INITIATIVE
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="document-description">
-
-        A proposed digital certificate system intended
-        to improve documentation, certificate generation,
-        verification and recognition of school-based
-        professional learning activities.
-
-      </div>
-
-
-      <span class="status status-review">
-
-        <i class="fas fa-magnifying-glass"></i>
-        Under Critique
-
-      </span>
-
-
-      <div class="document-actions">
-
-        <button
-          class="btn btn-preview"
-          onclick="previewDocument('lac')">
-
-          <i class="fas fa-eye"></i>
-          Preview
-
-        </button>
-
-
-        <a
-          data-document="lac"
-          class="btn btn-open"
-          target="_blank">
-
-          <i class="fas fa-arrow-up-right-from-square"></i>
-          Open
-
-        </a>
-
-
-        <a
-          data-download="lac"
-          class="btn btn-download">
-
-          <i class="fas fa-download"></i>
-          Download
-
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- DPDS -->
-
-    <div class="document-card fade">
-
-      <div class="document-top">
-
-        <div class="document-icon">
-
-          <i class="fas fa-handshake"></i>
-
-        </div>
-
-        <div>
-
-          <div class="document-title">
-            DPDS Leadership & Coordination
-          </div>
-
-          <div class="document-category">
-            SCHOOL LEADERSHIP
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="document-description">
-
-        Evidence of coordination, school-based initiatives,
-        stakeholder collaboration and contribution to
-        school development.
-
-      </div>
-
-
-      <span class="status status-ready">
-
-        <i class="fas fa-circle-check"></i>
-        Established
-
-      </span>
-
-
-      <div class="document-actions">
-
-        <button
-          class="btn btn-preview"
-          onclick="previewDocument('dpds')">
-
-          <i class="fas fa-eye"></i>
-          Preview
-
-        </button>
-
-
-        <a
-          data-document="dpds"
-          class="btn btn-open"
-          target="_blank">
-
-          <i class="fas fa-arrow-up-right-from-square"></i>
-          Open
-
-        </a>
-
-
-        <a
-          data-download="dpds"
-          class="btn btn-download">
-
-          <i class="fas fa-download"></i>
           Download
 
         </a>
@@ -1717,44 +1488,144 @@ footer {
 ====================================================== -->
 
 <section
-  id="digital"
-  class="section">
+id="digital"
+class="section">
 
   <div class="section-heading">
-    Digital Education & Professional Learning
+
+    Digital Education
+
   </div>
 
   <div class="section-intro">
 
-    Evidence demonstrating the use of digital tools
-    and contribution to professional learning.
+    Digital tools and teacher-developed resources
+    used to support Mathematics learning.
 
   </div>
 
 
-  <div class="featured fade">
+  <!-- GENERAL MATHEMATICS WEBSITE -->
 
-    <div class="featured-header">
+  <div class="featured-resource fade">
 
-      <div>
+    <div class="featured-resource-top">
 
-        <h3>
-          GitHub as a Tool for Teaching
-        </h3>
+      <div class="featured-title">
 
-        <p>
+        <div class="featured-icon">
 
-          Invited LAC Session speaker discussing GitHub
-          as a tool for teaching, organizing educational
-          resources and supporting digital learning.
+          <i class="fas fa-globe"></i>
 
-          <br><br>
+        </div>
 
-          <strong>
-            Scheduled: 27 August 2026
-          </strong>
+        <div>
 
-        </p>
+          <h3>
+
+            General Mathematics
+            Digital Learning Resource
+
+          </h3>
+
+          <small>
+
+            Teacher-Developed Digital Learning Material
+
+          </small>
+
+        </div>
+
+      </div>
+
+
+      <span class="status status-ready">
+
+        <i class="fas fa-circle-check"></i>
+
+        Currently in Use
+
+      </span>
+
+    </div>
+
+
+    <p>
+
+      A teacher-developed digital learning resource
+      for General Mathematics, designed to provide
+      students with accessible instructional materials
+      and support continuity of learning when regular
+      classroom instruction is disrupted.
+
+      <br><br>
+
+      The resource brings Mathematics lessons,
+      explanations, examples and learning materials
+      together in an accessible online environment.
+
+    </p>
+
+
+    <div class="document-actions">
+
+      <a
+      id="mathWebsite"
+      class="btn btn-preview"
+      target="_blank">
+
+        <i class="fas fa-globe"></i>
+
+        Visit Website
+
+      </a>
+
+
+      <button
+      class="btn btn-open"
+      onclick="previewDocument('mathWebsitePreview')">
+
+        <i class="fas fa-eye"></i>
+
+        Preview
+
+      </button>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- GITHUB SESSION -->
+
+  <div class="featured-resource fade">
+
+    <div class="featured-resource-top">
+
+      <div class="featured-title">
+
+        <div class="featured-icon">
+
+          <i class="fab fa-github"></i>
+
+        </div>
+
+        <div>
+
+          <h3>
+
+            GitHub as a Tool for Teaching
+
+          </h3>
+
+          <small>
+
+            LAC Session Speaker
+
+          </small>
+
+        </div>
 
       </div>
 
@@ -1763,44 +1634,521 @@ footer {
 
         <i class="fas fa-calendar-check"></i>
 
-        Scheduled
+        Scheduled — 27 August 2026
 
       </span>
 
     </div>
 
 
+    <p>
+
+      Invited as a school LAC Session speaker to discuss
+      GitHub as a practical tool for teaching, organizing
+      digital learning materials and sharing educational
+      resources.
+
+    </p>
+
+
     <div class="document-actions">
 
       <button
-        class="btn btn-preview"
-        onclick="previewDocument('githubSession')">
+      class="btn btn-preview"
+      onclick="previewDocument('githubSession')">
 
         <i class="fas fa-eye"></i>
+
         Preview
 
       </button>
 
 
       <a
-        data-document="githubSession"
-        class="btn btn-open"
-        target="_blank">
+      data-document="githubSession"
+      class="btn btn-open"
+      target="_blank">
 
         <i class="fas fa-arrow-up-right-from-square"></i>
+
         Open Evidence
 
       </a>
 
 
       <a
-        data-download="githubSession"
-        class="btn btn-download">
+      data-download="githubSession"
+      class="btn btn-download">
 
         <i class="fas fa-download"></i>
+
         Download
 
       </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CLASSROOM PRACTICE
+====================================================== -->
+
+<section
+id="classroom"
+class="section">
+
+  <div class="section-heading">
+
+    Classroom Practice
+
+  </div>
+
+  <div class="section-intro">
+
+    Evidence of classroom management,
+    planning and learner support.
+
+  </div>
+
+
+  <div class="document-grid">
+
+
+    <!-- BEHAVIOUR -->
+
+    <div class="document-card fade">
+
+      <div class="document-top">
+
+        <div class="document-icon">
+
+          <i class="fas fa-users"></i>
+
+        </div>
+
+        <div>
+
+          <div class="document-title">
+
+            Classroom Behaviour
+            Intervention Plan
+
+          </div>
+
+          <div class="document-category">
+
+            CLASSROOM MANAGEMENT
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-description">
+
+        A proposed classroom-based intervention
+        framework for addressing behaviour concerns
+        and establishing consistent monitoring
+        procedures.
+
+      </div>
+
+
+      <span class="status status-approval">
+
+        <i class="fas fa-clock"></i>
+
+        For Approval
+
+      </span>
+
+
+      <div class="document-actions">
+
+        <button
+        class="btn btn-preview"
+        onclick="previewDocument('behaviour')">
+
+          <i class="fas fa-eye"></i>
+
+          Preview
+
+        </button>
+
+
+        <a
+        data-document="behaviour"
+        class="btn btn-open"
+        target="_blank">
+
+          <i class="fas fa-arrow-up-right-from-square"></i>
+
+          Open
+
+        </a>
+
+
+        <a
+        data-download="behaviour"
+        class="btn btn-download">
+
+          <i class="fas fa-download"></i>
+
+          Download
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- LESSON PLAN -->
+
+    <div class="document-card fade">
+
+      <div class="document-top">
+
+        <div class="document-icon">
+
+          <i class="fas fa-book-open"></i>
+
+        </div>
+
+        <div>
+
+          <div class="document-title">
+
+            Sample Mathematics Lesson Plan
+
+          </div>
+
+          <div class="document-category">
+
+            TEACHING PRACTICE
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-description">
+
+        Selected lesson planning evidence demonstrating
+        Mathematics instruction, learning activities,
+        assessment and differentiation.
+
+      </div>
+
+
+      <span class="status status-ready">
+
+        <i class="fas fa-circle-check"></i>
+
+        Selected Evidence
+
+      </span>
+
+
+      <div class="document-actions">
+
+        <button
+        class="btn btn-preview"
+        onclick="previewDocument('lessonPlan')">
+
+          <i class="fas fa-eye"></i>
+
+          Preview
+
+        </button>
+
+
+        <a
+        data-document="lessonPlan"
+        class="btn btn-open"
+        target="_blank">
+
+          <i class="fas fa-arrow-up-right-from-square"></i>
+
+          Open
+
+        </a>
+
+
+        <a
+        data-download="lessonPlan"
+        class="btn btn-download">
+
+          <i class="fas fa-download"></i>
+
+          Download
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     LEADERSHIP
+====================================================== -->
+
+<section
+id="leadership"
+class="section">
+
+  <div class="section-heading">
+
+    Professional Leadership & School Initiatives
+
+  </div>
+
+  <div class="section-intro">
+
+    Evidence of leadership, coordination,
+    collaboration and school improvement.
+
+  </div>
+
+
+  <!-- DPDS -->
+
+  <div class="document-grid">
+
+
+    <div class="document-card fade">
+
+      <div class="document-top">
+
+        <div class="document-icon">
+
+          <i class="fas fa-handshake"></i>
+
+        </div>
+
+        <div>
+
+          <div class="document-title">
+
+            DPDS Leadership & Coordination
+
+          </div>
+
+          <div class="document-category">
+
+            SCHOOL LEADERSHIP
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-description">
+
+        Evidence of school-based coordination,
+        stakeholder collaboration and contribution
+        to school initiatives.
+
+      </div>
+
+
+      <span class="status status-ready">
+
+        <i class="fas fa-circle-check"></i>
+
+        Established
+
+      </span>
+
+
+      <div class="document-actions">
+
+        <button
+        class="btn btn-preview"
+        onclick="previewDocument('dpds')">
+
+          <i class="fas fa-eye"></i>
+
+          Preview
+
+        </button>
+
+
+        <a
+        data-document="dpds"
+        class="btn btn-open"
+        target="_blank">
+
+          <i class="fas fa-arrow-up-right-from-square"></i>
+
+          Open
+
+        </a>
+
+
+        <a
+        data-download="dpds"
+        class="btn btn-download">
+
+          <i class="fas fa-download"></i>
+
+          Download
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- LAC -->
+
+    <div class="document-card fade">
+
+      <div class="document-top">
+
+        <div class="document-icon">
+
+          <i class="fas fa-certificate"></i>
+
+        </div>
+
+        <div>
+
+          <div class="document-title">
+
+            LAC Session Certificate System
+
+          </div>
+
+          <div class="document-category">
+
+            DIGITAL SCHOOL INITIATIVE
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-description">
+
+        A proposed digital certificate system intended
+        to improve documentation, certificate generation,
+        verification and recognition of school-based
+        professional learning activities.
+
+      </div>
+
+
+      <span class="status status-review">
+
+        <i class="fas fa-magnifying-glass"></i>
+
+        Under Critique
+
+      </span>
+
+
+      <div class="document-actions">
+
+        <button
+        class="btn btn-preview"
+        onclick="previewDocument('lac')">
+
+          <i class="fas fa-eye"></i>
+
+          Preview
+
+        </button>
+
+
+        <a
+        data-document="lac"
+        class="btn btn-open"
+        target="_blank">
+
+          <i class="fas fa-arrow-up-right-from-square"></i>
+
+          Open
+
+        </a>
+
+
+        <a
+        data-download="lac"
+        class="btn btn-download">
+
+          <i class="fas fa-download"></i>
+
+          Download
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+  <!-- BRIGADE -->
+
+  <div class="leadership-feature fade future-card">
+
+    <div class="leadership-header">
+
+      <div>
+
+        <h3>
+
+          Brigade Coordination
+
+        </h3>
+
+        <p>
+
+          Current appointment as Brigade Coordinator,
+          with an activity proposal being prepared for
+          the coming school year.
+
+          This evidence will be developed further through
+          implementation and evaluation.
+
+        </p>
+
+      </div>
+
+
+      <span class="status status-approval">
+
+        <i class="fas fa-hourglass-half"></i>
+
+        Future Evidence
+
+      </span>
 
     </div>
 
@@ -1815,16 +2163,19 @@ footer {
 ====================================================== -->
 
 <section
-  id="development"
-  class="section">
+id="development"
+class="section">
 
   <div class="section-heading">
+
     Professional Development
+
   </div>
 
   <div class="section-intro">
 
-    Selected professional learning and development evidence.
+    Selected professional learning and development
+    evidence relevant to teaching practice.
 
   </div>
 
@@ -1845,11 +2196,15 @@ footer {
         <div>
 
           <div class="document-title">
+
             Professional Development Records
+
           </div>
 
           <div class="document-category">
+
             PROFESSIONAL LEARNING
+
           </div>
 
         </div>
@@ -1860,8 +2215,7 @@ footer {
       <div class="document-description">
 
         Selected certificates, training records and
-        professional learning evidence relevant to
-        teaching practice and leadership.
+        professional learning evidence.
 
       </div>
 
@@ -1869,6 +2223,7 @@ footer {
       <span class="status status-ready">
 
         <i class="fas fa-circle-check"></i>
+
         Selected Evidence
 
       </span>
@@ -1877,31 +2232,34 @@ footer {
       <div class="document-actions">
 
         <button
-          class="btn btn-preview"
-          onclick="previewDocument('pd')">
+        class="btn btn-preview"
+        onclick="previewDocument('pd')">
 
           <i class="fas fa-eye"></i>
+
           Preview
 
         </button>
 
 
         <a
-          data-document="pd"
-          class="btn btn-open"
-          target="_blank">
+        data-document="pd"
+        class="btn btn-open"
+        target="_blank">
 
           <i class="fas fa-arrow-up-right-from-square"></i>
+
           Open
 
         </a>
 
 
         <a
-          data-download="pd"
-          class="btn btn-download">
+        data-download="pd"
+        class="btn btn-download">
 
           <i class="fas fa-download"></i>
+
           Download
 
         </a>
@@ -1922,28 +2280,33 @@ footer {
 ====================================================== -->
 
 <section
-  id="nz"
-  class="section">
+id="nz"
+class="section">
 
   <div class="section-heading">
+
     New Zealand Teaching Readiness
+
   </div>
 
   <div class="section-intro">
 
-    Summary of my preparation for teaching in
-    Aotearoa New Zealand.
+    Current preparation for teaching opportunities
+    in Aotearoa New Zealand.
 
     <br><br>
 
-    Personal identity documents, transcripts and other
-    sensitive records are not publicly displayed.
+    Sensitive personal documents are intentionally
+    not displayed publicly and can be provided
+    privately when requested.
 
   </div>
 
 
   <div class="nz-grid">
 
+
+    <!-- NZQA -->
 
     <div class="nz-card fade">
 
@@ -1958,8 +2321,8 @@ footer {
 
       <p>
 
-        Documentation prepared for qualification
-        assessment.
+        Documentation prepared for the qualification
+        assessment process.
 
       </p>
 
@@ -1972,6 +2335,9 @@ footer {
 
     </div>
 
+
+
+    <!-- TEACHING COUNCIL -->
 
     <div class="nz-card fade">
 
@@ -2001,6 +2367,9 @@ footer {
     </div>
 
 
+
+    <!-- IELTS -->
+
     <div class="nz-card fade">
 
       <h3>
@@ -2014,7 +2383,7 @@ footer {
 
       <p>
 
-        English-language competency test
+        English-language competency requirement
         still to be completed.
 
       </p>
@@ -2029,6 +2398,9 @@ footer {
     </div>
 
 
+
+    <!-- CURRICULUM -->
+
     <div class="nz-card fade">
 
       <h3>
@@ -2042,8 +2414,9 @@ footer {
 
       <p>
 
-        Continuing preparation and familiarisation
-        with the NZ Mathematics curriculum.
+        Continuing professional preparation and
+        familiarisation with the New Zealand
+        Mathematics curriculum.
 
       </p>
 
@@ -2070,7 +2443,9 @@ footer {
 <section class="section">
 
   <div class="section-heading">
+
     Professional Contact
+
   </div>
 
 
@@ -2090,11 +2465,15 @@ footer {
         <div>
 
           <div class="document-title">
+
             Professional Enquiries
+
           </div>
 
           <div class="document-category">
+
             CONTACT
+
           </div>
 
         </div>
@@ -2113,10 +2492,11 @@ footer {
       <div class="document-actions">
 
         <a
-          id="emailButton"
-          class="btn btn-preview">
+        id="emailButton"
+        class="btn btn-preview">
 
           <i class="fas fa-envelope"></i>
+
           Contact Me
 
         </a>
@@ -2132,10 +2512,16 @@ footer {
 
 
 
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
 <footer>
 
   <strong>
+
     Mary Grace Peral
+
   </strong>
 
   <br>
@@ -2161,8 +2547,8 @@ footer {
 ====================================================== -->
 
 <div
-  id="previewModal"
-  class="modal">
+id="previewModal"
+class="modal">
 
 
   <div class="modal-box">
@@ -2171,13 +2557,15 @@ footer {
     <div class="modal-header">
 
       <strong id="modalTitle">
+
         Document Preview
+
       </strong>
 
 
       <button
-        class="close-modal"
-        onclick="closePreview()">
+      class="close-modal"
+      onclick="closePreview()">
 
         <i class="fas fa-xmark"></i>
 
@@ -2187,8 +2575,8 @@ footer {
 
 
     <iframe
-      id="previewFrame"
-      src="">
+    id="previewFrame"
+    src="">
 
     </iframe>
 
@@ -2201,6 +2589,7 @@ footer {
 
 <script>
 
+
 /* =========================================================
    =========================================================
 
@@ -2208,19 +2597,19 @@ footer {
 
    =========================================================
 
-   UPDATE YOUR DOCUMENT LINKS ONLY HERE.
+   IMPORTANT:
 
-   You don't need to search through the whole HTML.
+   You only need to update the links in this section.
 
    ========================================================= */
 
 
-/* =========================================================
-   DOCUMENT DATABASE
-========================================================= */
-
 const DOCUMENTS = {
 
+
+  /* =======================================================
+     CV
+  ======================================================= */
 
   cv: {
 
@@ -2239,6 +2628,10 @@ const DOCUMENTS = {
   },
 
 
+  /* =======================================================
+     ARAL
+  ======================================================= */
+
   aral: {
 
     title:
@@ -2255,6 +2648,10 @@ const DOCUMENTS = {
 
   },
 
+
+  /* =======================================================
+     CLASSROOM BEHAVIOUR
+  ======================================================= */
 
   behaviour: {
 
@@ -2273,6 +2670,10 @@ const DOCUMENTS = {
   },
 
 
+  /* =======================================================
+     LESSON PLAN
+  ======================================================= */
+
   lessonPlan: {
 
     title:
@@ -2289,6 +2690,10 @@ const DOCUMENTS = {
 
   },
 
+
+  /* =======================================================
+     LAC CERTIFICATE SYSTEM
+  ======================================================= */
 
   lac: {
 
@@ -2307,6 +2712,10 @@ const DOCUMENTS = {
   },
 
 
+  /* =======================================================
+     DPDS
+  ======================================================= */
+
   dpds: {
 
     title:
@@ -2323,6 +2732,10 @@ const DOCUMENTS = {
 
   },
 
+
+  /* =======================================================
+     GITHUB LAC SESSION
+  ======================================================= */
 
   githubSession: {
 
@@ -2341,6 +2754,10 @@ const DOCUMENTS = {
   },
 
 
+  /* =======================================================
+     PROFESSIONAL DEVELOPMENT
+  ======================================================= */
+
   pd: {
 
     title:
@@ -2355,9 +2772,39 @@ const DOCUMENTS = {
     download:
       "https://drive.google.com/uc?export=download&id=YOUR_PD_FILE_ID"
 
+  },
+
+
+  /* =======================================================
+     GENERAL MATHEMATICS WEBSITE
+  ======================================================= */
+
+  mathWebsitePreview: {
+
+    title:
+      "General Mathematics Digital Learning Resource",
+
+    preview:
+      "https://YOUR-GENERAL-MATHEMATICS-WEBSITE-URL"
+
   }
 
 };
+
+
+/* =========================================================
+   🌐 GENERAL MATHEMATICS WEBSITE
+========================================================= */
+
+const GENERAL_MATH_WEBSITE =
+
+  "https://YOUR-GENERAL-MATHEMATICS-WEBSITE-URL";
+
+
+document.getElementById(
+  "mathWebsite"
+).href =
+  GENERAL_MATH_WEBSITE;
 
 
 /* =========================================================
@@ -2393,24 +2840,20 @@ document
     link.href =
       DOCUMENTS[key].download;
 
-    link.setAttribute(
-      "download",
-      ""
-    );
-
   }
 
 });
 
 
 /* =========================================================
-   PREVIEW
+   PREVIEW DOCUMENT
 ========================================================= */
 
 function previewDocument(key) {
 
   const documentData =
     DOCUMENTS[key];
+
 
   if (!documentData) {
 
@@ -2461,7 +2904,7 @@ function closePreview() {
 
 
 /* =========================================================
-   CLOSE WHEN CLICKING OUTSIDE
+   CLICK OUTSIDE MODAL
 ========================================================= */
 
 document
@@ -2507,12 +2950,14 @@ document.addEventListener(
 ========================================================= */
 
 const EMAIL_ADDRESS =
+
   "marygrace.peral@example.com";
 
 
 document.getElementById(
   "emailButton"
 ).href =
+
   "mailto:" +
   EMAIL_ADDRESS +
   "?subject=Teaching%20Portfolio%20Inquiry";
@@ -2523,6 +2968,7 @@ document.getElementById(
 ========================================================= */
 
 const observer =
+
   new IntersectionObserver(
 
     entries => {
@@ -2534,8 +2980,8 @@ const observer =
         ) {
 
           entry.target
-            .classList
-            .add("show");
+          .classList
+          .add("show");
 
         }
 

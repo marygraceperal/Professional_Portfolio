@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mary Grace Peral | Secondary Mathematics Teacher Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+:root {
+  --bg-main: #faf7f8;
+  --bg-card: #ffffff;
+  --border-color: #eadde0;
+
+  --accent-color: #b85c68;
+  --accent-dark: #8f3f4b;
+  --accent-glow: #f9edef;
+
+  --text-primary: #33272a;
+  --text-secondary: #76666b;
+
+  --green: #3f8060;
+  --green-bg: #edf7f1;
+
+  --blue: #557aa3;
+  --blue-bg: #eef4fa;
+
+  --orange: #b77938;
+  --orange-bg: #fbf3e8;
+
+  --purple: #765f9a;
+  --purple-bg: #f3eff8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.dashboard-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px 80px;
+}
+
+/* =========================
+   HERO
+========================= */
+
+header {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 42px;
+  margin-bottom: 34px;
+
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 40px;
+  align-items: center;
+
+  box-shadow: 0 8px 30px rgba(60, 40, 45, 0.05);
+}
+
+.profile-label {
+  display: inline-block;
+  padding: 7px 12px;
+  background: var(--accent-glow);
+  color: var(--accent-dark);
+  border-radius: 20px;
+
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  margin-bottom: 14px;
+}
+
+.profile-info h1 {
+  font-size: 34px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+}
+
+.profile-info .role {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 15px;
+  margin-top: 8px;
+}
+
+.profile-bio {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.profile-bio strong {
+  color: var(--text-primary);
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section {
+  margin-bottom: 38px;
+}
+
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.section-description {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: -8px;
+  margin-bottom: 18px;
+}
+
+/* =========================
+   PROFESSIONAL SNAPSHOT
+========================= */
+
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.snapshot-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 22px;
+}
+
+.snapshot-card i {
+  color: var(--accent-color);
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.snapshot-card h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.snapshot-card p {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* =========================
+   PROJECT CARDS
+========================= */
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.project-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow: 0 3px 14px rgba(60, 40, 45, 0.035);
+}
+
+.project-icon {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: var(--accent-glow);
+  color: var(--accent-color);
+
+  margin-bottom: 16px;
+}
+
+.project-card h3 {
+  font-size: 16px;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.project-card .focus {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 15px;
+}
+
+.project-card p {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 18px;
+}
+
+/* =========================
+   STATUS BADGES
+========================= */
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  width: fit-content;
+
+  padding: 6px 10px;
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+
+  margin-top: auto;
+}
+
+.status-ready {
+  background: var(--green-bg);
+  color: var(--green);
+}
+
+.status-approval {
+  background: var(--orange-bg);
+  color: var(--orange);
+}
+
+.status-review {
+  background: var(--purple-bg);
+  color: var(--purple);
+}
+
+.status-progress {
+  background: var(--blue-bg);
+  color: var(--blue);
+}
+
+.status-pending {
+  background: #f5f0ed;
+  color: #806b5d;
+}
+
+/* =========================
+   NZ READINESS
+========================= */
+
+.nz-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.nz-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.nz-card h3 {
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.nz-card p {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+/* =========================
+   EVIDENCE GRID
+========================= */
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 15px;
+}
+
+.icon-box {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  color: var(--text-primary);
+
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.icon-box i {
+  font-size: 19px;
+  color: var(--accent-color);
+
+  margin-bottom: 11px;
+
+  background: var(--accent-glow);
+  padding: 13px;
+  border-radius: 50%;
+}
+
+.icon-box span {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.icon-box small {
+  font-size: 10px;
+  color: var(--text-secondary);
+  margin-top: 5px;
+}
+
+.icon-box:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* =========================
+   EVIDENCE AT A GLANCE
+========================= */
+
+.evidence-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.evidence-table th,
+.evidence-table td {
+  padding: 14px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 12px;
+}
+
+.evidence-table th {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-secondary);
+  background: var(--accent-glow);
+}
+
+.evidence-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* =========================
+   DOCUMENT PREVIEWS
+========================= */
+
+.previews-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.preview-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 18px;
+}
+
+.preview-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.preview-card h4 {
+  font-size: 13px;
+}
+
+.preview-card a {
+  color: var(--accent-color);
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.preview-card iframe {
+  width: 100%;
+  height: 220px;
+  border: none;
+  border-radius: 8px;
+  background: var(--bg-main);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  margin-top: 50px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border-color);
+
+  text-align: center;
+
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+footer strong {
+  color: var(--text-primary);
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+.fade {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+  header {
+    grid-template-columns: 1fr;
+  }
+
+  .snapshot-grid,
+  .nz-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-grid,
+  .previews-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .dashboard-container {
+    padding: 20px 14px 50px;
+  }
+
+  header {
+    padding: 27px 22px;
+  }
+
+  .profile-info h1 {
+    font-size: 27px;
+  }
+
+  .snapshot-grid,
+  .nz-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<!-- =====================================================
+     HERO
+====================================================== -->
+
+<header class="fade">
+
+  <div class="profile-info">
+
+    <span class="profile-label">
+      Professional Teaching Portfolio
+    </span>
+
+    <h1>Mary Grace Peral</h1>
+
+    <p class="role">
+      Secondary Mathematics Teacher | Mathematics Intervention | Evidence-Based Practice
+    </p>
+
+  </div>
+
+  <div class="profile-bio">
+
+    <strong>Experienced Mathematics educator</strong> with a focus on
+    senior secondary Mathematics, targeted intervention, differentiated
+    instruction, classroom improvement, and evidence-informed teaching practice.
+
+    <br><br>
+
+    Currently preparing for teaching in
+    <strong>Aotearoa New Zealand</strong> through qualification recognition,
+    professional registration preparation, English-language competency
+    assessment, and familiarisation with the NZ Curriculum and NCEA.
+
+  </div>
+
+</header>
+
+
+<!-- =====================================================
+     PROFESSIONAL SNAPSHOT
+====================================================== -->
+
+<section class="section">
+
+  <div class="section-title">
+    Professional Snapshot
+  </div>
+
+  <div class="snapshot-grid">
+
+    <div class="snapshot-card fade">
+      <i class="fas fa-calculator"></i>
+      <h3>Secondary Mathematics</h3>
+      <p>
+        Senior High School Mathematics teaching and curriculum implementation.
+      </p>
+    </div>
+
+    <div class="snapshot-card fade">
+      <i class="fas fa-chart-line"></i>
+      <h3>Mathematics Intervention</h3>
+      <p>
+        Targeted intervention and progress monitoring through ARAL Mathematics.
+      </p>
+    </div>
+
+    <div class="snapshot-card fade">
+      <i class="fas fa-chalkboard-teacher"></i>
+      <h3>Classroom Practice</h3>
+      <p>
+        Differentiated instruction, classroom management and learner support.
+      </p>
+    </div>
+
+    <div class="snapshot-card fade">
+      <i class="fas fa-lightbulb"></i>
+      <h3>Professional Innovation</h3>
+      <p>
+        Development of school-based systems and digital teaching initiatives.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     PROFESSIONAL PROJECTS
+====================================================== -->
+
+<section class="section">
+
+  <div class="section-title">
+    Professional Projects & Evidence
+  </div>
+
+  <div class="section-description">
+    Selected initiatives demonstrating Mathematics intervention,
+    classroom practice, leadership and school-level innovation.
+  </div>
+
+  <div class="project-grid">
+
+
+    <!-- PROJECT 1 -->
+
+    <div class="project-card fade">
+
+      <div class="project-icon">
+        <i class="fas fa-square-root-variable"></i>
+      </div>
+
+      <h3>
+        ARAL Mathematics Intervention
+      </h3>
+
+      <div class="focus">
+        Mathematics Learning Intervention
+      </div>
+
+      <p>
+        A structured Mathematics intervention initiative designed to
+        identify learning gaps, provide targeted support, and monitor
+        learner progress through organised intervention resources.
+      </p>
+
+      <span class="status status-ready">
+        <i class="fas fa-circle-check"></i>
+        Ready for Presentation / Approval
+      </span>
+
+      <br>
+
+      <a
+        href="https://drive.google.com/drive/folders/YOUR_ARAL_FOLDER"
+        target="_blank"
+        class="preview-card-link">
+        View Project Evidence →
+      </a>
+
+    </div>
+
+
+    <!-- PROJECT 2 -->
+
+    <div class="project-card fade">
+
+      <div class="project-icon">
+        <i class="fas fa-people-arrows"></i>
+      </div>
+
+      <h3>
+        Classroom Behaviour Intervention Plan
+      </h3>
+
+      <div class="focus">
+        Classroom Management & Learner Support
+      </div>
+
+      <p>
+        A proposed classroom-based intervention framework designed
+        to address behaviour concerns, protect learning time, and
+        establish consistent intervention and monitoring procedures.
+      </p>
+
+      <span class="status status-approval">
+        <i class="fas fa-clock"></i>
+        For Approval
+      </span>
+
+      <br>
+
+      <a
+        href="https://drive.google.com/drive/folders/YOUR_BEHAVIOR_FOLDER"
+        target="_blank"
+        class="preview-card-link">
+        View Project Evidence →
+      </a>
+
+    </div>
+
+
+    <!-- PROJECT 3 -->
+
+    <div class="project-card fade">
+
+      <div class="project-icon">
+        <i class="fas fa-certificate"></i>
+      </div>
+
+      <h3>
+        LAC Session Certificate System
+      </h3>
+
+      <div class="focus">
+        Digital Innovation & School Leadership
+      </div>
+
+      <p>
+        A proposed digital certificate system designed to improve
+        the documentation, generation, verification and recognition
+        of school-based LAC professional learning activities.
+      </p>
+
+      <span class="status status-review">
+        <i class="fas fa-magnifying-glass"></i>
+        Under Critique / Review
+      </span>
+
+      <br>
+
+      <a
+        href="https://drive.google.com/drive/folders/YOUR_LAC_FOLDER"
+        target="_blank"
+        class="preview-card-link">
+        View Project Evidence →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     NZ TEACHING READINESS
+====================================================== -->
+
+<section class="section">
+
+  <div class="section-title">
+    New Zealand Teaching Readiness
+  </div>
+
+  <div class="section-description">
+    Current preparation for transitioning from Philippine secondary
+    Mathematics teaching to the New Zealand education system.
+  </div>
+
+  <div class="nz-grid">
+
+
+    <div class="nz-card fade">
+
+      <h3>
+        <i class="fas fa-graduation-cap"></i>
+        NZQA
+      </h3>
+
+      <p>
+        Teaching qualification documentation prepared for
+        New Zealand qualification recognition.
+      </p>
+
+      <span class="status status-progress">
+        Documentation Prepared
+      </span>
+
+    </div>
+
+
+    <div class="nz-card fade">
+
+      <h3>
+        <i class="fas fa-user-check"></i>
+        Teaching Council
+      </h3>
+
+      <p>
+        Registration documentation and evidence prepared
+        for the overseas-trained teacher pathway.
+      </p>
+
+      <span class="status status-progress">
+        Preparation Stage
+      </span>
+
+    </div>
+
+
+    <div class="nz-card fade">
+
+      <h3>
+        <i class="fas fa-language"></i>
+        English Competency
+      </h3>
+
+      <p>
+        IELTS Academic preparation is underway as part of
+        the professional registration pathway.
+      </p>
+
+      <span class="status status-pending">
+        IELTS Pending
+      </span>
+
+    </div>
+
+
+    <div class="nz-card fade">
+
+      <h3>
+        <i class="fas fa-book-open"></i>
+        NZ Curriculum
+      </h3>
+
+      <p>
+        Continuing professional preparation in the NZ Curriculum,
+        Mathematics & Statistics and NCEA.
+      </p>
+
+      <span class="status status-progress">
+        In Preparation
+      </span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     EVIDENCE AT A GLANCE
+====================================================== -->
+
+<section class="section">
+
+  <div class="section-title">
+    Evidence at a Glance
+  </div>
+
+  <table class="evidence-table fade">
+
+    <thead>
+      <tr>
+        <th>Professional Area</th>
+        <th>Evidence</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td>Mathematics Teaching</td>
+        <td>Senior High School Mathematics experience</td>
+        <td>Established Practice</td>
+      </tr>
+
+      <tr>
+        <td>Mathematics Intervention</td>
+        <td>ARAL Mathematics Intervention</td>
+        <td>Ready for Approval</td>
+      </tr>
+
+      <tr>
+        <td>Classroom Management</td>
+        <td>Classroom Behaviour Intervention Plan</td>
+        <td>For Approval</td>
+      </tr>
+
+      <tr>
+        <td>Professional Leadership</td>
+        <td>DPDS / school coordination experience</td>
+        <td>Established Practice</td>
+      </tr>
+
+      <tr>
+        <td>Digital Innovation</td>
+        <td>LAC Session Certificate System</td>
+        <td>Under Critique</td>
+      </tr>
+
+      <tr>
+        <td>NZ Qualification Recognition</td>
+        <td>NZQA documentation prepared</td>
+        <td>In Preparation</td>
+      </tr>
+
+      <tr>
+        <td>NZ Teacher Registration</td>
+        <td>Teaching Council documentation prepared</td>
+        <td>In Preparation</td>
+      </tr>
+
+      <tr>
+        <td>English Language Competency</td>
+        <td>IELTS Academic</td>
+        <td>Pending</td>
+      </tr>
+
+    </tbody>
+
+  </table>
+
+</section>
+
+
+<!-- =====================================================
+     EVIDENCE & DOCUMENTS
+====================================================== -->
+
+<section class="section">
+
+  <div class="section-title">
+    Evidence & Professional Documents
+  </div>
+
+  <div class="icon-grid">
+
+
+    <a
+      href="https://drive.google.com/file/d/YOUR_CV_FILE_ID/view"
+      target="_blank"
+      class="icon-box fade">
+
+      <i class="fas fa-file-user"></i>
+
+      <span>Curriculum Vitae</span>
+
+      <small>Professional Profile</small>
+
+    </a>
+
+
+    <a
+      href="https://drive.google.com/drive/folders/YOUR_ARAL_FOLDER"
+      target="_blank"
+      class="icon-box fade">
+
+      <i class="fas fa-chart-line"></i>
+
+      <span>ARAL Intervention</span>
+
+      <small>Mathematics Evidence</small>
+
+    </a>
+
+
+    <a
+      href="https://drive.google.com/drive/folders/YOUR_BEHAVIOR_FOLDER"
+      target="_blank"
+      class="icon-box fade">
+
+      <i class="fas fa-users"></i>
+
+      <span>Behaviour Intervention</span>
+
+      <small>Classroom Practice</small>
+
+    </a>
+
+
+    <a
+      href="https://drive.google.com/drive/folders/YOUR_LAC_FOLDER"
+      target="_blank"
+      class="icon-box fade">
+
+      <i class="fas fa-certificate"></i>
+
+      <span>LAC Certificate System</span>
+
+      <small>School Innovation</small>
+
+    </a>
+
+
+    <a
+      href="https://drive.google.com/drive/folders/YOUR_LESSON_FOLDER"
+      target="_blank"
+      class="icon-box fade">
+
+      <i class="fas fa-book-open"></i>
+
+      <span>Teaching Resources</span>
+
+      <small>Lessons & Materials</small>
+
+    </a>
+
+
+    <a
+      href="https://drive.google.com/drive/folders/YOUR_PD_FOLDER"
+      target="_blank"
+      class="icon-box fade">
+
+      <i class="fas fa-award"></i>
+
+      <span>Professional Development</span>
+
+      <small>Certificates & Training</small>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     SELECTED DOCUMENT PREVIEWS
+====================================================== -->
+
+<section class="section">
+
+  <div class="section-title">
+    Selected Evidence
+  </div>
+
+  <div class="previews-grid">
+
+
+    <div class="preview-card fade">
+
+      <div class="preview-card-header">
+
+        <h4>
+          ARAL Mathematics Intervention
+        </h4>
+
+        <a
+          href="https://drive.google.com/file/d/YOUR_ARAL_DOC_ID/view"
+          target="_blank">
+
+          View
+          <i class="fas fa-external-link-alt"></i>
+
+        </a>
+
+      </div>
+
+      <iframe
+        src="https://drive.google.com/file/d/YOUR_ARAL_DOC_ID/preview">
+      </iframe>
+
+    </div>
+
+
+    <div class="preview-card fade">
+
+      <div class="preview-card-header">
+
+        <h4>
+          Classroom Behaviour Intervention
+        </h4>
+
+        <a
+          href="https://drive.google.com/file/d/YOUR_BEHAVIOR_DOC_ID/view"
+          target="_blank">
+
+          View
+          <i class="fas fa-external-link-alt"></i>
+
+        </a>
+
+      </div>
+
+      <iframe
+        src="https://drive.google.com/file/d/YOUR_BEHAVIOR_DOC_ID/preview">
+      </iframe>
+
+    </div>
+
+
+    <div class="preview-card fade">
+
+      <div class="preview-card-header">
+
+        <h4>
+          LAC Certificate System
+        </h4>
+
+        <a
+          href="https://drive.google.com/file/d/YOUR_LAC_DOC_ID/view"
+          target="_blank">
+
+          View
+          <i class="fas fa-external-link-alt"></i>
+
+        </a>
+
+      </div>
+
+      <iframe
+        src="https://drive.google.com/file/d/YOUR_LAC_DOC_ID/preview">
+      </iframe>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     CONTACT
+====================================================== -->
+
+<section class="section">
+
+  <div class="section-title">
+    Professional Contact
+  </div>
+
+  <div class="icon-grid">
+
+    <a
+      href="mailto:marygrace.peral@example.com?subject=Teaching%20Portfolio%20Inquiry"
+      class="icon-box fade">
+
+      <i class="fas fa-envelope"></i>
+
+      <span>Contact Me</span>
+
+      <small>Professional enquiries</small>
+
+    </a>
+
+
+    <a
+      href="https://drive.google.com/file/d/YOUR_CV_FILE_ID/view"
+      target="_blank"
+      class="icon-box fade">
+
+      <i class="fas fa-download"></i>
+
+      <span>View CV</span>
+
+      <small>Professional summary</small>
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
+
+<footer>
+
+  <strong>Mary Grace Peral</strong><br>
+
+  Secondary Mathematics Teacher | Mathematics Intervention |
+  Evidence-Based Practice
+
+  <br><br>
+
+  Professional portfolio prepared for teaching opportunities
+  in Aotearoa New Zealand.
+
+</footer>
+
+</div>
+
+
+<script>
+
+/* ==========================================
+   INTERSECTION OBSERVER
+========================================== */
+
+const observerOptions = {
+  threshold: 0.10
+};
+
+const observer = new IntersectionObserver((entries) => {
+
+  entries.forEach(entry => {
+
+    if (entry.isIntersecting) {
+
+      entry.target.classList.add('show');
+
+    }
+
+  });
+
+}, observerOptions);
+
+
+/* ==========================================
+   OBSERVE ALL FADE ELEMENTS
+========================================== */
+
+document
+  .querySelectorAll('.fade')
+  .forEach(element => observer.observe(element));
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NZ Teaching Application | Master Evidence Guide</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+    --bg: #faf7f8;
+    --card: #ffffff;
+    --border: #eadfe2;
+    --text: #33272b;
+    --muted: #806f75;
+    --accent: #c96f79;
+    --accent-light: #f9edef;
+
+    --ready: #4f8a68;
+    --ready-bg: #edf7f0;
+
+    --approved: #5278a8;
+    --approved-bg: #edf3fa;
+
+    --scheduled: #a57935;
+    --scheduled-bg: #fbf5e9;
+
+    --progress: #b56548;
+    --progress-bg: #faf0eb;
+
+    --optional: #777;
+    --optional-bg: #f2f2f2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+}
+
+.container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 20px 70px;
+}
+
+/* HEADER */
+
+.hero {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 42px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 30px rgba(80,50,55,0.05);
+}
+
+.eyebrow {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    max-width: 850px;
+    color: var(--muted);
+}
+
+.target {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 22px;
+    padding: 10px 15px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* NAVIGATION */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: rgba(250,247,248,0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+    margin-bottom: 25px;
+}
+
+.nav-inner {
+    max-width: 1250px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+}
+
+.nav a {
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.nav a:hover {
+    background: var(--accent-light);
+    color: var(--accent);
+}
+
+/* READINESS */
+
+.readiness {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.readiness-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 25px;
+}
+
+.readiness-card h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: #eee5e7;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    width: 80%;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 20px;
+}
+
+.readiness-number {
+    font-size: 38px;
+    font-weight: 800;
+    color: var(--accent);
+    margin-bottom: 5px;
+}
+
+.small {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* STATUS LEGEND */
+
+.legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.status {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    padding: 5px 9px;
+    border-radius: 999px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+.ready {
+    color: var(--ready);
+    background: var(--ready-bg);
+}
+
+.approved {
+    color: var(--approved);
+    background: var(--approved-bg);
+}
+
+.scheduled {
+    color: var(--scheduled);
+    background: var(--scheduled-bg);
+}
+
+.progress {
+    color: var(--progress);
+    background: var(--progress-bg);
+}
+
+.optional {
+    color: var(--optional);
+    background: var(--optional-bg);
+}
+
+/* SECTION */
+
+.section {
+    margin-top: 45px;
+    scroll-margin-top: 80px;
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-number {
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.section-header h2 {
+    font-size: 28px;
+    margin: 4px 0;
+}
+
+.section-header p {
+    color: var(--muted);
+    max-width: 850px;
+}
+
+/* FOLDER CARD */
+
+.folder {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    margin-bottom: 18px;
+    overflow: hidden;
+}
+
+.folder-top {
+    padding: 22px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.folder-title {
+    display: flex;
+    gap: 14px;
+}
+
+.folder-icon {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    background: var(--accent-light);
+    border-radius: 12px;
+    font-size: 21px;
+}
+
+.folder h3 {
+    font-size: 17px;
+}
+
+.folder-description {
+    color: var(--muted);
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.drive-button {
+    flex-shrink: 0;
+    text-decoration: none;
+    background: var(--text);
+    color: white;
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.drive-button:hover {
+    background: var(--accent);
+}
+
+/* SUBFOLDER */
+
+.subfolders {
+    border-top: 1px solid var(--border);
+}
+
+.subfolder {
+    border-bottom: 1px solid var(--border);
+}
+
+.subfolder:last-child {
+    border-bottom: none;
+}
+
+.subfolder summary {
+    cursor: pointer;
+    padding: 16px 22px;
+    font-size: 13px;
+    font-weight: 700;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subfolder summary::-webkit-details-marker {
+    display: none;
+}
+
+.subfolder summary::after {
+    content: '+';
+    font-size: 18px;
+    color: var(--accent);
+}
+
+.subfolder[open] summary::after {
+    content: '−';
+}
+
+.subfolder-content {
+    padding: 0 22px 20px;
+}
+
+.subfolder-description {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.checklist {
+    display: grid;
+    gap: 7px;
+}
+
+.check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    font-size: 12px;
+    color: var(--text);
+}
+
+.check-item input {
+    margin-top: 4px;
+    accent-color: var(--accent);
+}
+
+/* PROJECT CARDS */
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(290px,1fr));
+    gap: 18px;
+}
+
+.project {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 22px;
+}
+
+.project h3 {
+    font-size: 16px;
+    margin: 10px 0 7px;
+}
+
+.project p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.project .status {
+    margin-bottom: 5px;
+}
+
+/* PRIORITY */
+
+.priority {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 15px;
+}
+
+.priority-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 15px;
+    padding: 18px;
+}
+
+.priority-card strong {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.priority-card span {
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* NOTES */
+
+.note {
+    background: var(--accent-light);
+    border-left: 4px solid var(--accent);
+    padding: 16px 18px;
+    border-radius: 8px;
+    margin: 15px 0;
+    font-size: 12px;
+}
+
+.warning {
+    background: var(--scheduled-bg);
+    border-left-color: var(--scheduled);
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px) {
+
+    .hero {
+        padding: 28px 22px;
+    }
+
+    .readiness {
+        grid-template-columns: 1fr;
+    }
+
+    .folder-top {
+        flex-direction: column;
+    }
+
+    .drive-button {
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav class="nav">
+
+<div class="nav-inner">
+
+<a href="#dashboard">Dashboard</a>
+<a href="#public">Public Evidence</a>
+<a href="#application">CV & Application</a>
+<a href="#teaching">Teaching</a>
+<a href="#digital">Digital Learning</a>
+<a href="#support">Learner Support</a>
+<a href="#leadership">Leadership</a>
+<a href="#development">Professional Development</a>
+<a href="#recognition">Recognition</a>
+<a href="#priority">Priority Evidence</a>
+
+</div>
+
+</nav>
+
+
+<div class="container">
+
+<!-- HERO -->
+
+<header class="hero" id="dashboard">
+
+<div class="eyebrow">
+NZ Teaching Application · Master Evidence Guide
+</div>
+
+<h1>
+Mary Grace Peral
+</h1>
+
+<p>
+Master control guide for organising, checking and preparing professional evidence for secondary Mathematics teaching applications in New Zealand.
+</p>
+
+<div class="target">
+🎯 Target Application Readiness: August 31, 2026
+</div>
+
+</header>
+
+
+<!-- READINESS -->
+
+<section class="readiness">
+
+<div class="readiness-card">
+
+<h2>Application Readiness</h2>
+
+<div class="readiness-number">
+80%
+</div>
+
+<div class="progress-bar">
+<div class="progress-fill"></div>
+</div>
+
+<p class="small" style="margin-top:10px;">
+Working estimate. Update this manually as documents are completed.
+</p>
+
+</div>
+
+
+<div class="readiness-card">
+
+<h2>Status Guide</h2>
+
+<div class="legend">
+
+<span class="status ready">Ready</span>
+
+<span class="status approved">Approved / Implementation</span>
+
+<span class="status scheduled">Scheduled</span>
+
+<span class="status progress">In Progress</span>
+
+<span class="status optional">Optional</span>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- APPLICATION PRIORITIES -->
+
+<section class="section" id="priority">
+
+<div class="section-header">
+
+<div class="section-number">
+APPLICATION PRIORITY
+</div>
+
+<h2>What Must Be Ready</h2>
+
+<p>
+These are the documents and evidence areas that should receive priority before applications begin.
+</p>
+
+</div>
+
+<div class="priority">
+
+<div class="priority-card">
+<strong>01 · CV</strong>
+<span>Final NZ-tailored CV in PDF format.</span>
+</div>
+
+<div class="priority-card">
+<strong>02 · Cover Letter</strong>
+<span>Master template plus school-specific versions.</span>
+</div>
+
+<div class="priority-card">
+<strong>03 · Teaching Philosophy</strong>
+<span>Clear Mathematics teaching and learner-centred philosophy.</span>
+</div>
+
+<div class="priority-card">
+<strong>04 · References</strong>
+<span>Confirmed professional referees and contact information.</span>
+</div>
+
+<div class="priority-card">
+<strong>05 · Professional Development</strong>
+<span>Final Professional Development Log and selected certificates.</span>
+</div>
+
+<div class="priority-card">
+<strong>06 · Teaching Evidence</strong>
+<span>Selected lesson plans, assessment and differentiation evidence.</span>
+</div>
+
+<div class="priority-card">
+<strong>07 · Digital Learning</strong>
+<span>General Mathematics website and technology evidence.</span>
+</div>
+
+<div class="priority-card">
+<strong>08 · Leadership</strong>
+<span>Training Chair, LAC, DPDS and other leadership evidence.</span>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PUBLIC EVIDENCE -->
+
+<section class="section" id="public">
+
+<div class="section-header">
+
+<div class="section-number">00</div>
+
+<h2>Portfolio Public Evidence</h2>
+
+<p>
+Curated evidence intended for external reviewers. This should contain selected, polished evidence rather than your entire professional archive.
+</p>
+
+</div>
+
+
+<div class="folder">
+
+<div class="folder-top">
+
+<div class="folder-title">
+
+<div class="folder-icon">🌐</div>
+
+<div>
+
+<h3>00_PORTFOLIO_PUBLIC_EVIDENCE</h3>
+
+<div class="folder-description">
+Reviewer-facing evidence repository
+</div>
+
+</div>
+
+</div>
+
+<a class="drive-button"
+href="https://drive.google.com/drive/folders/1JnJQAUvSc_fA4ano4BECDeZJRXswXflK?usp=drive_link"
+target="_blank">
+Open Drive →
+</a>
+
+</div>
+
+
+<div class="subfolders">
+
+<details class="subfolder">
+<summary>01_CV</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">Final application CV for external review.</p>
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Final NZ-tailored CV PDF</label>
+<label class="check-item"><input type="checkbox"> Optional short CV</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>02_PROFESSIONAL_DEVELOPMENT_LOG</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">Concise record of professional learning from 2009–2026.</p>
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Final Professional Development Log</label>
+<label class="check-item"><input type="checkbox"> Selected high-value certificates</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>03_ARAL_MATHEMATICS</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">Selected evidence for Mathematics intervention.</p>
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> ARAL proposal</label>
+<label class="check-item"><input type="checkbox"> Approval document</label>
+<label class="check-item"><input type="checkbox"> Intervention framework</label>
+<label class="check-item"><input type="checkbox"> Monitoring tool</label>
+<label class="check-item"><input type="checkbox"> Outcome evidence — later</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>04_CLASSROOM_BEHAVIOUR_INTERVENTION</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">Evidence for structured classroom behaviour support.</p>
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Proposal</label>
+<label class="check-item"><input type="checkbox"> Signed/approved document</label>
+<label class="check-item"><input type="checkbox"> Intervention framework</label>
+<label class="check-item"><input type="checkbox"> Monitoring tool</label>
+<label class="check-item"><input type="checkbox"> Outcome evidence — later</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>05_GENERAL_MATHEMATICS_WEBSITE</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">Public evidence supporting your digitized Mathematics learning resource.</p>
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Website overview</label>
+<label class="check-item"><input type="checkbox"> Screenshots</label>
+<label class="check-item"><input type="checkbox"> Curriculum/topic overview</label>
+<label class="check-item"><input type="checkbox"> Evidence of use</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>06_LAC_CERTIFICATE_SYSTEM</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">Evidence of your school-based digital certificate innovation.</p>
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Proposal/design</label>
+<label class="check-item"><input type="checkbox"> Workflow</label>
+<label class="check-item"><input type="checkbox"> Certificate template</label>
+<label class="check-item"><input type="checkbox"> System screenshots</label>
+<label class="check-item"><input type="checkbox"> First-use evidence — Aug. 27</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>07_GITHUB_LAC_SESSION</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">Evidence of your August 27, 2026 professional learning session.</p>
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Invitation</label>
+<label class="check-item"><input type="checkbox"> Session program</label>
+<label class="check-item"><input type="checkbox"> Presentation</label>
+<label class="check-item"><input type="checkbox"> Attendance</label>
+<label class="check-item"><input type="checkbox"> Feedback/certificate — after session</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>08_COMPUTER_LITERACY_TRAINING</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">Completed school/community computer literacy activity.</p>
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Rationale</label>
+<label class="check-item"><input type="checkbox"> Proposal/program</label>
+<label class="check-item"><input type="checkbox"> Completion documentation</label>
+<label class="check-item"><input type="checkbox"> Certificates</label>
+<label class="check-item"><input type="checkbox"> Photos/report — if available</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>09_SELECTED_PROFESSIONAL_EVIDENCE</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">Strong additional professional evidence.</p>
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Regional Demonstration Teacher certificate</label>
+<label class="check-item"><input type="checkbox"> Training Chair evidence</label>
+<label class="check-item"><input type="checkbox"> Math Olympiad coaching evidence</label>
+<label class="check-item"><input type="checkbox"> Competition judging evidence</label>
+</div>
+</div>
+</details>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- CV -->
+
+<section class="section" id="application">
+
+<div class="section-header">
+<div class="section-number">01</div>
+<h2>CV & Application</h2>
+<p>Your actual application documents and tracking system.</p>
+</div>
+
+
+<div class="folder">
+
+<div class="folder-top">
+
+<div class="folder-title">
+<div class="folder-icon">📄</div>
+<div>
+<h3>01_CV & APPLICATION</h3>
+<div class="folder-description">Application preparation and submission materials</div>
+</div>
+</div>
+
+<a class="drive-button"
+href="https://drive.google.com/drive/folders/17KdWw6QwoiMyv0Vt5RnUcEBZnBkfx-Sh?usp=drive_link"
+target="_blank">
+Open Drive →
+</a>
+
+</div>
+
+
+<div class="subfolders">
+
+<details class="subfolder" open>
+<summary>01_Current_CV</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> NZ-tailored CV</label>
+<label class="check-item"><input type="checkbox"> Master CV</label>
+<label class="check-item"><input type="checkbox"> Final PDF</label>
+</div>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>02_Teaching_Philosophy</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> NZ teaching philosophy</label>
+<label class="check-item"><input type="checkbox"> Mathematics teaching philosophy</label>
+<label class="check-item"><input type="checkbox"> Short philosophy statement</label>
+</div>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>03_Cover_Letters</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Master cover letter</label>
+<label class="check-item"><input type="checkbox"> School-specific cover letters</label>
+<label class="check-item"><input type="checkbox"> Final submitted copies</label>
+</div>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>04_References</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Referee list</label>
+<label class="check-item"><input type="checkbox"> Contact details</label>
+<label class="check-item"><input type="checkbox"> Reference letters — if available</label>
+</div>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>05_Application_Tracker</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> School/job list</label>
+<label class="check-item"><input type="checkbox"> Application dates</label>
+<label class="check-item"><input type="checkbox"> Closing dates</label>
+<label class="check-item"><input type="checkbox"> Application status</label>
+<label class="check-item"><input type="checkbox"> Interview/follow-up notes</label>
+</div>
+</div>
+</details>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- TEACHING -->
+
+<section class="section" id="teaching">
+
+<div class="section-header">
+<div class="section-number">02</div>
+<h2>Teaching Practice</h2>
+<p>Evidence demonstrating classroom Mathematics practice.</p>
+</div>
+
+
+<div class="folder">
+
+<div class="folder-top">
+
+<div class="folder-title">
+<div class="folder-icon">📚</div>
+<div>
+<h3>02_TEACHING PRACTICE</h3>
+<div class="folder-description">Instruction, assessment and classroom practice</div>
+</div>
+</div>
+
+<a class="drive-button"
+href="https://drive.google.com/drive/folders/1joKCojSZEj7plWIhHpD-PKFXT99Egrpx?usp=drive_link"
+target="_blank">
+Open Drive →
+</a>
+
+</div>
+
+
+<div class="subfolders">
+
+<details class="subfolder">
+<summary>01_Lesson_Plans</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Strong Mathematics lesson plans</label>
+<label class="check-item"><input type="checkbox"> Technology-integrated lesson</label>
+<label class="check-item"><input type="checkbox"> Differentiated lesson</label>
+<label class="check-item"><input type="checkbox"> Inquiry/problem-solving lesson</label>
+</div>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>02_Assessment & Feedback</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Diagnostic assessment</label>
+<label class="check-item"><input type="checkbox"> Formative assessment</label>
+<label class="check-item"><input type="checkbox"> Summative assessment</label>
+<label class="check-item"><input type="checkbox"> Rubrics</label>
+<label class="check-item"><input type="checkbox"> Feedback examples</label>
+<label class="check-item"><input type="checkbox"> Progress monitoring</label>
+</div>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>03_Differentiated_Instruction</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Differentiated activities</label>
+<label class="check-item"><input type="checkbox"> Scaffolding examples</label>
+<label class="check-item"><input type="checkbox"> Extension activities</label>
+<label class="check-item"><input type="checkbox"> Remediation materials</label>
+</div>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>04_Classroom_Management</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Classroom routines</label>
+<label class="check-item"><input type="checkbox"> Behaviour strategies</label>
+<label class="check-item"><input type="checkbox"> Classroom expectations</label>
+<label class="check-item"><input type="checkbox"> Behaviour intervention materials</label>
+</div>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>05_General_Mathematics</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Topic resources</label>
+<label class="check-item"><input type="checkbox"> Activities</label>
+<label class="check-item"><input type="checkbox"> Problem-solving materials</label>
+<label class="check-item"><input type="checkbox"> Assessments</label>
+</div>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>06_Teaching_Resources</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Worksheets</label>
+<label class="check-item"><input type="checkbox"> Presentations</label>
+<label class="check-item"><input type="checkbox"> Visual materials</label>
+<label class="check-item"><input type="checkbox"> Interactive activities</label>
+</div>
+</div>
+</details>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- DIGITAL -->
+
+<section class="section" id="digital">
+
+<div class="section-header">
+<div class="section-number">03</div>
+<h2>Mathematics & Digital Learning</h2>
+<p>Technology-supported Mathematics education and digital resource development.</p>
+</div>
+
+
+<div class="folder">
+
+<div class="folder-top">
+
+<div class="folder-title">
+<div class="folder-icon">💻</div>
+<div>
+<h3>03_MATHEMATICS & DIGITAL LEARNING</h3>
+<div class="folder-description">Digital Mathematics resources and technology integration</div>
+</div>
+</div>
+
+<a class="drive-button"
+href="https://drive.google.com/drive/folders/1bDYrwBY3vh6c-O8n1XzaEC5SEKHsC67N?usp=drive_link"
+target="_blank">
+Open Drive →
+</a>
+
+</div>
+
+
+<div class="subfolders">
+
+<details class="subfolder">
+<summary>01_General_Mathematics_Website</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Website overview</label>
+<label class="check-item"><input type="checkbox"> Screenshots</label>
+<label class="check-item"><input type="checkbox"> Curriculum alignment</label>
+<label class="check-item"><input type="checkbox"> Evidence of use</label>
+</div>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>02_GitHub_Teaching</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> GitHub presentation</label>
+<label class="check-item"><input type="checkbox"> Teaching examples</label>
+<label class="check-item"><input type="checkbox"> Screenshots</label>
+<label class="check-item"><input type="checkbox"> August 27 session evidence</label>
+</div>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>03_Open_Educational_Resources</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> OER certificates</label>
+<label class="check-item"><input type="checkbox"> Digital e-book evidence</label>
+<label class="check-item"><input type="checkbox"> Kotobee evidence</label>
+<label class="check-item"><input type="checkbox"> Mobile learning materials</label>
+</div>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>04_Digital_Learning_Materials</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Instructional videos</label>
+<label class="check-item"><input type="checkbox"> Digital worksheets</label>
+<label class="check-item"><input type="checkbox"> Digital presentations</label>
+<label class="check-item"><input type="checkbox"> Online learning materials</label>
+</div>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>05_Mathematics_Enrichment</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Olympiad materials</label>
+<label class="check-item"><input type="checkbox"> Enrichment activities</label>
+<label class="check-item"><input type="checkbox"> Advanced problem-solving</label>
+</div>
+</div>
+</details>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- SUPPORT -->
+
+<section class="section" id="support">
+
+<div class="section-header">
+<div class="section-number">04</div>
+<h2>Learner Support & Intervention</h2>
+<p>Evidence of targeted support, remediation, differentiated learning and learner wellbeing.</p>
+</div>
+
+
+<div class="folder">
+
+<div class="folder-top">
+
+<div class="folder-title">
+<div class="folder-icon">🎯</div>
+<div>
+<h3>04_LEARNER SUPPORT & INTERVENTION</h3>
+<div class="folder-description">Intervention and learner support evidence</div>
+</div>
+</div>
+
+<a class="drive-button"
+href="https://drive.google.com/drive/folders/1cJFG5y2HBA34f3aIjuAiwBUzVnQmTJl?usp=drive_link"
+target="_blank">
+Open Drive →
+</a>
+
+</div>
+
+
+<div class="subfolders">
+
+<details class="subfolder" open>
+<summary>
+01_ARAL
+<span class="status approved">Approved / Implementation</span>
+</summary>
+
+<div class="subfolder-content">
+
+<p class="subfolder-description">
+Approved for use. Learner efficacy evidence is still being collected.
+</p>
+
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Proposal</label>
+<label class="check-item"><input type="checkbox"> Approval</label>
+<label class="check-item"><input type="checkbox"> Intervention plan</label>
+<label class="check-item"><input type="checkbox"> Learner identification</label>
+<label class="check-item"><input type="checkbox"> Diagnostic data</label>
+<label class="check-item"><input type="checkbox"> Monitoring tools</label>
+<label class="check-item"><input type="checkbox"> Implementation records</label>
+<label class="check-item"><input type="checkbox"> Reflection</label>
+<label class="check-item"><input type="checkbox"> Outcome evidence — later</label>
+</div>
+
+</div>
+</details>
+
+
+<details class="subfolder" open>
+
+<summary>
+02_Classroom_Behaviour_Intervention
+<span class="status approved">Implementation Stage</span>
+</summary>
+
+<div class="subfolder-content">
+
+<p class="subfolder-description">
+Proposal moving through formal approval and implementation. Do not claim outcome success yet.
+</p>
+
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Proposal</label>
+<label class="check-item"><input type="checkbox"> Rationale</label>
+<label class="check-item"><input type="checkbox"> Objectives</label>
+<label class="check-item"><input type="checkbox"> Signed/approved document</label>
+<label class="check-item"><input type="checkbox"> Intervention strategy</label>
+<label class="check-item"><input type="checkbox"> Observation tool</label>
+<label class="check-item"><input type="checkbox"> Monitoring records</label>
+<label class="check-item"><input type="checkbox"> Reflection</label>
+<label class="check-item"><input type="checkbox"> Outcome evidence — later</label>
+</div>
+
+</div>
+
+</details>
+
+
+<details class="subfolder">
+<summary>03_Differentiated_Learning</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Differentiated activities</label>
+<label class="check-item"><input type="checkbox"> Learner adaptations</label>
+<label class="check-item"><input type="checkbox"> Scaffolding</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>04_Learner_Wellbeing</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Wellbeing training</label>
+<label class="check-item"><input type="checkbox"> Safe-space training</label>
+<label class="check-item"><input type="checkbox"> Mental-health professional development</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>05_Remediation_&_Catch-Up</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Catch-up materials</label>
+<label class="check-item"><input type="checkbox"> Remediation plans</label>
+<label class="check-item"><input type="checkbox"> Learning-gap interventions</label>
+<label class="check-item"><input type="checkbox"> Division Catch-Up Training evidence</label>
+</div>
+</div>
+</details>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- LEADERSHIP -->
+
+<section class="section" id="leadership">
+
+<div class="section-header">
+<div class="section-number">05</div>
+<h2>Leadership & Collaboration</h2>
+<p>Evidence of leadership, professional learning contribution, coordination and school innovation.</p>
+</div>
+
+
+<div class="folder">
+
+<div class="folder-top">
+
+<div class="folder-title">
+<div class="folder-icon">🤝</div>
+<div>
+<h3>05_LEADERSHIP & COLLABORATION</h3>
+<div class="folder-description">School leadership and collaborative contribution</div>
+</div>
+</div>
+
+<a class="drive-button"
+href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
+target="_blank">
+Open Drive →
+</a>
+
+</div>
+
+
+<div class="subfolders">
+
+<details class="subfolder">
+<summary>01_Training_Chair</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Appointment/designation</label>
+<label class="check-item"><input type="checkbox"> Certificate</label>
+<label class="check-item"><input type="checkbox"> Training program</label>
+<label class="check-item"><input type="checkbox"> Role description</label>
+<label class="check-item"><input type="checkbox"> Outputs</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>02_LAC_Leadership</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> LAC plans</label>
+<label class="check-item"><input type="checkbox"> Proposals</label>
+<label class="check-item"><input type="checkbox"> Minutes</label>
+<label class="check-item"><input type="checkbox"> Attendance</label>
+<label class="check-item"><input type="checkbox"> Leadership evidence</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder" open>
+
+<summary>
+03_LAC_Certificate_System
+<span class="status scheduled">First Use · Aug. 27</span>
+</summary>
+
+<div class="subfolder-content">
+
+<p class="subfolder-description">
+Digital certificate system scheduled for its first actual use on August 27, 2026.
+</p>
+
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Proposal</label>
+<label class="check-item"><input type="checkbox"> System design</label>
+<label class="check-item"><input type="checkbox"> Google Form</label>
+<label class="check-item"><input type="checkbox"> Apps Script</label>
+<label class="check-item"><input type="checkbox"> Certificate template</label>
+<label class="check-item"><input type="checkbox"> Workflow</label>
+<label class="check-item"><input type="checkbox"> Testing evidence</label>
+<label class="check-item"><input type="checkbox"> First-use evidence — Aug. 27</label>
+</div>
+
+</div>
+
+</details>
+
+
+<details class="subfolder" open>
+
+<summary>
+04_LAC_GitHub_Session
+<span class="status scheduled">Scheduled · Aug. 27</span>
+</summary>
+
+<div class="subfolder-content">
+
+<p class="subfolder-description">
+Invited as school LAC Session speaker discussing GitHub as a tool for teaching.
+</p>
+
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Invitation</label>
+<label class="check-item"><input type="checkbox"> Program</label>
+<label class="check-item"><input type="checkbox"> Presentation</label>
+<label class="check-item"><input type="checkbox"> Attendance</label>
+<label class="check-item"><input type="checkbox"> Certificate</label>
+<label class="check-item"><input type="checkbox"> Participant feedback</label>
+<label class="check-item"><input type="checkbox"> Photos — if available</label>
+</div>
+
+</div>
+
+</details>
+
+
+<details class="subfolder">
+<summary>05_DPDS_Coordination</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Designation</label>
+<label class="check-item"><input type="checkbox"> Proposals</label>
+<label class="check-item"><input type="checkbox"> Reports</label>
+<label class="check-item"><input type="checkbox"> Coordination documents</label>
+<label class="check-item"><input type="checkbox"> Outputs</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>06_Brigade_Coordination</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Current designation</label>
+<label class="check-item"><input type="checkbox"> Role description</label>
+<label class="check-item"><input type="checkbox"> Activity proposal</label>
+<label class="check-item"><input type="checkbox"> Coordination documents</label>
+<label class="check-item"><input type="checkbox"> Implementation evidence — later</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>07_School_Partnerships</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Partnership documents</label>
+<label class="check-item"><input type="checkbox"> MOA/MOU — if applicable</label>
+<label class="check-item"><input type="checkbox"> Joint activities</label>
+<label class="check-item"><input type="checkbox"> Reports</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>08_Community_Engagement</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Community activities</label>
+<label class="check-item"><input type="checkbox"> Outreach</label>
+<label class="check-item"><input type="checkbox"> Certificates</label>
+<label class="check-item"><input type="checkbox"> Reports</label>
+</div>
+</div>
+</details>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- PROFESSIONAL DEVELOPMENT -->
+
+<section class="section" id="development">
+
+<div class="section-header">
+<div class="section-number">06</div>
+<h2>Professional Development</h2>
+<p>
+Longitudinal record of professional learning from 2009 through 2026.
+</p>
+</div>
+
+
+<div class="folder">
+
+<div class="folder-top">
+
+<div class="folder-title">
+<div class="folder-icon">🎓</div>
+<div>
+<h3>06_PROFESSIONAL DEVELOPMENT</h3>
+<div class="folder-description">Professional learning archive</div>
+</div>
+</div>
+
+<a class="drive-button"
+href="https://drive.google.com/drive/folders/1RiDZ7Fr0dGpKA90r7PgTraN3IWr_0xo2?usp=drive_link"
+target="_blank">
+Open Drive →
+</a>
+
+</div>
+
+
+<div class="subfolders">
+
+<details class="subfolder" open>
+
+<summary>00_Master_Professional_Development_Log</summary>
+
+<div class="subfolder-content">
+
+<p class="subfolder-description">
+Master index of your professional learning and training history.
+</p>
+
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Final Professional Development Log</label>
+<label class="check-item"><input type="checkbox"> Updated through 2026</label>
+</div>
+
+</div>
+
+</details>
+
+
+<details class="subfolder">
+<summary>2026</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">Current-year professional learning, including GitHub LAC-related development.</p>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>2025</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">Teacher performance management, Khan Academy, ARAL-Reading and other training.</p>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>2021</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">Math Olympiad coaching and Learning Delivery Modalities training.</p>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>2020</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">OER, digital learning, e-books, cybersecurity, digital citizenship and New Normal training.</p>
+</div>
+</details>
+
+<details class="subfolder">
+<summary>2016–2009</summary>
+<div class="subfolder-content">
+<p class="subfolder-description">
+Historical certificates and professional development records from 2016 through 2009.
+</p>
+</div>
+</details>
+
+</div>
+</div>
+
+
+<div class="note">
+<strong>Folder cleanup:</strong> Do not create separate Mathematics, Digital Education, Learner Wellbeing and Leadership subfolders here. Your year-based structure is sufficient and avoids duplicate filing.
+</div>
+
+</section>
+
+
+<!-- RECOGNITION -->
+
+<section class="section" id="recognition">
+
+<div class="section-header">
+<div class="section-number">07</div>
+<h2>Recognition & Special Roles</h2>
+<p>
+Formal professional roles, demonstrations, coaching, judging and special assignments.
+</p>
+</div>
+
+
+<div class="folder">
+
+<div class="folder-top">
+
+<div class="folder-title">
+<div class="folder-icon">🏆</div>
+<div>
+<h3>07_RECOGNITION & SPECIAL ROLES</h3>
+<div class="folder-description">Formal roles and professional recognition</div>
+</div>
+</div>
+
+<a class="drive-button"
+href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
+target="_blank">
+Open Drive →
+</a>
+
+</div>
+
+
+<div class="subfolders">
+
+<details class="subfolder">
+<summary>01_Regional_Demonstration_Teacher_2015</summary>
+
+<div class="subfolder-content">
+
+<p class="subfolder-description">
+Regional K–12 training demonstration experience. Official certificate is the available evidence.
+</p>
+
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Official certificate</label>
+<label class="check-item"><input type="checkbox"> Regional program — if available</label>
+<label class="check-item"><input type="checkbox"> Supporting documentation — if available</label>
+</div>
+
+</div>
+
+</details>
+
+
+<details class="subfolder">
+<summary>02_Training_Chair</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Certificate</label>
+<label class="check-item"><input type="checkbox"> Appointment</label>
+<label class="check-item"><input type="checkbox"> Program</label>
+<label class="check-item"><input type="checkbox"> Role description</label>
+<label class="check-item"><input type="checkbox"> Outputs</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>03_Math_Olympiad_Coach</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Coaching certificate</label>
+<label class="check-item"><input type="checkbox"> Training certificate</label>
+<label class="check-item"><input type="checkbox"> Competition documentation</label>
+<label class="check-item"><input type="checkbox"> Coaching materials</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>04_Competition_Judge</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Judge certificates</label>
+<label class="check-item"><input type="checkbox"> Appointment</label>
+<label class="check-item"><input type="checkbox"> Competition documentation</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>05_Mass_Demonstration_Judge</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Certificate</label>
+<label class="check-item"><input type="checkbox"> Appointment</label>
+<label class="check-item"><input type="checkbox"> Program/documentation</label>
+</div>
+</div>
+</details>
+
+
+<details class="subfolder">
+<summary>06_Other_Professional_Roles</summary>
+<div class="subfolder-content">
+<div class="checklist">
+<label class="check-item"><input type="checkbox"> Certificates</label>
+<label class="check-item"><input type="checkbox"> Appointments</label>
+<label class="check-item"><input type="checkbox"> Supporting documents</label>
+</div>
+</div>
+</details>
+
+</div>
+</div>
+
+</section>
+
+
+<!-- PROJECT STATUS -->
+
+<section class="section">
+
+<div class="section-header">
+
+<div class="section-number">
+CURRENT PROJECT STATUS
+</div>
+
+<h2>Projects to Monitor</h2>
+
+<p>
+Update these statuses as evidence becomes available.
+</p>
+
+</div>
+
+
+<div class="project-grid">
+
+
+<div class="project">
+
+<span class="status ready">Completed</span>
+
+<h3>Computer Literacy Activity</h3>
+
+<p>
+School-based computer literacy initiative completed on October 23 and 30, 2024.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<span class="status ready">Active</span>
+
+<h3>General Mathematics Website</h3>
+
+<p>
+Digitized Mathematics learning resource currently used to support access and continuity of learning.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<span class="status approved">Approved / Implementation</span>
+
+<h3>ARAL Mathematics</h3>
+
+<p>
+Approved for implementation. Student efficacy and outcome evidence are still being collected.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<span class="status approved">Implementation Stage</span>
+
+<h3>Classroom Behaviour Intervention</h3>
+
+<p>
+Formal proposal and implementation evidence are being developed. No outcome claims yet.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<span class="status scheduled">Scheduled</span>
+
+<h3>LAC Certificate System</h3>
+
+<p>
+First actual use scheduled for August 27, 2026. Add evidence after the first implementation.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<span class="status scheduled">Scheduled</span>
+
+<h3>GitHub as a Tool for Teaching</h3>
+
+<p>
+Invited as LAC Session speaker on August 27, 2026. Add presentation and session evidence afterward.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<span class="status progress">Current Role</span>
+
+<h3>Brigade Coordination</h3>
+
+<p>
+Current coordination role with an activity proposal being prepared for the coming school year.
+</p>
+
+</div>
+
+
+<div class="project">
+
+<span class="status ready">Evidence Available</span>
+
+<h3>Regional Demonstration Teacher</h3>
+
+<p>
+Regional-level demonstration experience supported by the official certificate.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- IMPORTANT NOTES -->
+
+<section class="section">
+
+<div class="section-header">
+
+<div class="section-number">
+EVIDENCE RULES
+</div>
+
+<h2>Before August 31</h2>
+
+</div>
+
+
+<div class="note">
+
+<strong>1. Never claim an outcome that you cannot document.</strong>
+
+ARAL and Classroom Behaviour Intervention should describe their actual implementation stage until learner outcome evidence becomes available.
+
+</div>
+
+
+<div class="note">
+
+<strong>2. Completed means actually completed.</strong>
+
+The August 27 GitHub session and LAC Certificate System should remain "Scheduled" until the activities actually occur.
+
+</div>
+
+
+<div class="note">
+
+<strong>3. Keep sensitive learner information private.</strong>
+
+Do not place personally identifiable student information, confidential records or sensitive learner data in your public evidence folders.
+
+</div>
+
+
+<div class="note">
+
+<strong>4. Curate your evidence.</strong>
+
+An NZ hiring panel does not need to see everything you have ever produced. Strong, clearly labelled evidence is more useful than a huge archive.
+
+</div>
+
+
+<div class="note warning">
+
+<strong>5. August 31 checkpoint.</strong>
+
+Before beginning your main application push, review the CV, teaching philosophy, cover letter, references, public evidence, intervention documentation and August 27 activities.
+
+</div>
+
+</section>
+
+
+<!-- FINAL PROFESSIONAL STORY -->
+
+<section class="section">
+
+<div class="section-header">
+
+<div class="section-number">
+YOUR PROFESSIONAL STORY
+</div>
+
+<h2>How the Evidence Connects</h2>
+
+</div>
+
+
+<div class="priority">
+
+<div class="priority-card">
+<strong>Mathematics Teacher</strong>
+<span>Secondary Mathematics instruction and curriculum-aligned teaching.</span>
+</div>
+
+<div class="priority-card">
+<strong>Learner Support</strong>
+<span>ARAL, remediation, differentiation and behaviour support.</span>
+</div>
+
+<div class="priority-card">
+<strong>Digital Educator</strong>
+<span>General Mathematics website, OER and technology-supported learning.</span>
+</div>
+
+<div class="priority-card">
+<strong>Innovator</strong>
+<span>LAC Certificate System and practical digital systems for school use.</span>
+</div>
+
+<div class="priority-card">
+<strong>Professional Learning Contributor</strong>
+<span>GitHub LAC Session and training-related roles.</span>
+</div>
+
+<div class="priority-card">
+<strong>School Leader</strong>
+<span>Training Chair, DPDS, LAC and Brigade coordination.</span>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+Mary Grace Peral · NZ Teaching Application Master Evidence Guide · 2026
+
+<br><br>
+
+Secondary Mathematics Education · Learner Support · Digital Learning · Professional Growth · Leadership
+
+</footer>
+
+
+</div>
+
+</body>
+</html>

@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mary Grace Peral | Secondary Mathematics Teacher Portfolio</title>
+<title>Mary Grace Peral | NZ Teaching Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link
+href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+rel="stylesheet">
 
-<link rel="stylesheet"
+<link
+rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 
 <style>
 
@@ -18,28 +24,39 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 ========================================================= */
 
 :root {
+
   --bg-main: #faf7f8;
+
   --bg-card: #ffffff;
-  --border-color: #eadde0;
 
-  --accent-color: #b85c68;
+  --border: #eadde0;
+
+  --accent: #b85c68;
+
   --accent-dark: #8f3f4b;
-  --accent-glow: #f9edef;
 
-  --text-primary: #33272a;
-  --text-secondary: #76666b;
+  --accent-light: #f9edef;
+
+  --text: #33272a;
+
+  --muted: #76666b;
 
   --green: #3f8060;
+
   --green-bg: #edf7f1;
 
-  --blue: #557aa3;
-  --blue-bg: #eef4fa;
-
   --orange: #b77938;
+
   --orange-bg: #fbf3e8;
 
   --purple: #765f9a;
+
   --purple-bg: #f3eff8;
+
+  --blue: #557aa3;
+
+  --blue-bg: #eef4fa;
+
 }
 
 
@@ -48,217 +65,404 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 ========================================================= */
 
 * {
+
   margin: 0;
+
   padding: 0;
+
   box-sizing: border-box;
+
   font-family: 'Plus Jakarta Sans', sans-serif;
+
 }
+
 
 html {
+
   scroll-behavior: smooth;
+
 }
+
 
 body {
+
   background: var(--bg-main);
-  color: var(--text-primary);
+
+  color: var(--text);
+
   line-height: 1.6;
-  min-height: 100vh;
+
 }
+
 
 a {
+
   color: inherit;
+
 }
 
-.dashboard-container {
+
+.container {
+
   max-width: 1200px;
+
   margin: auto;
-  padding: 40px 20px 80px;
+
+  padding: 30px 20px 80px;
+
 }
 
 
 /* =========================================================
-   HERO
+   HEADER
 ========================================================= */
 
 header {
+
   background: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: 20px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 22px;
+
   padding: 42px;
-  margin-bottom: 34px;
+
+  margin-bottom: 30px;
 
   display: grid;
-  grid-template-columns: 1.25fr 1fr;
+
+  grid-template-columns: 1.2fr 1fr;
+
   gap: 40px;
+
   align-items: center;
 
-  box-shadow: 0 8px 30px rgba(60, 40, 45, 0.05);
+  box-shadow: 0 8px 30px rgba(50,35,40,.05);
+
 }
 
-.profile-label {
+
+.label {
+
   display: inline-block;
+
+  background: var(--accent-light);
+
+  color: var(--accent-dark);
 
   padding: 7px 12px;
 
-  background: var(--accent-glow);
-  color: var(--accent-dark);
-
   border-radius: 20px;
 
-  font-size: 11px;
+  font-size: 10px;
+
   font-weight: 700;
 
   text-transform: uppercase;
+
   letter-spacing: 1px;
 
   margin-bottom: 14px;
+
 }
 
-.profile-info h1 {
-  font-size: 34px;
-  line-height: 1.2;
-  font-weight: 700;
-  letter-spacing: -0.8px;
+
+header h1 {
+
+  font-size: 36px;
+
+  line-height: 1.15;
+
+  letter-spacing: -1px;
+
 }
 
-.profile-info .role {
-  color: var(--accent-color);
-  font-weight: 700;
+
+.subtitle {
+
+  color: var(--accent);
+
   font-size: 15px;
-  margin-top: 8px;
+
+  font-weight: 700;
+
+  margin-top: 9px;
+
 }
 
-.profile-bio {
-  color: var(--text-secondary);
+
+.hero-description {
+
+  color: var(--muted);
+
   font-size: 14px;
-}
 
-.profile-bio strong {
-  color: var(--text-primary);
 }
 
 
 /* =========================================================
-   SECTION
+   NAVIGATION
+========================================================= */
+
+.navbar {
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 15px;
+
+  padding: 12px 16px;
+
+  margin-bottom: 35px;
+
+  display: flex;
+
+  gap: 8px;
+
+  flex-wrap: wrap;
+
+  position: sticky;
+
+  top: 10px;
+
+  z-index: 20;
+
+  box-shadow: 0 5px 20px rgba(50,35,40,.05);
+
+}
+
+
+.navbar a {
+
+  text-decoration: none;
+
+  padding: 9px 13px;
+
+  border-radius: 8px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  color: var(--muted);
+
+  transition: .2s;
+
+}
+
+
+.navbar a:hover {
+
+  background: var(--accent-light);
+
+  color: var(--accent-dark);
+
+}
+
+
+/* =========================================================
+   SECTIONS
 ========================================================= */
 
 .section {
-  margin-bottom: 38px;
+
+  margin-bottom: 45px;
+
 }
 
-.section-title {
+
+.section-heading {
+
   font-size: 13px;
-  font-weight: 700;
 
   text-transform: uppercase;
-  letter-spacing: 1.3px;
 
-  color: var(--text-secondary);
+  letter-spacing: 1.2px;
 
-  margin-bottom: 15px;
+  color: var(--muted);
+
+  font-weight: 700;
+
+  margin-bottom: 7px;
+
 }
 
-.section-description {
-  font-size: 13px;
-  color: var(--text-secondary);
 
-  margin-top: -8px;
+.section-intro {
+
+  color: var(--muted);
+
+  font-size: 12px;
+
   margin-bottom: 18px;
+
 }
 
 
 /* =========================================================
-   PROFESSIONAL SNAPSHOT
+   QUICK PROFILE
 ========================================================= */
 
-.snapshot-grid {
+.profile-grid {
+
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-columns: repeat(4,1fr);
+
   gap: 15px;
+
 }
 
-.snapshot-card {
+
+.profile-card {
+
   background: var(--bg-card);
 
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
+  border: 1px solid var(--border);
+
+  border-radius: 15px;
+
+  padding: 20px;
+
+}
+
+
+.profile-card i {
+
+  color: var(--accent);
+
+  font-size: 19px;
+
+  margin-bottom: 12px;
+
+}
+
+
+.profile-card h3 {
+
+  font-size: 13px;
+
+  margin-bottom: 5px;
+
+}
+
+
+.profile-card p {
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+}
+
+
+/* =========================================================
+   DOCUMENT GRID
+========================================================= */
+
+.document-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(320px,1fr));
+
+  gap: 18px;
+
+}
+
+
+.document-card {
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 17px;
 
   padding: 22px;
-}
 
-.snapshot-card i {
-  color: var(--accent-color);
-  font-size: 18px;
-  margin-bottom: 12px;
-}
+  transition: .2s ease;
 
-.snapshot-card h3 {
-  font-size: 14px;
-  margin-bottom: 5px;
-}
-
-.snapshot-card p {
-  font-size: 12px;
-  color: var(--text-secondary);
 }
 
 
-/* =========================================================
-   PROJECT CARDS
-========================================================= */
+.document-card:hover {
 
-.project-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+  transform: translateY(-2px);
+
+  border-color: var(--accent);
+
+  box-shadow: 0 7px 25px rgba(50,35,40,.06);
+
 }
 
-.project-card {
-  background: var(--bg-card);
 
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-
-  padding: 24px;
+.document-top {
 
   display: flex;
-  flex-direction: column;
 
-  box-shadow: 0 3px 14px rgba(60, 40, 45, 0.035);
+  gap: 14px;
+
+  align-items: flex-start;
+
 }
 
-.project-icon {
+
+.document-icon {
+
   width: 45px;
+
   height: 45px;
 
+  flex-shrink: 0;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
+  background: var(--accent-light);
+
+  color: var(--accent);
 
   border-radius: 12px;
 
-  background: var(--accent-glow);
-  color: var(--accent-color);
-
-  margin-bottom: 16px;
 }
 
-.project-card h3 {
-  font-size: 16px;
-  line-height: 1.4;
-  margin-bottom: 8px;
+
+.document-title {
+
+  font-size: 15px;
+
+  font-weight: 700;
+
 }
 
-.project-card .focus {
-  font-size: 12px;
-  color: var(--text-secondary);
-  margin-bottom: 15px;
+
+.document-category {
+
+  font-size: 10px;
+
+  color: var(--accent);
+
+  font-weight: 600;
+
+  margin-top: 3px;
+
 }
 
-.project-card p {
-  font-size: 12px;
-  color: var(--text-secondary);
-  margin-bottom: 18px;
+
+.document-description {
+
+  color: var(--muted);
+
+  font-size: 11px;
+
+  margin: 16px 0;
+
 }
 
 
@@ -267,68 +471,207 @@ header {
 ========================================================= */
 
 .status {
+
   display: inline-flex;
+
   align-items: center;
+
   gap: 6px;
 
-  width: fit-content;
-
-  padding: 6px 10px;
+  padding: 5px 9px;
 
   border-radius: 20px;
 
-  font-size: 10px;
+  font-size: 9px;
+
   font-weight: 700;
 
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+
+  letter-spacing: .3px;
+
 }
+
 
 .status-ready {
-  background: var(--green-bg);
+
   color: var(--green);
+
+  background: var(--green-bg);
+
 }
+
 
 .status-approval {
-  background: var(--orange-bg);
+
   color: var(--orange);
+
+  background: var(--orange-bg);
+
 }
+
 
 .status-review {
-  background: var(--purple-bg);
+
   color: var(--purple);
+
+  background: var(--purple-bg);
+
 }
 
-.status-progress {
-  background: var(--blue-bg);
+
+.status-scheduled {
+
   color: var(--blue);
+
+  background: var(--blue-bg);
+
 }
 
-.status-pending {
-  background: #f5f0ed;
-  color: #806b5d;
+
+.status-private {
+
+  color: var(--muted);
+
+  background: #f3f1f2;
+
 }
 
 
 /* =========================================================
-   PROJECT LINK
+   DOCUMENT ACTIONS
 ========================================================= */
 
-.project-link {
-  display: inline-block;
+.document-actions {
 
-  margin-top: 14px;
+  display: flex;
 
-  color: var(--accent-color);
+  gap: 8px;
 
-  font-size: 11px;
-  font-weight: 700;
+  margin-top: 17px;
 
-  text-decoration: none;
+  flex-wrap: wrap;
+
 }
 
-.project-link:hover {
-  text-decoration: underline;
+
+.btn {
+
+  border: none;
+
+  cursor: pointer;
+
+  text-decoration: none;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 6px;
+
+  padding: 8px 11px;
+
+  border-radius: 8px;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  transition: .2s;
+
+}
+
+
+.btn-preview {
+
+  background: var(--accent);
+
+  color: white;
+
+}
+
+
+.btn-preview:hover {
+
+  background: var(--accent-dark);
+
+}
+
+
+.btn-open {
+
+  background: var(--accent-light);
+
+  color: var(--accent-dark);
+
+}
+
+
+.btn-download {
+
+  background: #f3f1f2;
+
+  color: var(--text);
+
+}
+
+
+.btn:hover {
+
+  transform: translateY(-1px);
+
+}
+
+
+/* =========================================================
+   FEATURED PROJECT
+========================================================= */
+
+.featured {
+
+  background: var(--bg-card);
+
+  border: 1px solid var(--border);
+
+  border-radius: 18px;
+
+  padding: 25px;
+
+  margin-bottom: 20px;
+
+}
+
+
+.featured-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  gap: 20px;
+
+}
+
+
+.featured h3 {
+
+  font-size: 18px;
+
+  margin-bottom: 5px;
+
+}
+
+
+.featured p {
+
+  font-size: 12px;
+
+  color: var(--muted);
+
+  max-width: 750px;
+
 }
 
 
@@ -337,202 +680,154 @@ header {
 ========================================================= */
 
 .nz-grid {
+
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
+  grid-template-columns: repeat(4,1fr);
+
   gap: 15px;
+
 }
+
 
 .nz-card {
+
   background: var(--bg-card);
 
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
+  border: 1px solid var(--border);
+
+  border-radius: 15px;
 
   padding: 20px;
+
 }
+
+
+.nz-card i {
+
+  color: var(--accent);
+
+  margin-right: 6px;
+
+}
+
 
 .nz-card h3 {
+
   font-size: 13px;
-  margin-bottom: 7px;
+
+  margin-bottom: 8px;
+
 }
 
-.nz-card h3 i {
-  color: var(--accent-color);
-  margin-right: 5px;
-}
 
 .nz-card p {
+
   font-size: 11px;
-  color: var(--text-secondary);
+
+  color: var(--muted);
+
   margin-bottom: 12px;
+
 }
 
 
 /* =========================================================
-   ICON NAVIGATION
+   MODAL PREVIEW
 ========================================================= */
 
-.icon-grid {
-  display: grid;
-  grid-template-columns:
-    repeat(auto-fit, minmax(160px, 1fr));
-  gap: 15px;
+.modal {
+
+  display: none;
+
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(35,25,28,.75);
+
+  z-index: 100;
+
+  padding: 30px;
+
 }
 
-.icon-box {
-  background: var(--bg-card);
 
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
-
-  padding: 20px;
+.modal.active {
 
   display: flex;
-  flex-direction: column;
 
   align-items: center;
+
   justify-content: center;
 
-  text-decoration: none;
-
-  color: var(--text-primary);
-
-  transition: all 0.2s ease;
-
-  text-align: center;
-}
-
-.icon-box i {
-  font-size: 19px;
-
-  color: var(--accent-color);
-
-  margin-bottom: 11px;
-
-  background: var(--accent-glow);
-
-  padding: 13px;
-
-  border-radius: 50%;
-}
-
-.icon-box span {
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.icon-box small {
-  font-size: 10px;
-  color: var(--text-secondary);
-  margin-top: 5px;
-}
-
-.icon-box:hover {
-  border-color: var(--accent-color);
-
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 5px 18px rgba(184, 92, 104, 0.08);
 }
 
 
-/* =========================================================
-   EVIDENCE TABLE
-========================================================= */
+.modal-box {
 
-.evidence-table {
-  width: 100%;
+  background: white;
 
-  border-collapse: collapse;
+  width: min(1000px,100%);
 
-  background: var(--bg-card);
+  height: min(90vh,850px);
 
-  border: 1px solid var(--border-color);
-
-  border-radius: 14px;
+  border-radius: 16px;
 
   overflow: hidden;
-}
 
-.evidence-table th,
-.evidence-table td {
-  padding: 14px 16px;
+  display: flex;
 
-  text-align: left;
+  flex-direction: column;
 
-  border-bottom: 1px solid var(--border-color);
-
-  font-size: 12px;
-}
-
-.evidence-table th {
-  font-size: 10px;
-
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-
-  color: var(--text-secondary);
-
-  background: var(--accent-glow);
-}
-
-.evidence-table tr:last-child td {
-  border-bottom: none;
 }
 
 
-/* =========================================================
-   DOCUMENT PREVIEWS
-========================================================= */
+.modal-header {
 
-.previews-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 18px;
-}
+  padding: 14px 18px;
 
-.preview-card {
-  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
 
-  border: 1px solid var(--border-color);
-
-  border-radius: 14px;
-
-  padding: 18px;
-}
-
-.preview-card-header {
   display: flex;
 
   justify-content: space-between;
+
   align-items: center;
 
-  margin-bottom: 13px;
 }
 
-.preview-card h4 {
+
+.modal-header strong {
+
   font-size: 13px;
+
 }
 
-.preview-card a {
-  color: var(--accent-color);
 
-  font-size: 10px;
-  font-weight: 700;
-
-  text-decoration: none;
-}
-
-.preview-card iframe {
-  width: 100%;
-  height: 220px;
+.close-modal {
 
   border: none;
 
-  border-radius: 8px;
+  background: transparent;
 
-  background: var(--bg-main);
+  font-size: 20px;
+
+  cursor: pointer;
+
+  color: var(--muted);
+
+}
+
+
+#previewFrame {
+
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
 }
 
 
@@ -541,21 +836,17 @@ header {
 ========================================================= */
 
 footer {
-  margin-top: 50px;
+
+  border-top: 1px solid var(--border);
 
   padding-top: 25px;
 
-  border-top: 1px solid var(--border-color);
-
   text-align: center;
 
-  color: var(--text-secondary);
+  color: var(--muted);
 
-  font-size: 11px;
-}
+  font-size: 10px;
 
-footer strong {
-  color: var(--text-primary);
 }
 
 
@@ -564,18 +855,22 @@ footer strong {
 ========================================================= */
 
 .fade {
+
   opacity: 0;
 
-  transform: translateY(15px);
+  transform: translateY(12px);
 
-  transition:
-    opacity 0.6s ease,
-    transform 0.6s ease;
+  transition: .6s ease;
+
 }
 
+
 .fade.show {
+
   opacity: 1;
+
   transform: translateY(0);
+
 }
 
 
@@ -583,69 +878,92 @@ footer strong {
    MOBILE
 ========================================================= */
 
-@media (max-width: 900px) {
+@media(max-width:900px) {
 
   header {
-    grid-template-columns: 1fr;
+
+    grid-template-columns:1fr;
+
   }
 
-  .snapshot-grid,
+  .profile-grid,
   .nz-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
-  .project-grid,
-  .previews-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns:repeat(2,1fr);
+
   }
 
 }
 
 
-@media (max-width: 600px) {
+@media(max-width:600px) {
 
-  .dashboard-container {
+  .container {
+
     padding: 20px 14px 50px;
+
   }
 
   header {
-    padding: 27px 22px;
+
+    padding: 28px 22px;
+
   }
 
-  .profile-info h1 {
-    font-size: 27px;
+  header h1 {
+
+    font-size: 29px;
+
   }
 
-  .snapshot-grid,
+  .profile-grid,
   .nz-grid {
-    grid-template-columns: 1fr;
+
+    grid-template-columns:1fr;
+
   }
 
-  .evidence-table th,
-  .evidence-table td {
+  .featured-header {
+
+    flex-direction:column;
+
+  }
+
+  .navbar {
+
+    position: static;
+
+  }
+
+  .modal {
+
     padding: 10px;
+
   }
 
 }
 
 </style>
+
 </head>
+
 
 
 <body>
 
-<div class="dashboard-container">
+
+<div class="container">
 
 
-<!-- =========================================================
+<!-- =====================================================
      HERO
-========================================================= -->
+====================================================== -->
 
 <header class="fade">
 
-  <div class="profile-info">
+  <div>
 
-    <span class="profile-label">
+    <span class="label">
       Professional Teaching Portfolio
     </span>
 
@@ -653,30 +971,30 @@ footer strong {
       Mary Grace Peral
     </h1>
 
-    <p class="role">
+    <div class="subtitle">
+
       Secondary Mathematics Teacher |
       Mathematics Intervention |
-      Evidence-Based Practice
-    </p>
+      Digital Education
+
+    </div>
 
   </div>
 
 
-  <div class="profile-bio">
+  <div class="hero-description">
 
-    <strong>Mathematics educator</strong>
-    with experience in senior secondary Mathematics,
-    targeted intervention, differentiated instruction,
-    learner progress monitoring, classroom improvement,
-    and professional collaboration.
+    Evidence-informed educator with experience in
+    Mathematics teaching, learner intervention,
+    differentiated instruction, classroom practice,
+    professional leadership, and digital education.
 
     <br><br>
 
-    Preparing for teaching opportunities in
-    <strong>Aotearoa New Zealand</strong> through
-    professional documentation, English-language competency
-    preparation, and familiarisation with the NZ education
-    system.
+    <strong>
+      Preparing for teaching opportunities in
+      Aotearoa New Zealand.
+    </strong>
 
   </div>
 
@@ -684,79 +1002,133 @@ footer strong {
 
 
 
-<!-- =========================================================
-     PROFESSIONAL SNAPSHOT
-========================================================= -->
+<!-- =====================================================
+     NAVIGATION
+====================================================== -->
 
-<section class="section">
+<nav class="navbar">
 
-  <div class="section-title">
-    Professional Snapshot
+  <a href="#profile">
+    <i class="fas fa-user"></i>
+    Profile
+  </a>
+
+  <a href="#teaching">
+    <i class="fas fa-chalkboard"></i>
+    Teaching
+  </a>
+
+  <a href="#classroom">
+    <i class="fas fa-users"></i>
+    Classroom
+  </a>
+
+  <a href="#leadership">
+    <i class="fas fa-star"></i>
+    Leadership
+  </a>
+
+  <a href="#digital">
+    <i class="fas fa-laptop-code"></i>
+    Digital
+  </a>
+
+  <a href="#development">
+    <i class="fas fa-award"></i>
+    Development
+  </a>
+
+  <a href="#nz">
+    <i class="fas fa-earth-oceania"></i>
+    NZ Readiness
+  </a>
+
+</nav>
+
+
+
+<!-- =====================================================
+     PROFILE
+====================================================== -->
+
+<section
+  id="profile"
+  class="section">
+
+  <div class="section-heading">
+    Professional Profile
+  </div>
+
+  <div class="section-intro">
+
+    A concise overview of my professional experience
+    and areas of practice.
+
   </div>
 
 
-  <div class="snapshot-grid">
+  <div class="profile-grid">
 
 
-    <div class="snapshot-card fade">
+    <div class="profile-card fade">
 
       <i class="fas fa-calculator"></i>
 
       <h3>
-        Secondary Mathematics
+        Mathematics Education
       </h3>
 
       <p>
-        Senior High School Mathematics teaching
-        and curriculum implementation.
+        Senior High School Mathematics teaching,
+        curriculum implementation and learner support.
       </p>
 
     </div>
 
 
-    <div class="snapshot-card fade">
+    <div class="profile-card fade">
 
       <i class="fas fa-chart-line"></i>
 
       <h3>
-        Mathematics Intervention
+        Evidence-Informed Practice
       </h3>
 
       <p>
-        Targeted intervention and progress monitoring
-        through ARAL Mathematics.
+        Uses learner evidence and progress monitoring
+        to guide intervention and instruction.
       </p>
 
     </div>
 
 
-    <div class="snapshot-card fade">
+    <div class="profile-card fade">
 
-      <i class="fas fa-chalkboard-teacher"></i>
-
-      <h3>
-        Classroom Practice
-      </h3>
-
-      <p>
-        Differentiated instruction, classroom management,
-        and learner support.
-      </p>
-
-    </div>
-
-
-    <div class="snapshot-card fade">
-
-      <i class="fas fa-lightbulb"></i>
+      <i class="fas fa-people-group"></i>
 
       <h3>
         Professional Leadership
       </h3>
 
       <p>
-        School initiatives, digital innovation,
-        and professional learning leadership.
+        School initiatives, coordination,
+        collaboration and professional learning.
+      </p>
+
+    </div>
+
+
+    <div class="profile-card fade">
+
+      <i class="fas fa-laptop-code"></i>
+
+      <h3>
+        Digital Education
+      </h3>
+
+      <p>
+        Uses digital platforms to organize,
+        present and share educational resources.
       </p>
 
     </div>
@@ -768,228 +1140,376 @@ footer strong {
 
 
 
-<!-- =========================================================
-     PROFESSIONAL PROJECTS
-========================================================= -->
+<!-- =====================================================
+     TEACHING
+====================================================== -->
 
-<section class="section">
+<section
+  id="teaching"
+  class="section">
 
-  <div class="section-title">
-    Professional Projects & Evidence
+  <div class="section-heading">
+    Mathematics Teaching & Intervention
   </div>
 
-  <div class="section-description">
+  <div class="section-intro">
 
-    Selected initiatives demonstrating Mathematics intervention,
-    classroom practice, digital innovation, and professional
-    learning leadership.
+    Evidence demonstrating Mathematics teaching,
+    intervention and learner progress.
 
   </div>
 
 
-  <div class="project-grid">
+  <div class="document-grid">
 
 
-    <!-- =====================================================
-         ARAL
-    ====================================================== -->
+    <!-- CV -->
 
-    <div class="project-card fade">
+    <div class="document-card fade">
 
-      <div class="project-icon">
-        <i class="fas fa-square-root-variable"></i>
+      <div class="document-top">
+
+        <div class="document-icon">
+
+          <i class="fas fa-file-user"></i>
+
+        </div>
+
+        <div>
+
+          <div class="document-title">
+            Curriculum Vitae
+          </div>
+
+          <div class="document-category">
+            APPLICATION DOCUMENT
+          </div>
+
+        </div>
+
       </div>
 
-      <h3>
-        ARAL Mathematics Intervention
-      </h3>
 
-      <div class="focus">
-        Mathematics Learning Intervention
+      <div class="document-description">
+
+        Professional experience, qualifications,
+        teaching background and leadership experience.
+
       </div>
 
-      <p>
 
-        A structured Mathematics intervention initiative
-        designed to identify learning gaps, provide targeted
-        support, and monitor learner progress through
-        organised intervention resources.
+      <span class="status status-ready">
 
-      </p>
-
-
-      <span
-        id="aralStatus"
-        class="status">
-
-        <span></span>
+        <i class="fas fa-circle-check"></i>
+        Ready
 
       </span>
 
 
-      <a
-        data-link="aral"
-        target="_blank"
-        class="project-link">
+      <div class="document-actions">
 
-        View Project Evidence →
+        <button
+          class="btn btn-preview"
+          onclick="previewDocument('cv')">
 
-      </a>
+          <i class="fas fa-eye"></i>
+          Preview
+
+        </button>
+
+
+        <a
+          data-document="cv"
+          class="btn btn-open"
+          target="_blank">
+
+          <i class="fas fa-arrow-up-right-from-square"></i>
+          Open
+
+        </a>
+
+
+        <a
+          data-download="cv"
+          class="btn btn-download">
+
+          <i class="fas fa-download"></i>
+          Download
+
+        </a>
+
+      </div>
 
     </div>
 
 
 
-    <!-- =====================================================
-         BEHAVIOUR
-    ====================================================== -->
+    <!-- ARAL -->
 
-    <div class="project-card fade">
+    <div class="document-card fade">
 
-      <div class="project-icon">
-        <i class="fas fa-people-arrows"></i>
+      <div class="document-top">
+
+        <div class="document-icon">
+
+          <i class="fas fa-chart-line"></i>
+
+        </div>
+
+        <div>
+
+          <div class="document-title">
+            ARAL Mathematics Intervention
+          </div>
+
+          <div class="document-category">
+            LEARNER INTERVENTION
+          </div>
+
+        </div>
+
       </div>
 
-      <h3>
-        Classroom Behaviour Intervention Plan
-      </h3>
 
-      <div class="focus">
-        Classroom Management & Learner Support
+      <div class="document-description">
+
+        Evidence of a structured Mathematics intervention
+        designed to identify learning gaps, provide targeted
+        support and monitor learner progress.
+
       </div>
 
-      <p>
+
+      <span class="status status-ready">
+
+        <i class="fas fa-circle-check"></i>
+        Ready for Presentation
+
+      </span>
+
+
+      <div class="document-actions">
+
+        <button
+          class="btn btn-preview"
+          onclick="previewDocument('aral')">
+
+          <i class="fas fa-eye"></i>
+          Preview
+
+        </button>
+
+
+        <a
+          data-document="aral"
+          class="btn btn-open"
+          target="_blank">
+
+          <i class="fas fa-arrow-up-right-from-square"></i>
+          Open
+
+        </a>
+
+
+        <a
+          data-download="aral"
+          class="btn btn-download">
+
+          <i class="fas fa-download"></i>
+          Download
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CLASSROOM
+====================================================== -->
+
+<section
+  id="classroom"
+  class="section">
+
+  <div class="section-heading">
+    Classroom Practice
+  </div>
+
+  <div class="section-intro">
+
+    Evidence of classroom management, learner support
+    and continuous improvement.
+
+  </div>
+
+
+  <div class="document-grid">
+
+
+    <div class="document-card fade">
+
+      <div class="document-top">
+
+        <div class="document-icon">
+
+          <i class="fas fa-users"></i>
+
+        </div>
+
+        <div>
+
+          <div class="document-title">
+            Classroom Behaviour Intervention Plan
+          </div>
+
+          <div class="document-category">
+            CLASSROOM MANAGEMENT
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-description">
 
         A proposed classroom-based intervention framework
-        designed to address behaviour concerns, protect
-        learning time, and establish consistent intervention
-        and monitoring procedures.
+        for addressing behaviour concerns and establishing
+        consistent monitoring procedures.
 
-      </p>
+      </div>
 
 
-      <span
-        id="behaviourStatus"
-        class="status">
+      <span class="status status-approval">
 
-        <span></span>
+        <i class="fas fa-clock"></i>
+        For Approval
 
       </span>
 
 
-      <a
-        data-link="behaviour"
-        target="_blank"
-        class="project-link">
+      <div class="document-actions">
 
-        View Project Evidence →
+        <button
+          class="btn btn-preview"
+          onclick="previewDocument('behaviour')">
 
-      </a>
+          <i class="fas fa-eye"></i>
+          Preview
+
+        </button>
+
+
+        <a
+          data-document="behaviour"
+          class="btn btn-open"
+          target="_blank">
+
+          <i class="fas fa-arrow-up-right-from-square"></i>
+          Open
+
+        </a>
+
+
+        <a
+          data-download="behaviour"
+          class="btn btn-download">
+
+          <i class="fas fa-download"></i>
+          Download
+
+        </a>
+
+      </div>
 
     </div>
 
 
+    <!-- LESSON PLAN -->
 
-    <!-- =====================================================
-         LAC CERTIFICATE
-    ====================================================== -->
+    <div class="document-card fade">
 
-    <div class="project-card fade">
+      <div class="document-top">
 
-      <div class="project-icon">
-        <i class="fas fa-certificate"></i>
+        <div class="document-icon">
+
+          <i class="fas fa-book-open"></i>
+
+        </div>
+
+        <div>
+
+          <div class="document-title">
+            Sample Mathematics Lesson Plan
+          </div>
+
+          <div class="document-category">
+            TEACHING PRACTICE
+          </div>
+
+        </div>
+
       </div>
 
-      <h3>
-        LAC Session Certificate System
-      </h3>
 
-      <div class="focus">
-        Digital Innovation & School Leadership
+      <div class="document-description">
+
+        Selected lesson planning evidence demonstrating
+        Mathematics instruction, learning activities,
+        assessment and differentiation.
+
       </div>
 
-      <p>
 
-        A proposed digital certificate system designed
-        to improve the documentation, generation,
-        verification, and recognition of school-based
-        LAC professional learning activities.
+      <span class="status status-ready">
 
-      </p>
-
-
-      <span
-        id="lacStatus"
-        class="status">
-
-        <span></span>
+        <i class="fas fa-circle-check"></i>
+        Selected Evidence
 
       </span>
 
 
-      <a
-        data-link="lac"
-        target="_blank"
-        class="project-link">
+      <div class="document-actions">
 
-        View Project Evidence →
+        <button
+          class="btn btn-preview"
+          onclick="previewDocument('lessonPlan')">
 
-      </a>
+          <i class="fas fa-eye"></i>
+          Preview
 
-    </div>
+        </button>
 
 
+        <a
+          data-document="lessonPlan"
+          class="btn btn-open"
+          target="_blank">
 
-    <!-- =====================================================
-         GITHUB LAC SPEAKER
-    ====================================================== -->
+          <i class="fas fa-arrow-up-right-from-square"></i>
+          Open
 
-    <div class="project-card fade">
+        </a>
 
-      <div class="project-icon">
 
-        <i class="fab fa-github"></i>
+        <a
+          data-download="lessonPlan"
+          class="btn btn-download">
+
+          <i class="fas fa-download"></i>
+          Download
+
+        </a>
 
       </div>
-
-
-      <h3>
-        GitHub as a Tool for Teaching
-      </h3>
-
-
-      <div class="focus">
-        LAC Session Speaker | Digital Education
-      </div>
-
-
-      <p>
-
-        Invited to serve as a Learning Action Cell speaker
-        on the use of GitHub as a tool for organising,
-        publishing, sharing, and managing digital teaching
-        resources.
-
-      </p>
-
-
-      <span
-        id="githubStatus"
-        class="status">
-
-        <span></span>
-
-      </span>
-
-
-      <a
-        data-link="githubSession"
-        target="_blank"
-        class="project-link">
-
-        View Session Evidence →
-
-      </a>
 
     </div>
 
@@ -1000,30 +1520,430 @@ footer strong {
 
 
 
-<!-- =========================================================
-     NEW ZEALAND TEACHING READINESS
-========================================================= -->
+<!-- =====================================================
+     LEADERSHIP
+====================================================== -->
 
-<section class="section">
+<section
+  id="leadership"
+  class="section">
 
-  <div class="section-title">
+  <div class="section-heading">
+    Professional Leadership & School Initiatives
+  </div>
+
+  <div class="section-intro">
+
+    Evidence of leadership, coordination, innovation
+    and contribution to school improvement.
+
+  </div>
+
+
+  <div class="document-grid">
+
+
+    <!-- LAC CERTIFICATE -->
+
+    <div class="document-card fade">
+
+      <div class="document-top">
+
+        <div class="document-icon">
+
+          <i class="fas fa-certificate"></i>
+
+        </div>
+
+        <div>
+
+          <div class="document-title">
+            LAC Session Certificate System
+          </div>
+
+          <div class="document-category">
+            DIGITAL SCHOOL INITIATIVE
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-description">
+
+        A proposed digital certificate system intended
+        to improve documentation, certificate generation,
+        verification and recognition of school-based
+        professional learning activities.
+
+      </div>
+
+
+      <span class="status status-review">
+
+        <i class="fas fa-magnifying-glass"></i>
+        Under Critique
+
+      </span>
+
+
+      <div class="document-actions">
+
+        <button
+          class="btn btn-preview"
+          onclick="previewDocument('lac')">
+
+          <i class="fas fa-eye"></i>
+          Preview
+
+        </button>
+
+
+        <a
+          data-document="lac"
+          class="btn btn-open"
+          target="_blank">
+
+          <i class="fas fa-arrow-up-right-from-square"></i>
+          Open
+
+        </a>
+
+
+        <a
+          data-download="lac"
+          class="btn btn-download">
+
+          <i class="fas fa-download"></i>
+          Download
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <!-- DPDS -->
+
+    <div class="document-card fade">
+
+      <div class="document-top">
+
+        <div class="document-icon">
+
+          <i class="fas fa-handshake"></i>
+
+        </div>
+
+        <div>
+
+          <div class="document-title">
+            DPDS Leadership & Coordination
+          </div>
+
+          <div class="document-category">
+            SCHOOL LEADERSHIP
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-description">
+
+        Evidence of coordination, school-based initiatives,
+        stakeholder collaboration and contribution to
+        school development.
+
+      </div>
+
+
+      <span class="status status-ready">
+
+        <i class="fas fa-circle-check"></i>
+        Established
+
+      </span>
+
+
+      <div class="document-actions">
+
+        <button
+          class="btn btn-preview"
+          onclick="previewDocument('dpds')">
+
+          <i class="fas fa-eye"></i>
+          Preview
+
+        </button>
+
+
+        <a
+          data-document="dpds"
+          class="btn btn-open"
+          target="_blank">
+
+          <i class="fas fa-arrow-up-right-from-square"></i>
+          Open
+
+        </a>
+
+
+        <a
+          data-download="dpds"
+          class="btn btn-download">
+
+          <i class="fas fa-download"></i>
+          Download
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     DIGITAL EDUCATION
+====================================================== -->
+
+<section
+  id="digital"
+  class="section">
+
+  <div class="section-heading">
+    Digital Education & Professional Learning
+  </div>
+
+  <div class="section-intro">
+
+    Evidence demonstrating the use of digital tools
+    and contribution to professional learning.
+
+  </div>
+
+
+  <div class="featured fade">
+
+    <div class="featured-header">
+
+      <div>
+
+        <h3>
+          GitHub as a Tool for Teaching
+        </h3>
+
+        <p>
+
+          Invited LAC Session speaker discussing GitHub
+          as a tool for teaching, organizing educational
+          resources and supporting digital learning.
+
+          <br><br>
+
+          <strong>
+            Scheduled: 27 August 2026
+          </strong>
+
+        </p>
+
+      </div>
+
+
+      <span class="status status-scheduled">
+
+        <i class="fas fa-calendar-check"></i>
+
+        Scheduled
+
+      </span>
+
+    </div>
+
+
+    <div class="document-actions">
+
+      <button
+        class="btn btn-preview"
+        onclick="previewDocument('githubSession')">
+
+        <i class="fas fa-eye"></i>
+        Preview
+
+      </button>
+
+
+      <a
+        data-document="githubSession"
+        class="btn btn-open"
+        target="_blank">
+
+        <i class="fas fa-arrow-up-right-from-square"></i>
+        Open Evidence
+
+      </a>
+
+
+      <a
+        data-download="githubSession"
+        class="btn btn-download">
+
+        <i class="fas fa-download"></i>
+        Download
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     PROFESSIONAL DEVELOPMENT
+====================================================== -->
+
+<section
+  id="development"
+  class="section">
+
+  <div class="section-heading">
+    Professional Development
+  </div>
+
+  <div class="section-intro">
+
+    Selected professional learning and development evidence.
+
+  </div>
+
+
+  <div class="document-grid">
+
+
+    <div class="document-card fade">
+
+      <div class="document-top">
+
+        <div class="document-icon">
+
+          <i class="fas fa-award"></i>
+
+        </div>
+
+        <div>
+
+          <div class="document-title">
+            Professional Development Records
+          </div>
+
+          <div class="document-category">
+            PROFESSIONAL LEARNING
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-description">
+
+        Selected certificates, training records and
+        professional learning evidence relevant to
+        teaching practice and leadership.
+
+      </div>
+
+
+      <span class="status status-ready">
+
+        <i class="fas fa-circle-check"></i>
+        Selected Evidence
+
+      </span>
+
+
+      <div class="document-actions">
+
+        <button
+          class="btn btn-preview"
+          onclick="previewDocument('pd')">
+
+          <i class="fas fa-eye"></i>
+          Preview
+
+        </button>
+
+
+        <a
+          data-document="pd"
+          class="btn btn-open"
+          target="_blank">
+
+          <i class="fas fa-arrow-up-right-from-square"></i>
+          Open
+
+        </a>
+
+
+        <a
+          data-download="pd"
+          class="btn btn-download">
+
+          <i class="fas fa-download"></i>
+          Download
+
+        </a>
+
+      </div>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     NZ READINESS
+====================================================== -->
+
+<section
+  id="nz"
+  class="section">
+
+  <div class="section-heading">
     New Zealand Teaching Readiness
   </div>
 
+  <div class="section-intro">
 
-  <div class="section-description">
+    Summary of my preparation for teaching in
+    Aotearoa New Zealand.
 
-    Current preparation for transitioning from Philippine
-    secondary Mathematics teaching to the New Zealand
-    education system.
+    <br><br>
+
+    Personal identity documents, transcripts and other
+    sensitive records are not publicly displayed.
 
   </div>
 
 
   <div class="nz-grid">
 
-
-    <!-- NZQA -->
 
     <div class="nz-card fade">
 
@@ -1035,26 +1955,23 @@ footer strong {
 
       </h3>
 
+
       <p>
 
-        Teaching qualification documentation prepared
-        for New Zealand qualification recognition.
+        Documentation prepared for qualification
+        assessment.
 
       </p>
 
-      <span
-        id="nzqaStatus"
-        class="status status-progress">
 
-        <span></span>
+      <span class="status status-ready">
+
+        Documentation Prepared
 
       </span>
 
     </div>
 
-
-
-    <!-- TEACHING COUNCIL -->
 
     <div class="nz-card fade">
 
@@ -1066,26 +1983,23 @@ footer strong {
 
       </h3>
 
+
       <p>
 
-        Registration documentation and evidence prepared
-        for the overseas-trained teacher pathway.
+        Documentation prepared for the
+        registration pathway.
 
       </p>
 
-      <span
-        id="tcStatus"
-        class="status status-progress">
 
-        <span></span>
+      <span class="status status-ready">
+
+        Documentation Prepared
 
       </span>
 
     </div>
 
-
-
-    <!-- IELTS -->
 
     <div class="nz-card fade">
 
@@ -1093,49 +2007,48 @@ footer strong {
 
         <i class="fas fa-language"></i>
 
-        English Competency
+        IELTS
 
       </h3>
 
+
       <p>
 
-        IELTS Academic preparation is underway as part
-        of the professional registration pathway.
+        English-language competency test
+        still to be completed.
 
       </p>
 
-      <span
-        id="ieltsStatus"
-        class="status status-pending">
 
-        <span></span>
+      <span class="status status-scheduled">
+
+        IELTS Pending
 
       </span>
 
     </div>
 
 
-
-    <!-- NZ CURRICULUM -->
-
     <div class="nz-card fade">
 
       <h3>
 
-        <i class="fas fa-book-open"></i>
+        <i class="fas fa-book"></i>
 
         NZ Curriculum
 
       </h3>
 
+
       <p>
 
-        Continuing professional preparation in the
-        NZ Curriculum, Mathematics & Statistics, and NCEA.
+        Continuing preparation and familiarisation
+        with the NZ Mathematics curriculum.
 
       </p>
 
-      <span class="status status-progress">
+
+      <span class="status status-scheduled">
 
         In Preparation
 
@@ -1150,713 +2063,67 @@ footer strong {
 
 
 
-<!-- =========================================================
-     EVIDENCE AT A GLANCE
-========================================================= -->
-
-<section class="section">
-
-  <div class="section-title">
-    Evidence at a Glance
-  </div>
-
-
-  <table class="evidence-table fade">
-
-    <thead>
-
-      <tr>
-
-        <th>
-          Professional Area
-        </th>
-
-        <th>
-          Evidence
-        </th>
-
-        <th>
-          Status
-        </th>
-
-      </tr>
-
-    </thead>
-
-
-    <tbody>
-
-
-      <tr>
-
-        <td>
-          Mathematics Teaching
-        </td>
-
-        <td>
-          Senior High School Mathematics experience
-        </td>
-
-        <td>
-          Established Practice
-        </td>
-
-      </tr>
-
-
-      <tr>
-
-        <td>
-          Mathematics Intervention
-        </td>
-
-        <td>
-          ARAL Mathematics Intervention
-        </td>
-
-        <td>
-          Ready for Presentation
-        </td>
-
-      </tr>
-
-
-      <tr>
-
-        <td>
-          Classroom Management
-        </td>
-
-        <td>
-          Classroom Behaviour Intervention Plan
-        </td>
-
-        <td>
-          For Approval
-        </td>
-
-      </tr>
-
-
-      <tr>
-
-        <td>
-          Professional Leadership
-        </td>
-
-        <td>
-          DPDS / school coordination experience
-        </td>
-
-        <td>
-          Established Practice
-        </td>
-
-      </tr>
-
-
-      <tr>
-
-        <td>
-          Digital Innovation
-        </td>
-
-        <td>
-          LAC Session Certificate System
-        </td>
-
-        <td>
-          Under Critique
-        </td>
-
-      </tr>
-
-
-      <tr>
-
-        <td>
-          Professional Learning Leadership
-        </td>
-
-        <td>
-          GitHub as a Tool for Teaching
-        </td>
-
-        <td>
-          Scheduled — LAC Speaker
-        </td>
-
-      </tr>
-
-
-      <tr>
-
-        <td>
-          NZ Qualification Recognition
-        </td>
-
-        <td>
-          NZQA documentation
-        </td>
-
-        <td>
-          Documentation Prepared
-        </td>
-
-      </tr>
-
-
-      <tr>
-
-        <td>
-          NZ Teacher Registration
-        </td>
-
-        <td>
-          Teaching Council documentation
-        </td>
-
-        <td>
-          Preparation Stage
-        </td>
-
-      </tr>
-
-
-      <tr>
-
-        <td>
-          English Language Competency
-        </td>
-
-        <td>
-          IELTS Academic
-        </td>
-
-        <td>
-          Pending
-        </td>
-
-      </tr>
-
-
-    </tbody>
-
-  </table>
-
-</section>
-
-
-
-<!-- =========================================================
-     APPLICATION DOCUMENTS
-========================================================= -->
-
-<section class="section">
-
-  <div class="section-title">
-    Application & Professional Documents
-  </div>
-
-
-  <div class="icon-grid">
-
-
-    <a
-      data-link="cv"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fas fa-file-user"></i>
-
-      <span>
-        Curriculum Vitae
-      </span>
-
-      <small>
-        Professional Profile
-      </small>
-
-    </a>
-
-
-    <a
-      data-link="coverLetter"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fas fa-file-lines"></i>
-
-      <span>
-        Cover Letter
-      </span>
-
-      <small>
-        Teaching Application
-      </small>
-
-    </a>
-
-
-    <a
-      data-link="references"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fas fa-user-check"></i>
-
-      <span>
-        Professional References
-      </span>
-
-      <small>
-        Available on request
-      </small>
-
-    </a>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     TEACHING PRACTICE
-========================================================= -->
-
-<section class="section">
-
-  <div class="section-title">
-    Teaching Practice & Evidence
-  </div>
-
-
-  <div class="icon-grid">
-
-
-    <a
-      data-link="aral"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fas fa-chart-line"></i>
-
-      <span>
-        ARAL Intervention
-      </span>
-
-      <small>
-        Mathematics Evidence
-      </small>
-
-    </a>
-
-
-    <a
-      data-link="behaviour"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fas fa-users"></i>
-
-      <span>
-        Behaviour Intervention
-      </span>
-
-      <small>
-        Classroom Practice
-      </small>
-
-    </a>
-
-
-    <a
-      data-link="teachingResources"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fas fa-book-open"></i>
-
-      <span>
-        Teaching Resources
-      </span>
-
-      <small>
-        Lessons & Materials
-      </small>
-
-    </a>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     LEADERSHIP & PROFESSIONAL INNOVATION
-========================================================= -->
-
-<section class="section">
-
-  <div class="section-title">
-    Leadership & Professional Innovation
-  </div>
-
-
-  <div class="icon-grid">
-
-
-    <a
-      data-link="lac"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fas fa-certificate"></i>
-
-      <span>
-        LAC Certificate System
-      </span>
-
-      <small>
-        School Innovation
-      </small>
-
-    </a>
-
-
-    <a
-      data-link="githubSession"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fab fa-github"></i>
-
-      <span>
-        GitHub Teaching Session
-      </span>
-
-      <small>
-        LAC Speaker
-      </small>
-
-    </a>
-
-
-    <a
-      data-link="professionalDevelopment"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fas fa-award"></i>
-
-      <span>
-        Professional Development
-      </span>
-
-      <small>
-        Training & Learning
-      </small>
-
-    </a>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     NEW ZEALAND READINESS
-========================================================= -->
-
-<section class="section">
-
-  <div class="section-title">
-    New Zealand Readiness
-  </div>
-
-
-  <div class="section-description">
-
-    Selected information about professional preparation
-    for teaching in Aotearoa New Zealand.
-
-    <br><br>
-
-    <strong>
-      Private identification and official registration
-      documents should not be publicly displayed.
-    </strong>
-
-  </div>
-
-
-  <div class="icon-grid">
-
-
-    <a
-      data-link="nzReadiness"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fas fa-flag"></i>
-
-      <span>
-        NZ Teaching Readiness
-      </span>
-
-      <small>
-        Overview
-      </small>
-
-    </a>
-
-
-    <a
-      data-link="nzqa"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fas fa-graduation-cap"></i>
-
-      <span>
-        NZQA
-      </span>
-
-      <small>
-        Qualification Recognition
-      </small>
-
-    </a>
-
-
-    <a
-      data-link="teachingCouncil"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fas fa-user-check"></i>
-
-      <span>
-        Teaching Council
-      </span>
-
-      <small>
-        Registration Pathway
-      </small>
-
-    </a>
-
-
-    <a
-      data-link="ielts"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fas fa-language"></i>
-
-      <span>
-        IELTS
-      </span>
-
-      <small>
-        English Competency
-      </small>
-
-    </a>
-
-
-    <a
-      data-link="nzCurriculum"
-      target="_blank"
-      class="icon-box fade">
-
-      <i class="fas fa-book"></i>
-
-      <span>
-        NZ Curriculum & NCEA
-      </span>
-
-      <small>
-        Professional Preparation
-      </small>
-
-    </a>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
-     SELECTED EVIDENCE PREVIEWS
-========================================================= -->
-
-<section class="section">
-
-  <div class="section-title">
-    Selected Evidence
-  </div>
-
-
-  <div class="previews-grid">
-
-
-    <!-- ARAL -->
-
-    <div class="preview-card fade">
-
-      <div class="preview-card-header">
-
-        <h4>
-          ARAL Mathematics Intervention
-        </h4>
-
-        <a
-          id="aralPreviewLink"
-          target="_blank">
-
-          View
-
-          <i class="fas fa-external-link-alt"></i>
-
-        </a>
-
-      </div>
-
-
-      <iframe
-        id="aralPreview"
-        title="ARAL Mathematics Intervention Preview">
-      </iframe>
-
-    </div>
-
-
-
-    <!-- BEHAVIOUR -->
-
-    <div class="preview-card fade">
-
-      <div class="preview-card-header">
-
-        <h4>
-          Classroom Behaviour Intervention
-        </h4>
-
-        <a
-          id="behaviourPreviewLink"
-          target="_blank">
-
-          View
-
-          <i class="fas fa-external-link-alt"></i>
-
-        </a>
-
-      </div>
-
-
-      <iframe
-        id="behaviourPreview"
-        title="Classroom Behaviour Intervention Preview">
-      </iframe>
-
-    </div>
-
-
-
-    <!-- GITHUB -->
-
-    <div class="preview-card fade">
-
-      <div class="preview-card-header">
-
-        <h4>
-          GitHub Teaching Session
-        </h4>
-
-        <a
-          id="githubPreviewLink"
-          target="_blank">
-
-          View
-
-          <i class="fas fa-external-link-alt"></i>
-
-        </a>
-
-      </div>
-
-
-      <iframe
-        id="githubPreview"
-        title="GitHub Teaching Session Preview">
-      </iframe>
-
-    </div>
-
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================================================
+<!-- =====================================================
      CONTACT
-========================================================= -->
+====================================================== -->
 
 <section class="section">
 
-  <div class="section-title">
+  <div class="section-heading">
     Professional Contact
   </div>
 
 
-  <div class="icon-grid">
+  <div class="document-grid">
 
 
-    <a
-      id="emailLink"
-      class="icon-box fade">
+    <div class="document-card fade">
 
-      <i class="fas fa-envelope"></i>
+      <div class="document-top">
 
-      <span>
-        Contact Me
-      </span>
+        <div class="document-icon">
 
-      <small>
-        Professional enquiries
-      </small>
+          <i class="fas fa-envelope"></i>
 
-    </a>
+        </div>
+
+        <div>
+
+          <div class="document-title">
+            Professional Enquiries
+          </div>
+
+          <div class="document-category">
+            CONTACT
+          </div>
+
+        </div>
+
+      </div>
 
 
-    <a
-      data-link="cv"
-      target="_blank"
-      class="icon-box fade">
+      <div class="document-description">
 
-      <i class="fas fa-file-pdf"></i>
+        For school leaders, recruiters or professional
+        contacts interested in my teaching experience.
 
-      <span>
-        View CV
-      </span>
+      </div>
 
-      <small>
-        Professional summary
-      </small>
 
-    </a>
+      <div class="document-actions">
+
+        <a
+          id="emailButton"
+          class="btn btn-preview">
+
+          <i class="fas fa-envelope"></i>
+          Contact Me
+
+        </a>
+
+      </div>
+
+    </div>
 
 
   </div>
@@ -1864,10 +2131,6 @@ footer strong {
 </section>
 
 
-
-<!-- =========================================================
-     FOOTER
-========================================================= -->
 
 <footer>
 
@@ -1879,17 +2142,58 @@ footer strong {
 
   Secondary Mathematics Teacher |
   Mathematics Intervention |
-  Digital Education |
-  Professional Learning
+  Digital Education
 
   <br><br>
 
-  Professional portfolio prepared for teaching opportunities
-  in Aotearoa New Zealand.
+  Professional Teaching Portfolio |
+  Aotearoa New Zealand
 
 </footer>
 
 
+</div>
+
+
+
+<!-- =====================================================
+     PREVIEW MODAL
+====================================================== -->
+
+<div
+  id="previewModal"
+  class="modal">
+
+
+  <div class="modal-box">
+
+
+    <div class="modal-header">
+
+      <strong id="modalTitle">
+        Document Preview
+      </strong>
+
+
+      <button
+        class="close-modal"
+        onclick="closePreview()">
+
+        <i class="fas fa-xmark"></i>
+
+      </button>
+
+    </div>
+
+
+    <iframe
+      id="previewFrame"
+      src="">
+
+    </iframe>
+
+
+  </div>
 
 </div>
 
@@ -1900,227 +2204,302 @@ footer strong {
 /* =========================================================
    =========================================================
 
-        🔗 LINK MANAGEMENT CENTER
+       🔗 DOCUMENT LINK MANAGEMENT CENTER
 
    =========================================================
 
-   UPDATE YOUR LINKS HERE.
+   UPDATE YOUR DOCUMENT LINKS ONLY HERE.
 
-   You do NOT need to search through the HTML.
+   You don't need to search through the whole HTML.
 
    ========================================================= */
 
 
 /* =========================================================
-   1. WEBSITE / FOLDER LINKS
-========================================================= */
-
-const LINKS = {
-
-
-  /* -------------------------------------------------------
-     APPLICATION
-  ------------------------------------------------------- */
-
-  cv:
-    "https://drive.google.com/file/d/YOUR_CV_FILE_ID/view",
-
-  coverLetter:
-    "https://drive.google.com/file/d/YOUR_COVER_LETTER_FILE_ID/view",
-
-  references:
-    "https://drive.google.com/drive/folders/YOUR_REFERENCES_FOLDER",
-
-
-
-  /* -------------------------------------------------------
-     TEACHING PRACTICE
-  ------------------------------------------------------- */
-
-  aral:
-    "https://drive.google.com/drive/folders/YOUR_ARAL_FOLDER",
-
-  behaviour:
-    "https://drive.google.com/drive/folders/YOUR_BEHAVIOUR_FOLDER",
-
-  teachingResources:
-    "https://drive.google.com/drive/folders/YOUR_TEACHING_RESOURCES_FOLDER",
-
-
-
-  /* -------------------------------------------------------
-     LEADERSHIP
-  ------------------------------------------------------- */
-
-  lac:
-    "https://drive.google.com/drive/folders/YOUR_LAC_FOLDER",
-
-  githubSession:
-    "https://drive.google.com/drive/folders/YOUR_GITHUB_SESSION_FOLDER",
-
-  professionalDevelopment:
-    "https://drive.google.com/drive/folders/YOUR_PD_FOLDER",
-
-
-
-  /* -------------------------------------------------------
-     NEW ZEALAND READINESS
-  ------------------------------------------------------- */
-
-  nzReadiness:
-    "https://drive.google.com/drive/folders/YOUR_NZ_READINESS_FOLDER",
-
-  nzqa:
-    "https://drive.google.com/drive/folders/YOUR_NZQA_FOLDER",
-
-  teachingCouncil:
-    "https://drive.google.com/drive/folders/YOUR_TEACHING_COUNCIL_FOLDER",
-
-  ielts:
-    "https://drive.google.com/drive/folders/YOUR_IELTS_FOLDER",
-
-  nzCurriculum:
-    "https://drive.google.com/drive/folders/YOUR_NZ_CURRICULUM_FOLDER"
-
-};
-
-
-
-/* =========================================================
-   2. DOCUMENT PREVIEW FILE IDs
+   DOCUMENT DATABASE
 ========================================================= */
 
 const DOCUMENTS = {
 
-  aral:
-    "YOUR_ARAL_DOCUMENT_ID",
 
-  behaviour:
-    "YOUR_BEHAVIOUR_DOCUMENT_ID",
+  cv: {
 
-  githubSession:
-    "YOUR_GITHUB_SESSION_DOCUMENT_ID"
+    title:
+      "Curriculum Vitae",
 
-};
+    preview:
+      "https://drive.google.com/file/d/YOUR_CV_FILE_ID/preview",
 
+    open:
+      "https://drive.google.com/file/d/YOUR_CV_FILE_ID/view",
 
+    download:
+      "https://drive.google.com/uc?export=download&id=YOUR_CV_FILE_ID"
 
-/* =========================================================
-   3. PROJECT STATUS
-=========================================================
-
-   🔵 GitHub session is currently scheduled.
-
-   After August 27, change it to:
-
-   "Completed — LAC Speaker"
-
-========================================================= */
-
-const STATUS = {
+  },
 
 
   aral: {
 
-    text:
-      "Ready for Presentation / Approval",
+    title:
+      "ARAL Mathematics Intervention",
 
-    icon:
-      "fa-circle-check",
+    preview:
+      "https://drive.google.com/file/d/YOUR_ARAL_FILE_ID/preview",
 
-    className:
-      "status-ready"
+    open:
+      "https://drive.google.com/file/d/YOUR_ARAL_FILE_ID/view",
+
+    download:
+      "https://drive.google.com/uc?export=download&id=YOUR_ARAL_FILE_ID"
 
   },
 
 
   behaviour: {
 
-    text:
-      "For Approval",
+    title:
+      "Classroom Behaviour Intervention Plan",
 
-    icon:
-      "fa-clock",
+    preview:
+      "https://drive.google.com/file/d/YOUR_BEHAVIOUR_FILE_ID/preview",
 
-    className:
-      "status-approval"
+    open:
+      "https://drive.google.com/file/d/YOUR_BEHAVIOUR_FILE_ID/view",
+
+    download:
+      "https://drive.google.com/uc?export=download&id=YOUR_BEHAVIOUR_FILE_ID"
+
+  },
+
+
+  lessonPlan: {
+
+    title:
+      "Sample Mathematics Lesson Plan",
+
+    preview:
+      "https://drive.google.com/file/d/YOUR_LESSON_PLAN_ID/preview",
+
+    open:
+      "https://drive.google.com/file/d/YOUR_LESSON_PLAN_ID/view",
+
+    download:
+      "https://drive.google.com/uc?export=download&id=YOUR_LESSON_PLAN_ID"
 
   },
 
 
   lac: {
 
-    text:
-      "Under Critique / Review",
+    title:
+      "LAC Session Certificate System",
 
-    icon:
-      "fa-magnifying-glass",
+    preview:
+      "https://drive.google.com/file/d/YOUR_LAC_FILE_ID/preview",
 
-    className:
-      "status-review"
+    open:
+      "https://drive.google.com/file/d/YOUR_LAC_FILE_ID/view",
+
+    download:
+      "https://drive.google.com/uc?export=download&id=YOUR_LAC_FILE_ID"
 
   },
 
 
-  github: {
+  dpds: {
 
-    text:
-      "Scheduled — LAC Speaker",
+    title:
+      "DPDS Leadership & Coordination",
 
-    icon:
-      "fa-calendar-check",
+    preview:
+      "https://drive.google.com/file/d/YOUR_DPDS_FILE_ID/preview",
 
-    className:
-      "status-progress"
+    open:
+      "https://drive.google.com/file/d/YOUR_DPDS_FILE_ID/view",
+
+    download:
+      "https://drive.google.com/uc?export=download&id=YOUR_DPDS_FILE_ID"
+
+  },
+
+
+  githubSession: {
+
+    title:
+      "GitHub as a Tool for Teaching — LAC Session",
+
+    preview:
+      "https://drive.google.com/file/d/YOUR_GITHUB_SESSION_FILE_ID/preview",
+
+    open:
+      "https://drive.google.com/file/d/YOUR_GITHUB_SESSION_FILE_ID/view",
+
+    download:
+      "https://drive.google.com/uc?export=download&id=YOUR_GITHUB_SESSION_FILE_ID"
+
+  },
+
+
+  pd: {
+
+    title:
+      "Professional Development Records",
+
+    preview:
+      "https://drive.google.com/file/d/YOUR_PD_FILE_ID/preview",
+
+    open:
+      "https://drive.google.com/file/d/YOUR_PD_FILE_ID/view",
+
+    download:
+      "https://drive.google.com/uc?export=download&id=YOUR_PD_FILE_ID"
 
   }
 
 };
 
 
-
 /* =========================================================
-   4. NZ READINESS STATUS
-========================================================= */
-
-const NZ_STATUS = {
-
-
-  nzqa:
-    "Documentation Prepared",
-
-
-  teachingCouncil:
-    "Preparation Stage",
-
-
-  ielts:
-    "IELTS Pending"
-
-};
-
-
-
-/* =========================================================
-   APPLY NAVIGATION LINKS
+   APPLY DOCUMENT LINKS
 ========================================================= */
 
 document
-  .querySelectorAll("[data-link]")
-  .forEach(link => {
+.querySelectorAll("[data-document]")
+.forEach(link => {
 
-    const key =
-      link.dataset.link;
+  const key =
+    link.dataset.document;
 
-    if (LINKS[key]) {
+  if (DOCUMENTS[key]) {
 
-      link.href =
-        LINKS[key];
+    link.href =
+      DOCUMENTS[key].open;
+
+  }
+
+});
+
+
+document
+.querySelectorAll("[data-download]")
+.forEach(link => {
+
+  const key =
+    link.dataset.download;
+
+  if (DOCUMENTS[key]) {
+
+    link.href =
+      DOCUMENTS[key].download;
+
+    link.setAttribute(
+      "download",
+      ""
+    );
+
+  }
+
+});
+
+
+/* =========================================================
+   PREVIEW
+========================================================= */
+
+function previewDocument(key) {
+
+  const documentData =
+    DOCUMENTS[key];
+
+  if (!documentData) {
+
+    alert(
+      "This document has not been linked yet."
+    );
+
+    return;
+
+  }
+
+
+  document.getElementById(
+    "modalTitle"
+  ).textContent =
+    documentData.title;
+
+
+  document.getElementById(
+    "previewFrame"
+  ).src =
+    documentData.preview;
+
+
+  document.getElementById(
+    "previewModal"
+  ).classList.add("active");
+
+}
+
+
+/* =========================================================
+   CLOSE PREVIEW
+========================================================= */
+
+function closePreview() {
+
+  document.getElementById(
+    "previewFrame"
+  ).src = "";
+
+
+  document.getElementById(
+    "previewModal"
+  ).classList.remove("active");
+
+}
+
+
+/* =========================================================
+   CLOSE WHEN CLICKING OUTSIDE
+========================================================= */
+
+document
+.getElementById("previewModal")
+.addEventListener(
+  "click",
+  function(event) {
+
+    if (
+      event.target === this
+    ) {
+
+      closePreview();
 
     }
 
-  });
+  }
+);
 
+
+/* =========================================================
+   ESCAPE KEY
+========================================================= */
+
+document.addEventListener(
+  "keydown",
+  function(event) {
+
+    if (
+      event.key === "Escape"
+    ) {
+
+      closePreview();
+
+    }
+
+  }
+);
 
 
 /* =========================================================
@@ -2131,247 +2510,58 @@ const EMAIL_ADDRESS =
   "marygrace.peral@example.com";
 
 
-const emailLink =
-  document.getElementById(
-    "emailLink"
-  );
-
-
-emailLink.href =
+document.getElementById(
+  "emailButton"
+).href =
   "mailto:" +
   EMAIL_ADDRESS +
   "?subject=Teaching%20Portfolio%20Inquiry";
-
-
-
-/* =========================================================
-   APPLY PROJECT STATUS
-========================================================= */
-
-function applyStatus(
-  elementId,
-  statusData
-) {
-
-  const element =
-    document.getElementById(
-      elementId
-    );
-
-
-  if (!element) return;
-
-
-  element.className =
-    "status " +
-    statusData.className;
-
-
-  element.innerHTML =
-
-    '<i class="fas ' +
-    statusData.icon +
-    '"></i>' +
-
-    '<span>' +
-    statusData.text +
-    '</span>';
-
-}
-
-
-
-/* =========================================================
-   PROJECT STATUSES
-========================================================= */
-
-applyStatus(
-  "aralStatus",
-  STATUS.aral
-);
-
-
-applyStatus(
-  "behaviourStatus",
-  STATUS.behaviour
-);
-
-
-applyStatus(
-  "lacStatus",
-  STATUS.lac
-);
-
-
-applyStatus(
-  "githubStatus",
-  STATUS.github
-);
-
-
-
-/* =========================================================
-   NZ STATUS
-========================================================= */
-
-document
-  .querySelector(
-    "#nzqaStatus span"
-  )
-  .textContent =
-    NZ_STATUS.nzqa;
-
-
-document
-  .querySelector(
-    "#tcStatus span"
-  )
-  .textContent =
-    NZ_STATUS.teachingCouncil;
-
-
-document
-  .querySelector(
-    "#ieltsStatus span"
-  )
-  .textContent =
-    NZ_STATUS.ielts;
-
-
-
-/* =========================================================
-   GOOGLE DRIVE PREVIEW
-========================================================= */
-
-function setDrivePreview(
-  iframeId,
-  linkId,
-  fileId
-) {
-
-
-  const iframe =
-    document.getElementById(
-      iframeId
-    );
-
-
-  const link =
-    document.getElementById(
-      linkId
-    );
-
-
-  if (
-    !fileId ||
-    fileId.includes("YOUR_")
-  ) {
-
-    iframe.style.display =
-      "none";
-
-
-    link.href =
-      "#";
-
-
-    link.innerHTML =
-      "Add document →";
-
-
-    return;
-
-  }
-
-
-  iframe.src =
-    "https://drive.google.com/file/d/" +
-    fileId +
-    "/preview";
-
-
-  link.href =
-    "https://drive.google.com/file/d/" +
-    fileId +
-    "/view";
-
-}
-
-
-
-/* =========================================================
-   APPLY PREVIEWS
-========================================================= */
-
-setDrivePreview(
-  "aralPreview",
-  "aralPreviewLink",
-  DOCUMENTS.aral
-);
-
-
-setDrivePreview(
-  "behaviourPreview",
-  "behaviourPreviewLink",
-  DOCUMENTS.behaviour
-);
-
-
-setDrivePreview(
-  "githubPreview",
-  "githubPreviewLink",
-  DOCUMENTS.githubSession
-);
-
 
 
 /* =========================================================
    FADE-IN ANIMATION
 ========================================================= */
 
-const observerOptions = {
-
-  threshold: 0.10
-
-};
-
-
 const observer =
   new IntersectionObserver(
 
-    (entries) => {
+    entries => {
 
-      entries.forEach(
-        entry => {
+      entries.forEach(entry => {
 
-          if (
-            entry.isIntersecting
-          ) {
+        if (
+          entry.isIntersecting
+        ) {
 
-            entry.target.classList
-              .add("show");
-
-          }
+          entry.target
+            .classList
+            .add("show");
 
         }
-      );
+
+      });
 
     },
 
-    observerOptions
+    {
+      threshold: 0.1
+    }
 
   );
 
 
 document
-  .querySelectorAll(".fade")
-  .forEach(element => {
+.querySelectorAll(".fade")
+.forEach(element => {
 
-    observer.observe(element);
+  observer.observe(element);
 
-  });
+});
+
 
 </script>
 
+
 </body>
+
 </html>

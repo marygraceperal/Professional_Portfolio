@@ -6,59 +6,39 @@
 
 <title>Mary Grace Peral | Professional Teaching Portfolio</title>
 
-<meta name="description"
-content="Professional teaching portfolio of Mary Grace Peral — Secondary Mathematics Educator, digital learning developer, learner intervention practitioner and school-based professional leader.">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
-rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
-/* =========================================================
-   COLOR SYSTEM
-========================================================= */
 
 :root {
   --bg-main: #faf7f8;
   --bg-card: #ffffff;
-  --bg-soft: #fdf2f4;
-
-  --border: #f0e1e5;
+  --border-color: #f0e3e6;
 
   --accent: #c96f78;
-  --accent-dark: #9f4f58;
+  --accent-light: #fdf1f3;
 
-  --green: #4f8a68;
-  --green-bg: #edf7f0;
+  --green: #5f8a70;
+  --green-light: #eef6f0;
 
-  --blue: #547ca5;
-  --blue-bg: #eef5fb;
+  --blue: #6685a5;
+  --blue-light: #eef4f9;
 
-  --orange: #b47a3c;
-  --orange-bg: #fbf3e8;
+  --amber: #a9824e;
+  --amber-light: #faf4e9;
 
-  --text-primary: #302326;
-  --text-secondary: #75656a;
-  --text-light: #9a898e;
-
-  --shadow: 0 8px 30px rgba(70, 35, 45, 0.06);
+  --text-primary: #34272a;
+  --text-secondary: #79696d;
+  --text-light: #9b898e;
 }
-
-
-/* =========================================================
-   GENERAL
-========================================================= */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 html {
@@ -66,62 +46,65 @@ html {
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
   background: var(--bg-main);
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.65;
 }
 
 a {
   color: inherit;
 }
 
+.container {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 22px;
+}
 
-/* =========================================================
+/* =========================
    NAVIGATION
-========================================================= */
+========================= */
 
-.top-nav {
+.navbar {
   position: sticky;
   top: 0;
   z-index: 1000;
 
-  background: rgba(255,255,255,0.96);
+  background: rgba(255,255,255,0.94);
   backdrop-filter: blur(12px);
 
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .nav-inner {
-  max-width: 1200px;
+  max-width: 1180px;
   margin: auto;
-  padding: 14px 20px;
+  padding: 15px 22px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   gap: 20px;
 }
 
 .brand {
-  font-weight: 800;
-  color: var(--accent-dark);
   text-decoration: none;
-  white-space: nowrap;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-primary);
 }
 
 .nav-links {
   display: flex;
-  gap: 18px;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: flex-end;
 }
 
 .nav-links a {
+  text-decoration: none;
   font-size: 12px;
   font-weight: 600;
-  text-decoration: none;
   color: var(--text-secondary);
 }
 
@@ -129,479 +112,345 @@ a {
   color: var(--accent);
 }
 
-
-/* =========================================================
-   MAIN CONTAINER
-========================================================= */
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 42px 20px 70px;
-}
-
-
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero {
+  padding: 90px 0 70px;
+}
+
+.hero-card {
   background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 55px;
 
-  border: 1px solid var(--border);
-  border-radius: 20px;
-
-  padding: 48px;
-
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-
-  gap: 40px;
-
-  box-shadow: var(--shadow);
-
-  margin-bottom: 30px;
+  box-shadow: 0 10px 40px rgba(100,60,70,0.05);
 }
 
 .eyebrow {
+  display: inline-block;
+
+  background: var(--accent-light);
   color: var(--accent);
 
-  font-size: 12px;
-  font-weight: 800;
+  padding: 7px 13px;
+  border-radius: 20px;
 
-  letter-spacing: 1.8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-transform: uppercase;
-
-  margin-bottom: 12px;
-}
-
-.hero h1 {
-  font-size: clamp(34px, 5vw, 52px);
-
-  line-height: 1.1;
-
-  letter-spacing: -1.5px;
-
-  margin-bottom: 12px;
-}
-
-.hero h2 {
-  color: var(--accent-dark);
-
-  font-size: 17px;
-  font-weight: 600;
 
   margin-bottom: 20px;
 }
 
-.hero p {
-  color: var(--text-secondary);
-
-  font-size: 15px;
-
-  max-width: 700px;
-}
-
-.hero-side {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.profile-box {
-  background: var(--bg-soft);
-
-  border: 1px solid var(--border);
-
-  border-radius: 16px;
-
-  padding: 25px;
-
-  width: 100%;
-}
-
-.profile-box h3 {
-  font-size: 14px;
+.hero h1 {
+  font-size: clamp(38px, 6vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -2px;
   margin-bottom: 12px;
 }
 
-.profile-box p {
-  font-size: 13px;
+.hero h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 22px;
 }
 
+.hero-description {
+  max-width: 780px;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
 
-/* =========================================================
-   BUTTONS
-========================================================= */
-
-.button-row {
-  margin-top: 25px;
-
+.hero-buttons {
   display: flex;
-
   gap: 12px;
-
   flex-wrap: wrap;
+  margin-top: 30px;
 }
 
-.btn {
+.button {
   display: inline-flex;
-
   align-items: center;
-
   gap: 8px;
 
   padding: 12px 18px;
 
-  border-radius: 9px;
+  border-radius: 10px;
 
   text-decoration: none;
 
   font-size: 12px;
-
   font-weight: 700;
 
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
-.btn-primary {
+.button-primary {
   background: var(--accent);
   color: white;
 }
 
-.btn-primary:hover {
-  background: var(--accent-dark);
+.button-secondary {
+  background: var(--accent-light);
+  color: var(--accent);
+}
 
+.button:hover {
   transform: translateY(-2px);
 }
 
-.btn-secondary {
-  border: 1px solid var(--border);
-
-  background: white;
-}
-
-.btn-secondary:hover {
-  border-color: var(--accent);
-
-  color: var(--accent);
-}
-
-
-/* =========================================================
+/* =========================
    SECTIONS
-========================================================= */
+========================= */
 
 section {
-  scroll-margin-top: 80px;
-  margin-top: 42px;
+  padding: 65px 0;
 }
 
 .section-heading {
-  margin-bottom: 18px;
+  margin-bottom: 30px;
 }
 
-.section-heading span {
-  display: block;
-
-  color: var(--accent);
-
+.section-number {
   font-size: 11px;
-
-  font-weight: 800;
-
+  font-weight: 700;
   letter-spacing: 1.5px;
-
+  color: var(--accent);
   text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
 .section-heading h2 {
-  font-size: 25px;
-
-  margin-top: 4px;
+  font-size: 30px;
+  letter-spacing: -0.7px;
+  margin-bottom: 8px;
 }
 
 .section-heading p {
-  color: var(--text-secondary);
-
-  font-size: 13px;
-
   max-width: 760px;
-
-  margin-top: 6px;
-}
-
-
-/* =========================================================
-   HIGHLIGHTS
-========================================================= */
-
-.highlights {
-  display: grid;
-
-  grid-template-columns: repeat(4,1fr);
-
-  gap: 15px;
-}
-
-.highlight {
-  background: white;
-
-  border: 1px solid var(--border);
-
-  border-radius: 13px;
-
-  padding: 20px;
-}
-
-.highlight i {
-  color: var(--accent);
-
-  font-size: 19px;
-
-  margin-bottom: 13px;
-}
-
-.highlight h3 {
-  font-size: 14px;
-
-  margin-bottom: 5px;
-}
-
-.highlight p {
-  font-size: 12px;
-
   color: var(--text-secondary);
+  font-size: 14px;
 }
 
+/* =========================
+   FOCUS GRID
+========================= */
 
-/* =========================================================
-   PROJECTS
-========================================================= */
-
-.project-grid {
+.focus-grid {
   display: grid;
-
-  grid-template-columns: repeat(2,1fr);
-
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 16px;
 }
 
-.project {
+.focus-card {
   background: white;
-
-  border: 1px solid var(--border);
-
+  border: 1px solid var(--border-color);
   border-radius: 15px;
-
-  padding: 23px;
-
-  box-shadow: 0 3px 15px rgba(0,0,0,.02);
+  padding: 24px;
 }
 
-.project-header {
-  display: flex;
-
-  justify-content: space-between;
-
-  align-items: flex-start;
-
-  gap: 15px;
-
-  margin-bottom: 14px;
-}
-
-.project-icon {
+.focus-icon {
   width: 42px;
   height: 42px;
 
   display: flex;
-
   align-items: center;
   justify-content: center;
 
-  border-radius: 11px;
-
-  background: var(--bg-soft);
-
+  background: var(--accent-light);
   color: var(--accent);
 
-  flex-shrink: 0;
+  border-radius: 50%;
+
+  margin-bottom: 16px;
 }
 
-.project h3 {
+.focus-card h3 {
   font-size: 15px;
-
-  margin-bottom: 4px;
+  margin-bottom: 7px;
 }
 
-.project .description {
-  font-size: 12px;
-
+.focus-card p {
+  font-size: 13px;
   color: var(--text-secondary);
 }
 
-.project-details {
-  margin-top: 15px;
-
-  border-top: 1px solid var(--border);
-
-  padding-top: 14px;
-}
-
-.project-details strong {
-  font-size: 11px;
-}
-
-.project-details p {
-  font-size: 11px;
-
-  color: var(--text-secondary);
-
-  margin-top: 3px;
-}
-
-.project-link {
-  display: inline-block;
-
-  margin-top: 15px;
-
-  margin-right: 10px;
-
-  color: var(--accent);
-
-  text-decoration: none;
-
-  font-size: 11px;
-
-  font-weight: 700;
-}
-
-.project-link:hover {
-  text-decoration: underline;
-}
-
-
-/* =========================================================
-   STATUS LABELS
-========================================================= */
-
-.status {
-  display: inline-flex;
-
-  align-items: center;
-
-  gap: 6px;
-
-  padding: 5px 9px;
-
-  border-radius: 30px;
-
-  font-size: 9px;
-
-  font-weight: 800;
-
-  text-transform: uppercase;
-
-  white-space: nowrap;
-}
-
-.status.completed {
-  color: var(--green);
-
-  background: var(--green-bg);
-}
-
-.status.implementation {
-  color: var(--blue);
-
-  background: var(--blue-bg);
-}
-
-.status.scheduled {
-  color: var(--orange);
-
-  background: var(--orange-bg);
-}
-
-.status.active {
-  color: var(--green);
-
-  background: var(--green-bg);
-}
-
-
-/* =========================================================
-   EVIDENCE GRID
-========================================================= */
+/* =========================
+   EVIDENCE CARDS
+========================= */
 
 .evidence-grid {
   display: grid;
-
-  grid-template-columns: repeat(4,1fr);
-
-  gap: 15px;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 20px;
 }
 
-.evidence {
+.evidence-card {
   background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 26px;
 
-  border: 1px solid var(--border);
-
-  border-radius: 13px;
-
-  padding: 20px;
-
-  text-decoration: none;
-
-  transition: .2s ease;
+  transition: 0.2s ease;
 }
 
-.evidence:hover {
+.evidence-card:hover {
   transform: translateY(-3px);
-
-  border-color: var(--accent);
-
-  box-shadow: var(--shadow);
+  box-shadow: 0 8px 25px rgba(80,50,60,0.06);
 }
 
-.evidence i {
-  color: var(--accent);
-
-  font-size: 20px;
-
-  margin-bottom: 13px;
+.evidence-card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
 }
 
-.evidence h3 {
+.evidence-card p {
   font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
 
+.evidence-card ul {
+  padding-left: 18px;
+  margin-bottom: 20px;
+}
+
+.evidence-card li {
+  font-size: 12px;
+  color: var(--text-secondary);
   margin-bottom: 5px;
 }
 
-.evidence p {
-  font-size: 11px;
+/* =========================
+   STATUS
+========================= */
 
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  padding: 6px 10px;
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.status-active {
+  background: var(--green-light);
+  color: var(--green);
+}
+
+.status-approved {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+
+.status-scheduled {
+  background: var(--amber-light);
+  color: var(--amber);
+}
+
+.status-completed {
+  background: var(--green-light);
+  color: var(--green);
+}
+
+.status-development {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+/* =========================
+   EVIDENCE BUTTON
+========================= */
+
+.evidence-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  color: var(--accent);
+
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.evidence-link:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   FEATURE CARD
+========================= */
+
+.feature-card {
+  background: white;
+
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+
+  padding: 32px;
+
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 35px;
+
+  align-items: center;
+}
+
+.feature-card h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.feature-side {
+  background: var(--accent-light);
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.feature-side strong {
+  display: block;
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+
+.feature-side span {
+  font-size: 12px;
   color: var(--text-secondary);
 }
 
-
-/* =========================================================
+/* =========================
    TIMELINE
-========================================================= */
+========================= */
 
 .timeline {
-  border-left: 2px solid var(--border);
-
-  margin-left: 8px;
-
-  padding-left: 25px;
+  position: relative;
+  border-left: 2px solid var(--border-color);
+  margin-left: 10px;
+  padding-left: 30px;
 }
 
 .timeline-item {
   position: relative;
-
-  margin-bottom: 27px;
+  margin-bottom: 30px;
 }
 
 .timeline-item::before {
@@ -609,128 +458,139 @@ section {
 
   position: absolute;
 
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
 
   background: var(--accent);
 
   border-radius: 50%;
 
-  left: -31px;
-
+  left: -37px;
   top: 7px;
 }
 
 .timeline-year {
-  color: var(--accent);
-
-  font-size: 11px;
-
-  font-weight: 800;
-}
-
-.timeline h3 {
-  font-size: 14px;
-
-  margin: 3px 0;
-}
-
-.timeline p {
   font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
 
+.timeline-item h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.timeline-item p {
+  font-size: 13px;
   color: var(--text-secondary);
 }
 
+/* =========================
+   FOLDER GRID
+========================= */
 
-/* =========================================================
-   STATEMENT
-========================================================= */
-
-.statement {
-  background: var(--accent-dark);
-
-  color: white;
-
-  border-radius: 18px;
-
-  padding: 35px;
-
-  margin-top: 45px;
+.folder-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(230px,1fr));
+  gap: 15px;
 }
 
-.statement h2 {
-  font-size: 22px;
+.folder-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 13px;
+  padding: 20px;
 
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.folder-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.folder-icon {
+  color: var(--accent);
+  font-size: 20px;
   margin-bottom: 12px;
 }
 
-.statement p {
+.folder-card h3 {
   font-size: 13px;
-
-  opacity: .92;
-
-  max-width: 850px;
+  margin-bottom: 5px;
 }
 
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-footer {
-  text-align: center;
-
-  margin-top: 60px;
-
-  padding-top: 25px;
-
-  border-top: 1px solid var(--border);
-
-  color: var(--text-light);
-
+.folder-card p {
+  color: var(--text-secondary);
   font-size: 11px;
 }
 
+/* =========================
+   CLOSING
+========================= */
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
+.closing {
+  text-align: center;
 
-@media(max-width:900px) {
+  background: white;
 
-  .hero {
-    grid-template-columns: 1fr;
-
-    padding: 32px;
-  }
-
-  .highlights,
-  .evidence-grid {
-    grid-template-columns: repeat(2,1fr);
-  }
-
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
-@media(max-width:650px) {
+.closing h2 {
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+
+.closing p {
+  max-width: 750px;
+  margin: auto;
+
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 30px 0;
+  text-align: center;
+
+  color: var(--text-light);
+  font-size: 11px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:760px) {
 
   .nav-inner {
-    align-items: flex-start;
-
     flex-direction: column;
+    align-items: flex-start;
   }
 
   .nav-links {
     justify-content: flex-start;
   }
 
-  .hero {
-    padding: 25px;
+  .hero-card {
+    padding: 32px 25px;
   }
 
-  .project-grid,
-  .highlights,
-  .evidence-grid {
+  .feature-card {
     grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 45px;
   }
 
 }
@@ -738,15 +598,13 @@ footer {
 </style>
 </head>
 
-
-<body>
-
+<body id="top">
 
 <!-- =========================================================
      NAVIGATION
 ========================================================= -->
 
-<nav class="top-nav">
+<nav class="navbar">
 
   <div class="nav-inner">
 
@@ -768,6 +626,8 @@ footer {
 
       <a href="#development">Professional Development</a>
 
+      <a href="#recognition">Recognition</a>
+
       <a href="#evidence">Evidence</a>
 
     </div>
@@ -777,104 +637,54 @@ footer {
 </nav>
 
 
-<div class="container" id="top">
-
-
 <!-- =========================================================
      HERO
 ========================================================= -->
 
 <header class="hero" id="profile">
 
-  <div>
+  <div class="container">
 
-    <div class="eyebrow">
-      Professional Teaching Portfolio
-    </div>
+    <div class="hero-card">
 
-    <h1>
-      Mary Grace Peral
-    </h1>
+      <span class="eyebrow">
+        Professional Teaching Portfolio
+      </span>
 
-    <h2>
-      Secondary Mathematics Educator
-    </h2>
+      <h1>
+        Mary Grace Peral
+      </h1>
 
-    <p>
+      <h2>
+        Secondary Mathematics Educator
+      </h2>
 
-      Mathematics educator committed to purposeful,
-      evidence-informed teaching, learner support,
-      digital learning and continuous professional growth.
+      <p class="hero-description">
 
-      My professional practice includes secondary Mathematics
-      instruction, targeted intervention, digital learning
-      development, professional collaboration and school-based
-      leadership.
+        Mathematics educator committed to purposeful,
+        evidence-informed teaching, learner support,
+        digital learning and continuous professional growth.
 
-    </p>
-
-    <div class="button-row">
-
-      <a class="btn btn-primary"
-         href="#evidence">
-
-        <i class="fas fa-folder-open"></i>
-
-        Explore Evidence
-
-      </a>
-
-      <a class="btn btn-secondary"
-         href="#development">
-
-        <i class="fas fa-graduation-cap"></i>
-
-        Professional Development
-
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <div class="hero-side">
-
-    <div class="profile-box">
-
-      <h3>
-        Professional Focus
-      </h3>
-
-      <p>
-
-        <strong>Mathematics Education</strong><br>
-
-        Secondary Mathematics teaching and
-        curriculum-aligned instruction.
-
-        <br><br>
-
-        <strong>Learner Support</strong><br>
-
-        Targeted intervention, differentiated
-        instruction and progress monitoring.
-
-        <br><br>
-
-        <strong>Digital Learning</strong><br>
-
-        Development and use of digital learning
-        resources and educational technology.
-
-        <br><br>
-
-        <strong>Professional Leadership</strong><br>
-
-        School-based collaboration, training,
-        innovation and continuous development.
+        My professional practice includes secondary Mathematics
+        instruction, targeted intervention, digital learning
+        development, professional collaboration and school-based
+        leadership.
 
       </p>
+
+      <div class="hero-buttons">
+
+        <a href="#evidence" class="button button-primary">
+          <i class="fas fa-folder-open"></i>
+          Explore Evidence
+        </a>
+
+        <a href="#development" class="button button-secondary">
+          <i class="fas fa-graduation-cap"></i>
+          Professional Development
+        </a>
+
+      </div>
 
     </div>
 
@@ -884,89 +694,105 @@ footer {
 
 
 <!-- =========================================================
-     PROFESSIONAL HIGHLIGHTS
+     PROFESSIONAL FOCUS
 ========================================================= -->
 
 <section>
 
-  <div class="section-heading">
+  <div class="container">
 
-    <span>At a Glance</span>
+    <div class="section-heading">
 
-    <h2>
-      Professional Highlights
-    </h2>
+      <div class="section-number">
+        Professional Focus
+      </div>
 
-  </div>
-
-
-  <div class="highlights">
-
-
-    <div class="highlight">
-
-      <i class="fas fa-calculator"></i>
-
-      <h3>
-        Mathematics Educator
-      </h3>
+      <h2>
+        Teaching with Purpose
+      </h2>
 
       <p>
-        Secondary Mathematics teaching with emphasis
-        on meaningful and accessible learning.
+        Four interconnected areas shape my professional practice
+        as a secondary Mathematics educator.
       </p>
 
     </div>
 
 
-    <div class="highlight">
+    <div class="focus-grid">
 
-      <i class="fas fa-chart-line"></i>
+      <div class="focus-card">
 
-      <h3>
-        Learner Intervention
-      </h3>
+        <div class="focus-icon">
+          <i class="fas fa-square-root-variable"></i>
+        </div>
 
-      <p>
-        ARAL and classroom behaviour intervention
-        initiatives designed around identified learner needs.
-      </p>
+        <h3>
+          Mathematics Education
+        </h3>
+
+        <p>
+          Secondary Mathematics teaching and curriculum-aligned
+          instruction with emphasis on meaningful learning.
+        </p>
+
+      </div>
+
+
+      <div class="focus-card">
+
+        <div class="focus-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+
+        <h3>
+          Learner Support
+        </h3>
+
+        <p>
+          Targeted intervention, differentiated support and
+          progress monitoring based on identified learner needs.
+        </p>
+
+      </div>
+
+
+      <div class="focus-card">
+
+        <div class="focus-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+
+        <h3>
+          Digital Learning
+        </h3>
+
+        <p>
+          Development and practical use of digital learning
+          resources and educational technology.
+        </p>
+
+      </div>
+
+
+      <div class="focus-card">
+
+        <div class="focus-icon">
+          <i class="fas fa-people-group"></i>
+        </div>
+
+        <h3>
+          Professional Leadership
+        </h3>
+
+        <p>
+          School-based collaboration, professional learning,
+          innovation and contribution beyond classroom teaching.
+        </p>
+
+      </div>
 
     </div>
-
-
-    <div class="highlight">
-
-      <i class="fas fa-laptop-code"></i>
-
-      <h3>
-        Digital Learning
-      </h3>
-
-      <p>
-        Development of digital Mathematics resources,
-        GitHub-based learning materials and
-        technology-supported instruction.
-      </p>
-
-    </div>
-
-
-    <div class="highlight">
-
-      <i class="fas fa-users"></i>
-
-      <h3>
-        School Leadership
-      </h3>
-
-      <p>
-        Professional collaboration, LAC activities,
-        training and school-based innovation.
-      </p>
-
-    </div>
-
 
   </div>
 
@@ -974,172 +800,138 @@ footer {
 
 
 <!-- =========================================================
-     TEACHING PRACTICE
+     01 TEACHING PRACTICE
 ========================================================= -->
 
 <section id="practice">
 
-  <div class="section-heading">
+  <div class="container">
 
-    <span>01 · Teaching Practice</span>
+    <div class="section-heading">
 
-    <h2>
-      Mathematics Teaching
-    </h2>
+      <div class="section-number">
+        01 · Teaching Practice
+      </div>
 
-    <p>
-      Selected evidence demonstrating classroom practice,
-      instructional planning and Mathematics learning resources.
-    </p>
+      <h2>
+        Mathematics Teaching
+      </h2>
 
-  </div>
+      <p>
+        Selected evidence demonstrating secondary Mathematics
+        teaching, instructional resources and support for
+        accessible learning.
+      </p>
+
+    </div>
 
 
-  <div class="project-grid">
+    <div class="feature-card">
 
+      <div>
 
-    <!-- GENERAL MATHEMATICS -->
-
-    <article class="project">
-
-      <div class="project-header">
-
-        <div class="project-icon">
-
-          <i class="fas fa-square-root-variable"></i>
-
-        </div>
-
-        <span class="status active">
-
+        <span class="status status-active">
           <i class="fas fa-circle"></i>
-
           Active
+        </span>
 
+        <h3>
+          General Mathematics Digital Learning Website
+        </h3>
+
+        <p>
+
+          A digitized Mathematics learning resource currently
+          used to support students' access to instructional
+          materials, including situations where normal classroom
+          delivery may be disrupted.
+
+          The resource demonstrates curriculum support,
+          digital resource development and continuity of learning.
+
+        </p>
+
+        <br>
+
+        <a
+          href="https://marygraceperal.github.io/GeneralMathematicsSHS/"
+          target="_blank"
+          class="evidence-link">
+
+          <i class="fas fa-globe"></i>
+          Visit learning website
+
+        </a>
+
+        &nbsp;&nbsp;
+
+        <a
+          href="https://drive.google.com/drive/folders/1bDYrwBY3vh6c-O8n1XzaEC5SEKHsC67N?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
+
+          <i class="fas fa-folder-open"></i>
+          Supporting evidence
+
+        </a>
+
+      </div>
+
+
+      <div class="feature-side">
+
+        <strong>
+          Professional Value
+        </strong>
+
+        <span>
+          Curriculum support · Digital learning ·
+          Learning continuity
         </span>
 
       </div>
 
-      <h3>
-        General Mathematics Digital Learning Website
-      </h3>
-
-      <p class="description">
-
-        A digitized Mathematics learning resource currently
-        used to support students' access to instructional
-        materials, including situations where normal classroom
-        delivery may be disrupted.
-
-      </p>
-
-      <div class="project-details">
-
-        <strong>
-          Professional value
-        </strong>
-
-        <p>
-
-          Demonstrates digital resource development,
-          curriculum support and continuity of learning.
-
-        </p>
-
-      </div>
+    </div>
 
 
-      <!-- ACTUAL WEBSITE -->
-
-      <a class="project-link"
-         href="https://marygraceperal.github.io/GeneralMathematicsSHS/"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <i class="fas fa-globe"></i>
-
-        Visit learning website →
-
-      </a>
+    <br><br>
 
 
-      <!-- DRIVE EVIDENCE -->
+    <div class="evidence-grid">
 
-      <a class="project-link"
-         href="https://drive.google.com/drive/folders/1bDYrwBY3vh6c-O8n1XzaEC5SEKHsC67N?usp=drive_link"
-         target="_blank"
-         rel="noopener noreferrer">
+      <div class="evidence-card">
 
-        <i class="fas fa-folder-open"></i>
-
-        Supporting evidence →
-
-      </a>
-
-    </article>
-
-
-    <!-- TEACHING PRACTICE -->
-
-    <article class="project">
-
-      <div class="project-header">
-
-        <div class="project-icon">
-
-          <i class="fas fa-book-open"></i>
-
-        </div>
-
-        <span class="status active">
-
-          <i class="fas fa-circle"></i>
-
+        <span class="status status-active">
           Active
-
         </span>
 
-      </div>
-
-      <h3>
-        Teaching Practice Evidence
-      </h3>
-
-      <p class="description">
-
-        Collection of lesson materials, instructional
-        resources and selected evidence supporting
-        secondary Mathematics teaching.
-
-      </p>
-
-      <div class="project-details">
-
-        <strong>
-          Evidence
-        </strong>
+        <h3>
+          Teaching Practice Evidence
+        </h3>
 
         <p>
-          Lesson plans, instructional materials and
-          selected classroom resources.
+          Selected lesson materials, instructional resources
+          and supporting evidence from secondary Mathematics
+          teaching practice.
         </p>
+
+        <ul>
+          <li>Lesson materials</li>
+          <li>Instructional resources</li>
+          <li>Selected teaching evidence</li>
+        </ul>
+
+        <a
+          href="https://drive.google.com/drive/folders/1joKCojSZEj7plWIhHpD-PKFXT99Egrpx?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
+
+          View teaching evidence →
+        </a>
 
       </div>
 
-
-      <a class="project-link"
-         href="https://drive.google.com/drive/folders/1joKCojSZEj7plWIhHpD-PKFXT99Egrpx?usp=drive_link"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <i class="fas fa-folder-open"></i>
-
-        View teaching evidence →
-
-      </a>
-
-    </article>
-
+    </div>
 
   </div>
 
@@ -1147,284 +939,175 @@ footer {
 
 
 <!-- =========================================================
-     DIGITAL LEARNING
+     02 DIGITAL LEARNING
 ========================================================= -->
 
 <section id="digital">
 
-  <div class="section-heading">
+  <div class="container">
 
-    <span>02 · Mathematics & Digital Learning</span>
+    <div class="section-heading">
 
-    <h2>
-      Technology as a Teaching Tool
-    </h2>
+      <div class="section-number">
+        02 · Mathematics & Digital Learning
+      </div>
 
-    <p>
+      <h2>
+        Technology as a Teaching Tool
+      </h2>
 
-      Evidence of using technology not simply as a technical
-      skill, but as a means of improving access, organization
-      and learning.
+      <p>
+        Evidence of using technology not simply as a technical
+        skill, but as a practical means of improving access,
+        organization and learning.
+      </p>
 
-    </p>
-
-  </div>
-
-
-  <div class="project-grid">
+    </div>
 
 
-    <!-- GENERAL MATHEMATICS -->
+    <div class="evidence-grid">
 
-    <article class="project">
 
-      <div class="project-header">
+      <!-- GENERAL MATH WEBSITE -->
 
-        <div class="project-icon">
+      <div class="evidence-card">
 
-          <i class="fas fa-laptop-code"></i>
-
-        </div>
-
-        <span class="status active">
-
-          <i class="fas fa-circle"></i>
-
+        <span class="status status-active">
           Active
-
         </span>
+
+        <h3>
+          Digitized Mathematics Learning Materials
+        </h3>
+
+        <p>
+          Digital Mathematics resources developed to support
+          student access to learning materials and provide
+          continuity of learning during emergency situations.
+        </p>
+
+        <a
+          href="https://marygraceperal.github.io/GeneralMathematicsSHS/"
+          target="_blank"
+          class="evidence-link">
+
+          Open website →
+        </a>
 
       </div>
 
-      <h3>
-        Digitized Mathematics Learning Materials
-      </h3>
 
-      <p class="description">
+      <!-- GITHUB LAC -->
 
-        Digital Mathematics resources developed to support
-        students' access to learning materials and provide
-        continuity of learning during emergency situations.
+      <div class="evidence-card">
 
-      </p>
-
-
-      <a class="project-link"
-         href="https://marygraceperal.github.io/GeneralMathematicsSHS/"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <i class="fas fa-globe"></i>
-
-        Open website →
-
-      </a>
-
-
-      <a class="project-link"
-         href="https://drive.google.com/drive/folders/1bDYrwBY3vh6c-O8n1XzaEC5SEKHsC67N?usp=drive_link"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <i class="fas fa-folder-open"></i>
-
-        View evidence →
-
-      </a>
-
-    </article>
-
-
-    <!-- GITHUB LAC -->
-
-    <article class="project">
-
-      <div class="project-header">
-
-        <div class="project-icon">
-
-          <i class="fab fa-github"></i>
-
-        </div>
-
-        <span class="status scheduled">
-
-          <i class="fas fa-calendar"></i>
-
+        <span class="status status-scheduled">
           Scheduled · Aug 27, 2026
-
         </span>
 
-      </div>
-
-      <h3>
-        LAC Session: GitHub as a Tool for Teaching
-      </h3>
-
-      <p class="description">
-
-        Invited as a school LAC Session speaker to discuss
-        the practical use of GitHub as a tool for organizing,
-        publishing and sharing educational resources.
-
-      </p>
-
-      <div class="project-details">
-
-        <strong>
-          Current status
-        </strong>
+        <h3>
+          LAC Session: GitHub as a Tool for Teaching
+        </h3>
 
         <p>
 
-          Scheduled for August 27, 2026.
-
-          Update the status to "Completed" after
-          the session has actually taken place.
+          Invited as a school LAC Session speaker to discuss
+          practical ways GitHub can be used for organizing,
+          publishing and sharing educational resources.
 
         </p>
 
+        <ul>
+          <li>School-based professional learning</li>
+          <li>Digital resource organization</li>
+          <li>Educational technology sharing</li>
+        </ul>
+
+        <a
+          href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
+
+          Leadership & LAC evidence →
+        </a>
+
       </div>
 
 
-      <a class="project-link"
-         href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
-         target="_blank"
-         rel="noopener noreferrer">
+      <!-- CERTIFICATE SYSTEM -->
 
-        <i class="fas fa-folder-open"></i>
+      <div class="evidence-card">
 
-        Leadership & LAC evidence →
-
-      </a>
-
-    </article>
-
-
-    <!-- LAC CERTIFICATE SYSTEM -->
-
-    <article class="project">
-
-      <div class="project-header">
-
-        <div class="project-icon">
-
-          <i class="fas fa-certificate"></i>
-
-        </div>
-
-        <span class="status scheduled">
-
-          <i class="fas fa-calendar-check"></i>
-
-          First Use · Aug 27
-
+        <span class="status status-scheduled">
+          First Use · Aug 27, 2026
         </span>
 
-      </div>
-
-      <h3>
-        LAC Session Certificate System
-      </h3>
-
-      <p class="description">
-
-        A school-based digital certificate system developed
-        to streamline the preparation and documentation of
-        LAC Session certificates.
-
-      </p>
-
-      <div class="project-details">
-
-        <strong>
-          Current status
-        </strong>
+        <h3>
+          LAC Session Certificate System
+        </h3>
 
         <p>
 
-          Scheduled for its first actual use on
-          August 27, 2026.
+          A school-based digital certificate system developed
+          to streamline preparation and documentation of
+          LAC Session certificates.
 
         </p>
-
-      </div>
-
-
-      <a class="project-link"
-         href="https://drive.google.com/drive/folders/1bDYrwBY3vh6c-O8n1XzaEC5SEKHsC67N?usp=drive_link"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <i class="fas fa-folder-open"></i>
-
-        View project evidence →
-
-      </a>
-
-    </article>
-
-
-    <!-- COMPUTER LITERACY -->
-
-    <article class="project">
-
-      <div class="project-header">
-
-        <div class="project-icon">
-
-          <i class="fas fa-desktop"></i>
-
-        </div>
-
-        <span class="status completed">
-
-          <i class="fas fa-check"></i>
-
-          Completed
-
-        </span>
-
-      </div>
-
-      <h3>
-        Computer Literacy Activity
-      </h3>
-
-      <p class="description">
-
-        School-based computer literacy initiative involving
-        Microsoft operating programs and collaboration with
-        community and partner institutions.
-
-      </p>
-
-      <div class="project-details">
-
-        <strong>
-          Implementation
-        </strong>
 
         <p>
-          Completed October 23 and 30, 2024.
+          The system is scheduled for its first actual use
+          on August 27, 2026.
         </p>
+
+        <a
+          href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
+
+          View project evidence →
+        </a>
 
       </div>
 
 
-      <a class="project-link"
-         href="https://drive.google.com/drive/folders/1bDYrwBY3vh6c-O8n1XzaEC5SEKHsC67N?usp=drive_link"
-         target="_blank"
-         rel="noopener noreferrer">
+      <!-- COMPUTER LITERACY -->
 
-        <i class="fas fa-folder-open"></i>
+      <div class="evidence-card">
 
-        View documentation →
+        <span class="status status-completed">
+          Completed · 2024
+        </span>
 
-      </a>
+        <h3>
+          Computer Literacy Activity
+        </h3>
 
-    </article>
+        <p>
 
+          School-based computer literacy initiative involving
+          Microsoft operating programs and collaboration with
+          community and partner institutions.
+
+        </p>
+
+        <ul>
+          <li>Completed October 23, 2024</li>
+          <li>Completed October 30, 2024</li>
+          <li>Student computer literacy development</li>
+          <li>Community and institutional collaboration</li>
+        </ul>
+
+        <a
+          href="https://drive.google.com/drive/folders/1bDYrwBY3vh6c-O8n1XzaEC5SEKHsC67N?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
+
+          View documentation →
+        </a>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -1432,166 +1115,118 @@ footer {
 
 
 <!-- =========================================================
-     LEARNER SUPPORT
+     03 LEARNER SUPPORT
 ========================================================= -->
 
 <section id="support">
 
-  <div class="section-heading">
+  <div class="container">
 
-    <span>03 · Learner Support & Intervention</span>
+    <div class="section-heading">
 
-    <h2>
-      Intervention & Progress Monitoring
-    </h2>
-
-    <p>
-
-      Intervention initiatives are presented according
-      to their actual implementation stage.
-
-      Student outcome claims will be added only when
-      sufficient evidence is available.
-
-    </p>
-
-  </div>
-
-
-  <div class="project-grid">
-
-
-    <!-- ARAL -->
-
-    <article class="project">
-
-      <div class="project-header">
-
-        <div class="project-icon">
-
-          <i class="fas fa-chart-line"></i>
-
-        </div>
-
-        <span class="status implementation">
-
-          <i class="fas fa-spinner"></i>
-
-          Approved · Implementation
-
-        </span>
-
+      <div class="section-number">
+        03 · Learner Support & Intervention
       </div>
 
-      <h3>
-        ARAL Mathematics Intervention
-      </h3>
+      <h2>
+        Supporting Learners
+      </h2>
 
-      <p class="description">
+      <p>
 
-        A targeted Mathematics intervention initiative
-        designed to identify learning needs, provide focused
-        support and monitor learner progress.
+        Intervention initiatives are presented according to
+        their actual implementation stage. Student outcome
+        claims will be added only when sufficient evidence
+        is available.
 
       </p>
 
-      <div class="project-details">
+    </div>
 
-        <strong>
-          Current evidence stage
-        </strong>
+
+    <div class="evidence-grid">
+
+
+      <!-- ARAL -->
+
+      <div class="evidence-card">
+
+        <span class="status status-approved">
+          Approved · Implementation
+        </span>
+
+        <h3>
+          ARAL Mathematics Intervention
+        </h3>
 
         <p>
+
+          A targeted Mathematics intervention initiative
+          designed to identify learning needs, provide focused
+          support and monitor learner progress.
+
+        </p>
+
+        <p>
+
+          <strong>Evidence stage:</strong>
 
           Approved for use and entering implementation.
-
-          Evidence of efficacy and learner outcomes
-          is still being collected.
+          Evidence of efficacy and learner outcomes is still
+          being collected.
 
         </p>
 
+        <a
+          href="https://drive.google.com/drive/folders/1cJFG5y2HBA34f3aIjuAiwBUzVnQmTJl?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
+
+          View ARAL evidence →
+        </a>
+
       </div>
 
 
-      <a class="project-link"
-         href="https://drive.google.com/drive/folders/1cJFG5y2HBA34f3aIjuAiwBUzVnQmTJl?usp=drive_link"
-         target="_blank"
-         rel="noopener noreferrer">
+      <!-- BEHAVIOUR -->
 
-        <i class="fas fa-folder-open"></i>
+      <div class="evidence-card">
 
-        View ARAL evidence →
-
-      </a>
-
-    </article>
-
-
-    <!-- BEHAVIOUR -->
-
-    <article class="project">
-
-      <div class="project-header">
-
-        <div class="project-icon">
-
-          <i class="fas fa-people-arrows"></i>
-
-        </div>
-
-        <span class="status implementation">
-
-          <i class="fas fa-spinner"></i>
-
-          Implementation
-
+        <span class="status status-development">
+          Under Approval / Implementation Preparation
         </span>
 
-      </div>
-
-      <h3>
-        Classroom Behaviour Intervention
-      </h3>
-
-      <p class="description">
-
-        A structured classroom behaviour intervention
-        designed to provide a supportive response to
-        learner behaviour and classroom participation needs.
-
-      </p>
-
-      <div class="project-details">
-
-        <strong>
-          Current evidence stage
-        </strong>
+        <h3>
+          Classroom Behaviour Intervention
+        </h3>
 
         <p>
 
-          Proposal undergoing formal approval and
-          implementation.
-
-          Outcome evidence is not yet being claimed.
+          A structured classroom behaviour intervention
+          designed to provide a supportive response to learner
+          behaviour and classroom participation needs.
 
         </p>
 
+        <p>
+
+          The proposal is undergoing formal approval and
+          implementation preparation. Outcome evidence is
+          not yet being claimed.
+
+        </p>
+
+        <a
+          href="https://drive.google.com/drive/folders/1cJFG5y2HBA34f3aIjuAiwBUzVnQmTJl?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
+
+          View intervention evidence →
+        </a>
+
       </div>
 
-
-      <a class="project-link"
-         href="https://drive.google.com/drive/folders/1cJFG5y2HBA34f3aIjuAiwBUzVnQmTJl?usp=drive_link"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <i class="fas fa-folder-open"></i>
-
-        View intervention evidence →
-
-      </a>
-
-    </article>
-
+    </div>
 
   </div>
 
@@ -1599,415 +1234,352 @@ footer {
 
 
 <!-- =========================================================
-     LEADERSHIP
+     04 LEADERSHIP
 ========================================================= -->
 
 <section id="leadership">
 
-  <div class="section-heading">
+  <div class="container">
 
-    <span>04 · Leadership & Collaboration</span>
+    <div class="section-heading">
 
-    <h2>
-      Contributing Beyond the Classroom
-    </h2>
-
-    <p>
-
-      Professional contributions involving collaboration,
-      training, school improvement and development of
-      practical systems for school use.
-
-    </p>
-
-  </div>
-
-
-  <div class="project-grid">
-
-
-    <!-- LAC SPEAKER -->
-
-    <article class="project">
-
-      <div class="project-header">
-
-        <div class="project-icon">
-
-          <i class="fas fa-chalkboard-user"></i>
-
-        </div>
-
-        <span class="status scheduled">
-
-          <i class="fas fa-calendar"></i>
-
-          Aug 27, 2026
-
-        </span>
-
+      <div class="section-number">
+        04 · Leadership & Collaboration
       </div>
 
-      <h3>
-        LAC Session Speaker
-      </h3>
+      <h2>
+        Contributing Beyond the Classroom
+      </h2>
 
-      <p class="description">
+      <p>
 
-        Invited school LAC Session speaker for a professional
-        learning session focused on GitHub as a tool for teaching.
+        Professional contributions involving collaboration,
+        professional learning, training, school improvement
+        and development of practical systems for school use.
 
       </p>
 
-      <div class="project-details">
+    </div>
 
-        <strong>
-          Role
-        </strong>
+
+    <div class="evidence-grid">
+
+
+      <!-- LAC SPEAKER -->
+
+      <div class="evidence-card">
+
+        <span class="status status-scheduled">
+          Scheduled · Aug 27, 2026
+        </span>
+
+        <h3>
+          LAC Session Speaker
+        </h3>
 
         <p>
+
+          Invited as a school LAC Session speaker for a
+          professional learning session focused on GitHub
+          as a tool for teaching.
+
+        </p>
+
+        <p>
+
+          <strong>Role:</strong>
           Professional learning contributor and session speaker.
+
+        </p>
+
+        <a
+          href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
+
+          View leadership evidence →
+        </a>
+
+      </div>
+
+
+      <!-- CERTIFICATE SYSTEM -->
+
+      <div class="evidence-card">
+
+        <span class="status status-scheduled">
+          First Use · Aug 27, 2026
+        </span>
+
+        <h3>
+          LAC Certificate System
+        </h3>
+
+        <p>
+
+          Development of a practical digital certificate
+          workflow intended to improve the preparation and
+          documentation of school LAC Session certificates.
+
+        </p>
+
+        <a
+          href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
+
+          View system evidence →
+        </a>
+
+      </div>
+
+
+      <!-- COLLABORATION -->
+
+      <div class="evidence-card">
+
+        <span class="status status-active">
+          Current
+        </span>
+
+        <h3>
+          School-Based Collaboration
+        </h3>
+
+        <p>
+
+          Participation in school coordination, collaborative
+          initiatives and professional activities supporting
+          school development.
+
+        </p>
+
+        <a
+          href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
+
+          View collaboration evidence →
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     05 PROFESSIONAL DEVELOPMENT
+========================================================= -->
+
+<section id="development">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="section-number">
+        05 · Professional Development
+      </div>
+
+      <h2>
+        Continuous Professional Learning
+      </h2>
+
+      <p>
+
+        A longitudinal record of professional learning in
+        Mathematics education, digital learning, learner
+        support, leadership, school administration and
+        professional practice.
+
+      </p>
+
+    </div>
+
+
+    <div class="timeline">
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-year">
+          2025
+        </div>
+
+        <h3>
+          Pareja Integrated School
+        </h3>
+
+        <p>
+
+          Teacher's Performance Management ·
+          Maximizing Khan Academy ·
+          ARAL-Reading Program
+
         </p>
 
       </div>
 
 
-      <a class="project-link"
-         href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
-         target="_blank"
-         rel="noopener noreferrer">
+      <div class="timeline-item">
 
-        <i class="fas fa-folder-open"></i>
-
-        View leadership evidence →
-
-      </a>
-
-    </article>
-
-
-    <!-- TRAINING -->
-
-    <article class="project">
-
-      <div class="project-header">
-
-        <div class="project-icon">
-
-          <i class="fas fa-users-gear"></i>
-
+        <div class="timeline-year">
+          2021
         </div>
 
-        <span class="status active">
+        <h3>
+          Mathematics Olympiad Coaching & Learning Delivery
+        </h3>
 
-          <i class="fas fa-circle"></i>
+        <p>
 
-          Professional Experience
+          Effective Coaching: Math Olympiad ·
+          Learning Delivery Modalities (LDM2)
 
-        </span>
+        </p>
 
       </div>
 
-      <h3>
-        Training & Professional Learning Roles
-      </h3>
 
-      <p class="description">
+      <div class="timeline-item">
 
-        Experience contributing to professional learning,
-        training coordination and capacity-building activities.
-
-      </p>
-
-
-      <a class="project-link"
-         href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <i class="fas fa-award"></i>
-
-        View recognition evidence →
-
-      </a>
-
-
-      <a class="project-link"
-         href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
-         target="_blank"
-         rel="noopener noreferrer">
-
-        <i class="fas fa-folder-open"></i>
-
-        View leadership evidence →
-
-      </a>
-
-    </article>
-
-
-    <!-- SCHOOL COLLABORATION -->
-
-    <article class="project">
-
-      <div class="project-header">
-
-        <div class="project-icon">
-
-          <i class="fas fa-school"></i>
-
+        <div class="timeline-year">
+          2020
         </div>
 
-        <span class="status active">
+        <h3>
+          Digital Learning & Open Educational Resources
+        </h3>
 
-          <i class="fas fa-circle"></i>
+        <p>
 
-          Current
+          Open Educational Resources, digital e-book
+          development, mobile applications, instructional
+          videos, digital portfolios, cybersecurity,
+          digital citizenship and New Normal classroom practice.
 
-        </span>
+        </p>
 
       </div>
 
-      <h3>
-        School-Based Collaboration
-      </h3>
 
-      <p class="description">
+      <div class="timeline-item">
 
-        Participation in school-based coordination,
-        collaborative initiatives and professional activities
-        supporting school development.
+        <div class="timeline-year">
+          2016–2017
+        </div>
 
-      </p>
+        <h3>
+          School Administration & Financial Management
+        </h3>
 
+        <p>
 
-      <a class="project-link"
-         href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
-         target="_blank"
-         rel="noopener noreferrer">
+          Budget proposal, budget monitoring, financial
+          reporting, strategic planning and team building.
 
-        <i class="fas fa-folder-open"></i>
+        </p>
 
-        View collaboration evidence →
-
-      </a>
-
-    </article>
-
-
-  </div>
-
-</section>
-
-
-<!-- =========================================================
-     PROFESSIONAL DEVELOPMENT
-========================================================= -->
-
-<section id="development">
-
-  <div class="section-heading">
-
-    <span>05 · Professional Development</span>
-
-    <h2>
-      Continuous Professional Learning
-    </h2>
-
-    <p>
-
-      A longitudinal record of professional learning in
-      Mathematics education, digital learning, learner support,
-      leadership, school administration and professional practice.
-
-    </p>
-
-  </div>
-
-
-  <div class="timeline">
-
-
-    <div class="timeline-item">
-
-      <div class="timeline-year">
-        2025
       </div>
 
-      <h3>
-        Pareja Integrated School
-      </h3>
 
-      <p>
+      <div class="timeline-item">
 
-        Teacher's Performance Management;
-        Maximizing Khan Academy;
-        ARAL-Reading Program.
+        <div class="timeline-year">
+          2015
+        </div>
 
-      </p>
+        <h3>
+          Regional K–12 Training
+        </h3>
+
+        <p>
+
+          Served as a Mathematics demonstrator during
+          regional K–12 training. Official certificate is
+          the available evidence.
+
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-year">
+          2013
+        </div>
+
+        <h3>
+          Division Catch-Up Training
+        </h3>
+
+        <p>
+
+          Strengthened subject-area expertise in addressing
+          learning gaps and remediation for secondary learners.
+
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-year">
+          2010–2012
+        </div>
+
+        <h3>
+          Teaching, Coaching & Professional Development
+        </h3>
+
+        <p>
+
+          Curriculum implementation, Mathematics instruction,
+          student coaching, dispute resolution and educational
+          programs.
+
+        </p>
+
+      </div>
+
+
+      <div class="timeline-item">
+
+        <div class="timeline-year">
+          2009
+        </div>
+
+        <h3>
+          Civil Service Eligibility & Teacher Development
+        </h3>
+
+        <p>
+
+          Certificate of Eligibility as an Honor Graduate
+          and participation in professional teacher development.
+
+        </p>
+
+      </div>
 
     </div>
 
 
-    <div class="timeline-item">
+    <br>
 
-      <div class="timeline-year">
-        2021
-      </div>
+    <a
+      href="https://drive.google.com/drive/folders/1RiDZ7Fr0dGpKA90r7PgTraN3IWr_0xo2?usp=drive_link"
+      target="_blank"
+      class="button button-secondary">
 
-      <h3>
-        Mathematics Olympiad Coaching & Learning Delivery
-      </h3>
-
-      <p>
-
-        Effective Coaching: Math Olympiad and
-        Learning Delivery Modalities (LDM2).
-
-      </p>
-
-    </div>
-
-
-    <div class="timeline-item">
-
-      <div class="timeline-year">
-        2020
-      </div>
-
-      <h3>
-        Digital Learning & Open Educational Resources
-      </h3>
-
-      <p>
-
-        Open Educational Resources, digital e-book development,
-        mobile applications, instructional videos, digital
-        portfolios, cybersecurity, digital citizenship and
-        New Normal classroom practice.
-
-      </p>
-
-    </div>
-
-
-    <div class="timeline-item">
-
-      <div class="timeline-year">
-        2016–2017
-      </div>
-
-      <h3>
-        School Administration & Financial Management
-      </h3>
-
-      <p>
-
-        Budget proposals, budget monitoring,
-        financial reporting, strategic planning
-        and team building.
-
-      </p>
-
-    </div>
-
-
-    <div class="timeline-item">
-
-      <div class="timeline-year">
-        2015
-      </div>
-
-      <h3>
-        Regional K–12 Training Demonstrator
-      </h3>
-
-      <p>
-
-        Served as a demonstrator for regional K–12 training,
-        demonstrating Grade 10 Mathematics practices.
-
-        Official certificate is the available evidence.
-
-      </p>
-
-    </div>
-
-
-    <div class="timeline-item">
-
-      <div class="timeline-year">
-        2013
-      </div>
-
-      <h3>
-        Division Catch-Up Training
-      </h3>
-
-      <p>
-
-        Strengthened subject-area expertise in addressing
-        learning gaps and remediation for secondary learners.
-
-      </p>
-
-    </div>
-
-
-    <div class="timeline-item">
-
-      <div class="timeline-year">
-        2010–2012
-      </div>
-
-      <h3>
-        Teaching, Coaching & Professional Development
-      </h3>
-
-      <p>
-
-        Professional learning in curriculum implementation,
-        Mathematics instruction, student coaching,
-        dispute resolution and educational programs.
-
-      </p>
-
-    </div>
-
-
-    <div class="timeline-item">
-
-      <div class="timeline-year">
-        2009
-      </div>
-
-      <h3>
-        Civil Service Eligibility & Teacher Development
-      </h3>
-
-      <p>
-
-        Certificate of Eligibility as an Honor Graduate and
-        participation in professional teacher development.
-
-      </p>
-
-    </div>
-
-
-  </div>
-
-
-  <div class="button-row">
-
-    <a class="btn btn-primary"
-       href="https://drive.google.com/drive/folders/1RiDZ7Fr0dGpKA90r7PgTraN3IWr_0xo2?usp=drive_link"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <i class="fas fa-file-lines"></i>
-
-      View Professional Development
+      <i class="fas fa-folder-open"></i>
+      View Professional Development Evidence
 
     </a>
 
@@ -2017,108 +1589,153 @@ footer {
 
 
 <!-- =========================================================
-     RECOGNITION & SPECIAL ROLES
+     06 RECOGNITION
 ========================================================= -->
 
 <section id="recognition">
 
-  <div class="section-heading">
+  <div class="container">
 
-    <span>06 · Recognition & Special Roles</span>
+    <div class="section-heading">
 
-    <h2>
-      Selected Professional Evidence
-    </h2>
+      <div class="section-number">
+        06 · Recognition & Special Roles
+      </div>
 
-  </div>
-
-
-  <div class="evidence-grid">
-
-
-    <a class="evidence"
-       href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <i class="fas fa-award"></i>
-
-      <h3>
-        Regional Demonstration Teacher
-      </h3>
+      <h2>
+        Selected Professional Evidence
+      </h2>
 
       <p>
 
-        Regional K–12 training demonstration experience.
-        Official certificate available.
+        Selected roles and responsibilities demonstrating
+        professional contribution beyond routine classroom
+        instruction.
 
       </p>
 
-    </a>
+    </div>
 
 
-    <a class="evidence"
-       href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <i class="fas fa-medal"></i>
-
-      <h3>
-        Coaching & Judging
-      </h3>
-
-      <p>
-
-        Experience in Mathematics coaching,
-        academic competitions and formal judging roles.
-
-      </p>
-
-    </a>
+    <div class="evidence-grid">
 
 
-    <a class="evidence"
-       href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
-       target="_blank"
-       rel="noopener noreferrer">
+      <div class="evidence-card">
 
-      <i class="fas fa-certificate"></i>
+        <h3>
+          Regional Demonstration Teacher
+        </h3>
 
-      <h3>
-        Professional Recognition
-      </h3>
+        <p>
 
-      <p>
+          Served as a demonstrator during regional K–12
+          training, demonstrating Grade 10 Mathematics
+          practices.
 
-        Certificates and supporting documentation
-        for selected professional roles.
+        </p>
 
-      </p>
+        <p>
+          <strong>Evidence:</strong>
+          Official certificate available.
+        </p>
 
-    </a>
+        <a
+          href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
+
+          View certificate →
+        </a>
+
+      </div>
 
 
-    <a class="evidence"
-       href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
-       target="_blank"
-       rel="noopener noreferrer">
+      <div class="evidence-card">
 
-      <i class="fas fa-user-tie"></i>
+        <h3>
+          Mathematics Coaching
+        </h3>
 
-      <h3>
-        Special Roles
-      </h3>
+        <p>
 
-      <p>
+          Experience coaching students in academic and
+          Mathematics-related competitive activities,
+          including Mathematics Olympiad coaching.
 
-        Selected professional roles, training
-        assignments and special responsibilities.
+        </p>
 
-      </p>
+        <a
+          href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
 
-    </a>
+          View recognition evidence →
+        </a>
 
+      </div>
+
+
+      <div class="evidence-card">
+
+        <h3>
+          Judging & Assessment Roles
+        </h3>
+
+        <p>
+
+          Experience serving as a formal judge in student
+          competitions and performance demonstrations.
+
+        </p>
+
+        <ul>
+
+          <li>
+            Mass Demonstration Judge
+          </li>
+
+          <li>
+            Literary-Musical Competition Judge
+          </li>
+
+        </ul>
+
+        <a
+          href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
+
+          View supporting evidence →
+        </a>
+
+      </div>
+
+
+      <div class="evidence-card">
+
+        <h3>
+          Professional Recognition
+        </h3>
+
+        <p>
+
+          Selected certificates and documentation supporting
+          professional roles, training assignments and special
+          responsibilities.
+
+        </p>
+
+        <a
+          href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
+          target="_blank"
+          class="evidence-link">
+
+          View recognition repository →
+        </a>
+
+      </div>
+
+    </div>
 
   </div>
 
@@ -2126,248 +1743,249 @@ footer {
 
 
 <!-- =========================================================
-     PUBLIC EVIDENCE
+     07 PUBLIC EVIDENCE
 ========================================================= -->
 
 <section id="evidence">
 
-  <div class="section-heading">
+  <div class="container">
 
-    <span>07 · Portfolio Public Evidence</span>
+    <div class="section-heading">
+
+      <div class="section-number">
+        07 · Portfolio Public Evidence
+      </div>
+
+      <h2>
+        Supporting Documentation
+      </h2>
+
+      <p>
+
+        A curated evidence repository designed to allow
+        external reviewers to explore selected professional
+        documents without navigating the entire personal
+        Google Drive.
+
+      </p>
+
+    </div>
+
+
+    <div class="folder-grid">
+
+
+      <!-- 00 -->
+
+      <a
+        href="https://drive.google.com/drive/folders/1JnJQAUvSc_fA4ano4BECDeZJRXswXflK?usp=drive_link"
+        target="_blank"
+        class="folder-card">
+
+        <div class="folder-icon">
+          <i class="fas fa-folder-open"></i>
+        </div>
+
+        <h3>
+          00 · Portfolio Public Evidence
+        </h3>
+
+        <p>
+          Curated evidence prepared for external reviewers.
+        </p>
+
+      </a>
+
+
+      <!-- 01 -->
+
+      <a
+        href="https://drive.google.com/drive/folders/17KdWw6QwoiMyv0Vt5RnUcEBZnBkfx-Sh?usp=drive_link"
+        target="_blank"
+        class="folder-card">
+
+        <div class="folder-icon">
+          <i class="fas fa-file-user"></i>
+        </div>
+
+        <h3>
+          01 · CV & Application
+        </h3>
+
+        <p>
+          Curriculum Vitae and application supporting documents.
+        </p>
+
+      </a>
+
+
+      <!-- 02 -->
+
+      <a
+        href="https://drive.google.com/drive/folders/1joKCojSZEj7plWIhHpD-PKFXT99Egrpx?usp=drive_link"
+        target="_blank"
+        class="folder-card">
+
+        <div class="folder-icon">
+          <i class="fas fa-chalkboard-user"></i>
+        </div>
+
+        <h3>
+          02 · Teaching Practice
+        </h3>
+
+        <p>
+          Lesson materials and Mathematics teaching evidence.
+        </p>
+
+      </a>
+
+
+      <!-- 03 -->
+
+      <a
+        href="https://drive.google.com/drive/folders/1bDYrwBY3vh6c-O8n1XzaEC5SEKHsC67N?usp=drive_link"
+        target="_blank"
+        class="folder-card">
+
+        <div class="folder-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+
+        <h3>
+          03 · Mathematics & Digital Learning
+        </h3>
+
+        <p>
+          Digital resources, websites and technology projects.
+        </p>
+
+      </a>
+
+
+      <!-- 04 -->
+
+      <a
+        href="https://drive.google.com/drive/folders/1cJFG5y2HBA34f3aIjuAiwBUzVnQmTJl?usp=drive_link"
+        target="_blank"
+        class="folder-card">
+
+        <div class="folder-icon">
+          <i class="fas fa-user-check"></i>
+        </div>
+
+        <h3>
+          04 · Learner Support & Intervention
+        </h3>
+
+        <p>
+          ARAL and classroom intervention documentation.
+        </p>
+
+      </a>
+
+
+      <!-- 05 -->
+
+      <a
+        href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
+        target="_blank"
+        class="folder-card">
+
+        <div class="folder-icon">
+          <i class="fas fa-people-group"></i>
+        </div>
+
+        <h3>
+          05 · Leadership & Collaboration
+        </h3>
+
+        <p>
+          LAC, coordination and professional collaboration evidence.
+        </p>
+
+      </a>
+
+
+      <!-- 06 -->
+
+      <a
+        href="https://drive.google.com/drive/folders/1RiDZ7Fr0dGpKA90r7PgTraN3IWr_0xo2?usp=drive_link"
+        target="_blank"
+        class="folder-card">
+
+        <div class="folder-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+
+        <h3>
+          06 · Professional Development
+        </h3>
+
+        <p>
+          Professional development log and training documentation.
+        </p>
+
+      </a>
+
+
+      <!-- 07 -->
+
+      <a
+        href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
+        target="_blank"
+        class="folder-card">
+
+        <div class="folder-icon">
+          <i class="fas fa-award"></i>
+        </div>
+
+        <h3>
+          07 · Recognition & Special Roles
+        </h3>
+
+        <p>
+          Demonstrator, coaching, judging and professional roles.
+        </p>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CLOSING
+========================================================= -->
+
+<section class="closing">
+
+  <div class="container">
 
     <h2>
-      Supporting Documentation
+      Teaching with Purpose, Evidence and Continuous Growth
     </h2>
 
     <p>
 
-      A curated evidence repository designed to allow
-      external reviewers to explore selected professional
-      documents without having to navigate the entire
-      personal Google Drive.
+      My professional practice is grounded in the belief that
+      Mathematics learning becomes more meaningful when teachers
+      understand learner needs, use appropriate instructional
+      strategies, monitor progress and continually reflect on
+      their practice.
+
+      I seek to combine sound Mathematics teaching with practical
+      intervention, responsible use of technology and meaningful
+      professional collaboration.
 
     </p>
 
   </div>
 
-
-  <div class="evidence-grid">
-
-
-    <!-- PUBLIC EVIDENCE -->
-
-    <a class="evidence"
-       href="https://drive.google.com/drive/folders/1JnJQAUvSc_fA4ano4BECDeZJRXswXflK?usp=drive_link"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <i class="fas fa-folder-open"></i>
-
-      <h3>
-        Public Evidence Repository
-      </h3>
-
-      <p>
-
-        Curated portfolio evidence prepared
-        specifically for external reviewers.
-
-      </p>
-
-    </a>
-
-
-    <!-- CV -->
-
-    <a class="evidence"
-       href="https://drive.google.com/drive/folders/17KdWw6QwoiMyv0Vt5RnUcEBZnBkfx-Sh?usp=drive_link"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <i class="fas fa-file-pdf"></i>
-
-      <h3>
-        CV & Application
-      </h3>
-
-      <p>
-
-        Curriculum Vitae and application
-        supporting documents.
-
-      </p>
-
-    </a>
-
-
-    <!-- TEACHING -->
-
-    <a class="evidence"
-       href="https://drive.google.com/drive/folders/1joKCojSZEj7plWIhHpD-PKFXT99Egrpx?usp=drive_link"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <i class="fas fa-chalkboard"></i>
-
-      <h3>
-        Teaching Practice
-      </h3>
-
-      <p>
-
-        Lesson materials and Mathematics
-        teaching evidence.
-
-      </p>
-
-    </a>
-
-
-    <!-- DIGITAL -->
-
-    <a class="evidence"
-       href="https://drive.google.com/drive/folders/1bDYrwBY3vh6c-O8n1XzaEC5SEKHsC67N?usp=drive_link"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <i class="fas fa-laptop"></i>
-
-      <h3>
-        Mathematics & Digital Learning
-      </h3>
-
-      <p>
-
-        Digital resources, websites,
-        GitHub work and technology projects.
-
-      </p>
-
-    </a>
-
-
-    <!-- LEARNER SUPPORT -->
-
-    <a class="evidence"
-       href="https://drive.google.com/drive/folders/1cJFG5y2HBA34f3aIjuAiwBUzVnQmTJl?usp=drive_link"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <i class="fas fa-chart-line"></i>
-
-      <h3>
-        Learner Support & Intervention
-      </h3>
-
-      <p>
-
-        ARAL and classroom intervention
-        documentation.
-
-      </p>
-
-    </a>
-
-
-    <!-- LEADERSHIP -->
-
-    <a class="evidence"
-       href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <i class="fas fa-users"></i>
-
-      <h3>
-        Leadership & Collaboration
-      </h3>
-
-      <p>
-
-        LAC, coordination and
-        professional collaboration evidence.
-
-      </p>
-
-    </a>
-
-
-    <!-- PD -->
-
-    <a class="evidence"
-       href="https://drive.google.com/drive/folders/1RiDZ7Fr0dGpKA90r7PgTraN3IWr_0xo2?usp=drive_link"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <i class="fas fa-graduation-cap"></i>
-
-      <h3>
-        Professional Development
-      </h3>
-
-      <p>
-
-        Professional development log
-        and training documentation.
-
-      </p>
-
-    </a>
-
-
-    <!-- RECOGNITION -->
-
-    <a class="evidence"
-       href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
-       target="_blank"
-       rel="noopener noreferrer">
-
-      <i class="fas fa-certificate"></i>
-
-      <h3>
-        Recognition & Special Roles
-      </h3>
-
-      <p>
-
-        Demonstrator, coaching, judging
-        and other professional roles.
-
-      </p>
-
-    </a>
-
-
-  </div>
-
 </section>
-
-
-<!-- =========================================================
-     PROFESSIONAL STATEMENT
-========================================================= -->
-
-<div class="statement">
-
-  <h2>
-    Teaching with Purpose, Evidence and Continuous Growth
-  </h2>
-
-  <p>
-
-    My professional practice is grounded in the belief that
-    Mathematics learning becomes more meaningful when teachers
-    understand learner needs, use appropriate instructional
-    strategies, monitor progress and continually reflect on
-    their practice.
-
-    I seek to combine sound Mathematics teaching with practical
-    intervention, responsible use of technology and meaningful
-    professional collaboration.
-
-  </p>
-
-</div>
 
 
 <!-- =========================================================
@@ -2376,23 +1994,21 @@ footer {
 
 <footer>
 
-  <p>
-    © 2026 Mary Grace Peral · Professional Teaching Portfolio
-  </p>
+  <div class="container">
 
-  <p style="margin-top:5px;">
+    © 2026 Mary Grace Peral · Professional Teaching Portfolio
+
+    <br>
 
     Secondary Mathematics Education ·
     Digital Learning ·
     Learner Support ·
     Professional Growth
 
-  </p>
+  </div>
 
 </footer>
 
-
-</div>
 
 </body>
 </html>

@@ -1,0 +1,2936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mary Grace Peral | Private Evidence Master Guide</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+:root {
+  --bg-main: #f7f7f8;
+  --bg-card: #ffffff;
+  --border: #e7e7ea;
+
+  --accent: #6d5a8d;
+  --accent-light: #f1edf7;
+
+  --green: #4f8063;
+  --green-light: #edf6f0;
+
+  --blue: #55799b;
+  --blue-light: #edf4f9;
+
+  --amber: #a47735;
+  --amber-light: #faf3e5;
+
+  --red: #a85c5c;
+  --red-light: #faeeee;
+
+  --text-primary: #29272d;
+  --text-secondary: #6f6b74;
+  --text-light: #99959d;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+
+a {
+  color: inherit;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 22px;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  max-width: 1180px;
+  margin: auto;
+  padding: 14px 22px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.brand {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--text-primary);
+}
+
+.brand span {
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  padding: 65px 0 45px;
+}
+
+.hero-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 48px;
+
+  box-shadow: 0 12px 35px rgba(40,35,50,0.05);
+}
+
+.eyebrow {
+  display: inline-block;
+
+  background: var(--accent-light);
+  color: var(--accent);
+
+  padding: 7px 13px;
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: clamp(35px, 5vw, 54px);
+  line-height: 1.05;
+  letter-spacing: -1.8px;
+  margin-bottom: 10px;
+}
+
+.hero h2 {
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 18px;
+}
+
+.hero-description {
+  max-width: 820px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.hero-note {
+  margin-top: 22px;
+  padding: 16px 18px;
+
+  background: var(--amber-light);
+  border-left: 4px solid var(--amber);
+
+  border-radius: 10px;
+
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  padding: 11px 16px;
+
+  border-radius: 9px;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.button-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.button-secondary {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+  padding: 55px 0;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-number {
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 7px;
+}
+
+.section-heading h2 {
+  font-size: 28px;
+  letter-spacing: -0.6px;
+  margin-bottom: 7px;
+}
+
+.section-heading p {
+  max-width: 780px;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(210px,1fr));
+  gap: 15px;
+}
+
+.dashboard-card {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 21px;
+}
+
+.dashboard-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: var(--accent-light);
+  color: var(--accent);
+
+  margin-bottom: 13px;
+}
+
+.dashboard-card h3 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.dashboard-card p {
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+/* =========================
+   STATUS LEGEND
+========================= */
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
+  gap: 12px;
+}
+
+.status-box {
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  background: white;
+}
+
+.status-box strong {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+.status-box span {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.complete {
+  border-left: 4px solid var(--green);
+}
+
+.progress {
+  border-left: 4px solid var(--amber);
+}
+
+.missing {
+  border-left: 4px solid var(--red);
+}
+
+.future {
+  border-left: 4px solid var(--blue);
+}
+
+.optional {
+  border-left: 4px solid var(--text-light);
+}
+
+/* =========================
+   FOLDER SECTIONS
+========================= */
+
+.folder-section {
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px;
+
+  margin-bottom: 22px;
+}
+
+.folder-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+
+  margin-bottom: 22px;
+}
+
+.folder-title {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.folder-number {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: var(--accent-light);
+  color: var(--accent);
+
+  font-weight: 800;
+  font-size: 12px;
+}
+
+.folder-title h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.folder-title p {
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+.folder-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+
+  background: var(--accent-light);
+  color: var(--accent);
+
+  padding: 8px 11px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* =========================
+   DOCUMENT GRID
+========================= */
+
+.document-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 13px;
+}
+
+.document-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 17px;
+
+  background: #fcfcfd;
+}
+
+.document-card h4 {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.document-card p {
+  color: var(--text-secondary);
+  font-size: 11px;
+  margin-bottom: 9px;
+}
+
+.document-card ul {
+  padding-left: 17px;
+}
+
+.document-card li {
+  color: var(--text-secondary);
+  font-size: 10px;
+  margin-bottom: 3px;
+}
+
+/* =========================
+   TAGS
+========================= */
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 4px 8px;
+
+  border-radius: 15px;
+
+  font-size: 9px;
+  font-weight: 800;
+
+  margin-bottom: 9px;
+}
+
+.tag-essential {
+  background: var(--green-light);
+  color: var(--green);
+}
+
+.tag-supporting {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+
+.tag-future {
+  background: var(--amber-light);
+  color: var(--amber);
+}
+
+.tag-optional {
+  background: #f1f1f3;
+  color: var(--text-secondary);
+}
+
+/* =========================
+   EVIDENCE PACKAGE
+========================= */
+
+.package {
+  margin-top: 22px;
+
+  background: var(--blue-light);
+
+  border: 1px solid #dbe7f0;
+
+  border-radius: 13px;
+
+  padding: 20px;
+}
+
+.package h4 {
+  font-size: 13px;
+  margin-bottom: 7px;
+}
+
+.package p {
+  color: var(--text-secondary);
+  font-size: 11px;
+}
+
+/* =========================
+   PRINCIPLE
+========================= */
+
+.principle {
+  margin-top: 18px;
+
+  padding: 17px;
+
+  background: var(--accent-light);
+
+  border-radius: 12px;
+
+  font-size: 11px;
+
+  color: var(--text-secondary);
+}
+
+.principle strong {
+  color: var(--accent);
+}
+
+/* =========================
+   AUDIT TABLE
+========================= */
+
+.audit-table-wrapper {
+  overflow-x: auto;
+}
+
+.audit-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  background: white;
+
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  overflow: hidden;
+}
+
+.audit-table th,
+.audit-table td {
+  padding: 12px;
+
+  border-bottom: 1px solid var(--border);
+
+  text-align: left;
+
+  font-size: 11px;
+}
+
+.audit-table th {
+  background: var(--accent-light);
+  color: var(--accent);
+
+  font-weight: 800;
+}
+
+.audit-table td {
+  color: var(--text-secondary);
+}
+
+/* =========================
+   FINAL CHECKLIST
+========================= */
+
+.checklist {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(270px,1fr));
+  gap: 13px;
+}
+
+.check-card {
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  padding: 17px;
+}
+
+.check-card h4 {
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.check-card ul {
+  padding-left: 18px;
+}
+
+.check-card li {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+
+/* =========================
+   CLOSING
+========================= */
+
+.closing {
+  text-align: center;
+
+  background: white;
+
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.closing h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.closing p {
+  max-width: 750px;
+  margin: auto;
+
+  color: var(--text-secondary);
+
+  font-size: 13px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  padding: 28px 0;
+
+  text-align: center;
+
+  color: var(--text-light);
+
+  font-size: 10px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:760px) {
+
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+  }
+
+  .hero-card {
+    padding: 30px 23px;
+  }
+
+  .folder-header {
+    flex-direction: column;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body id="top">
+
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav class="navbar">
+
+  <div class="nav-inner">
+
+    <a href="#top" class="brand">
+      Mary Grace Peral <span>· Private Guide</span>
+    </a>
+
+    <div class="nav-links">
+
+      <a href="#dashboard">Dashboard</a>
+
+      <a href="#cv">CV</a>
+
+      <a href="#teaching">Teaching</a>
+
+      <a href="#digital">Digital</a>
+
+      <a href="#support">Support</a>
+
+      <a href="#leadership">Leadership</a>
+
+      <a href="#development">PD</a>
+
+      <a href="#recognition">Recognition</a>
+
+      <a href="#audit">Audit</a>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<header class="hero">
+
+  <div class="container">
+
+    <div class="hero-card">
+
+      <span class="eyebrow">
+        Private Evidence Management System
+      </span>
+
+      <h1>
+        Evidence Master Guide
+      </h1>
+
+      <h2>
+        NZ Teaching Application
+      </h2>
+
+      <p class="hero-description">
+
+        This private guide is the internal evidence-management
+        system for Mary Grace Peral's professional teaching
+        portfolio. It identifies what evidence belongs in each
+        private folder, what documents should be created,
+        which evidence can be combined, and what remains to be
+        completed.
+
+      </p>
+
+      <div class="hero-note">
+
+        <strong>Important:</strong>
+
+        This page is an internal working guide. It is not intended
+        to replace the public portfolio and should not be placed
+        inside the public evidence repository.
+
+      </div>
+
+      <div class="hero-buttons">
+
+        <a href="#dashboard" class="button button-primary">
+          <i class="fas fa-chart-pie"></i>
+          Open Dashboard
+        </a>
+
+        <a href="#audit" class="button button-secondary">
+          <i class="fas fa-clipboard-check"></i>
+          Final Audit
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<!-- =========================================================
+     DASHBOARD
+========================================================= -->
+
+<section id="dashboard">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="section-number">
+        00 · Dashboard
+      </div>
+
+      <h2>
+        Evidence Management Overview
+      </h2>
+
+      <p>
+        Use this page as the starting point whenever you work
+        on your application evidence.
+      </p>
+
+    </div>
+
+
+    <div class="dashboard">
+
+
+      <div class="dashboard-card">
+
+        <div class="dashboard-icon">
+          <i class="fas fa-file-user"></i>
+        </div>
+
+        <h3>
+          01 · CV & Application
+        </h3>
+
+        <p>
+          Core application documents and employment materials.
+        </p>
+
+      </div>
+
+
+      <div class="dashboard-card">
+
+        <div class="dashboard-icon">
+          <i class="fas fa-chalkboard-user"></i>
+        </div>
+
+        <h3>
+          02 · Teaching Practice
+        </h3>
+
+        <p>
+          Classroom planning, instruction and assessment evidence.
+        </p>
+
+      </div>
+
+
+      <div class="dashboard-card">
+
+        <div class="dashboard-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+
+        <h3>
+          03 · Mathematics & Digital Learning
+        </h3>
+
+        <p>
+          Mathematics resources, websites and educational technology.
+        </p>
+
+      </div>
+
+
+      <div class="dashboard-card">
+
+        <div class="dashboard-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+
+        <h3>
+          04 · Learner Support
+        </h3>
+
+        <p>
+          Intervention, remediation, wellbeing and differentiation.
+        </p>
+
+      </div>
+
+
+      <div class="dashboard-card">
+
+        <div class="dashboard-icon">
+          <i class="fas fa-people-group"></i>
+        </div>
+
+        <h3>
+          05 · Leadership
+        </h3>
+
+        <p>
+          LAC, coordination, partnerships and school contribution.
+        </p>
+
+      </div>
+
+
+      <div class="dashboard-card">
+
+        <div class="dashboard-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+
+        <h3>
+          06 · Professional Development
+        </h3>
+
+        <p>
+          Training, certificates and longitudinal professional learning.
+        </p>
+
+      </div>
+
+
+      <div class="dashboard-card">
+
+        <div class="dashboard-icon">
+          <i class="fas fa-award"></i>
+        </div>
+
+        <h3>
+          07 · Recognition & Roles
+        </h3>
+
+        <p>
+          Demonstration, coaching, judging and special assignments.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     STATUS SYSTEM
+========================================================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="section-number">
+        Evidence Status System
+      </div>
+
+      <h2>
+        How to Mark Your Progress
+      </h2>
+
+      <p>
+        Use one consistent status system throughout your private
+        evidence-building process.
+      </p>
+
+    </div>
+
+
+    <div class="status-grid">
+
+      <div class="status-box complete">
+
+        <strong>
+          🟢 COMPLETE
+        </strong>
+
+        <span>
+          Evidence exists, is organized and is ready for review.
+        </span>
+
+      </div>
+
+
+      <div class="status-box progress">
+
+        <strong>
+          🟡 IN PROGRESS
+        </strong>
+
+        <span>
+          Some evidence exists but the package is not finished.
+        </span>
+
+      </div>
+
+
+      <div class="status-box missing">
+
+        <strong>
+          🔴 MISSING
+        </strong>
+
+        <span>
+          The document or evidence still needs to be created.
+        </span>
+
+      </div>
+
+
+      <div class="status-box future">
+
+        <strong>
+          🔵 UPDATE LATER
+        </strong>
+
+        <span>
+          Evidence depends on an activity that has not yet occurred.
+        </span>
+
+      </div>
+
+
+      <div class="status-box optional">
+
+        <strong>
+          ⚪ OPTIONAL
+        </strong>
+
+        <span>
+          Useful supporting evidence but not essential to the application.
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     01 CV & APPLICATION
+========================================================= -->
+
+<section id="cv">
+
+  <div class="container">
+
+    <div class="folder-section">
+
+      <div class="folder-header">
+
+        <div class="folder-title">
+
+          <div class="folder-number">
+            01
+          </div>
+
+          <div>
+
+            <h3>
+              CV & Application
+            </h3>
+
+            <p>
+              Core documents used directly in the NZ teaching application.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-grid">
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            Current CV
+          </h4>
+
+          <p>
+            Final professional curriculum vitae.
+          </p>
+
+          <ul>
+            <li>Teaching experience</li>
+            <li>Qualifications</li>
+            <li>Professional development</li>
+            <li>Leadership and special roles</li>
+            <li>Digital learning experience</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            Teaching Philosophy
+          </h4>
+
+          <p>
+            Concise statement explaining your approach to teaching.
+          </p>
+
+          <ul>
+            <li>Mathematics learning</li>
+            <li>Learner-centred practice</li>
+            <li>Differentiation</li>
+            <li>Assessment</li>
+            <li>Digital learning</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            References
+          </h4>
+
+          <p>
+            Professional referees and supporting contact information.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            Cover Letters
+          </h4>
+
+          <p>
+            Tailored application letters for prospective schools.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            MANAGEMENT
+          </span>
+
+          <h4>
+            Application Tracker
+          </h4>
+
+          <p>
+            Internal record of applications and their progress.
+          </p>
+
+          <ul>
+            <li>School</li>
+            <li>Position</li>
+            <li>Date applied</li>
+            <li>Contact person</li>
+            <li>Status</li>
+            <li>Follow-up date</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     02 TEACHING PRACTICE
+========================================================= -->
+
+<section id="teaching">
+
+  <div class="container">
+
+    <div class="folder-section">
+
+      <div class="folder-header">
+
+        <div class="folder-title">
+
+          <div class="folder-number">
+            02
+          </div>
+
+          <div>
+
+            <h3>
+              Teaching Practice
+            </h3>
+
+            <p>
+              Evidence showing how you plan, teach, assess and support
+              secondary Mathematics learners.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-grid">
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            Lesson Plans
+          </h4>
+
+          <p>
+            Strong representative examples rather than every lesson.
+          </p>
+
+          <ul>
+            <li>Learning objectives</li>
+            <li>Learning activities</li>
+            <li>Assessment</li>
+            <li>Differentiation</li>
+            <li>Reflection where available</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            Assessment & Feedback
+          </h4>
+
+          <p>
+            Evidence demonstrating how learner understanding is checked.
+          </p>
+
+          <ul>
+            <li>Assessment tools</li>
+            <li>Rubrics</li>
+            <li>Feedback examples</li>
+            <li>Progress-monitoring records</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            Differentiated Instruction
+          </h4>
+
+          <p>
+            Examples of adapting instruction to learner needs.
+          </p>
+
+          <ul>
+            <li>Modified activities</li>
+            <li>Scaffolding</li>
+            <li>Multiple representations</li>
+            <li>Support for different readiness levels</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            Classroom Management
+          </h4>
+
+          <p>
+            Evidence of routines, expectations and positive classroom
+            management.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            General Mathematics
+          </h4>
+
+          <p>
+            Representative Mathematics teaching materials.
+          </p>
+
+          <ul>
+            <li>Units</li>
+            <li>Learning activities</li>
+            <li>Problem-solving tasks</li>
+            <li>Assessment materials</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            Teaching Resources
+          </h4>
+
+          <p>
+            Selected original or adapted resources used in instruction.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="principle">
+
+        <strong>Do not upload everything.</strong>
+
+        Select representative evidence that demonstrates quality,
+        planning, learner responsiveness and professional judgment.
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     03 DIGITAL LEARNING
+========================================================= -->
+
+<section id="digital">
+
+  <div class="container">
+
+    <div class="folder-section">
+
+      <div class="folder-header">
+
+        <div class="folder-title">
+
+          <div class="folder-number">
+            03
+          </div>
+
+          <div>
+
+            <h3>
+              Mathematics & Digital Learning
+            </h3>
+
+            <p>
+              Evidence of Mathematics resource development and meaningful
+              use of technology in education.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-grid">
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            ARAL Mathematics
+          </h4>
+
+          <p>
+            Documentation of the Mathematics intervention resource.
+          </p>
+
+          <ul>
+            <li>Program overview</li>
+            <li>Mathematics materials</li>
+            <li>Implementation evidence</li>
+            <li>Monitoring tools</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            General Mathematics Website
+          </h4>
+
+          <p>
+            Evidence package documenting the purpose and development
+            of the digital Mathematics website.
+          </p>
+
+          <ul>
+            <li>Website description</li>
+            <li>Purpose</li>
+            <li>Representative screenshots</li>
+            <li>URL</li>
+            <li>Teaching value</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            GitHub Teaching
+          </h4>
+
+          <p>
+            Evidence showing the educational use of GitHub.
+          </p>
+
+          <ul>
+            <li>Repository examples</li>
+            <li>Educational purpose</li>
+            <li>Resource organization</li>
+            <li>LAC presentation evidence</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            Open Educational Resources
+          </h4>
+
+          <p>
+            Selected OER creation, curation and adaptation evidence.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            Digital Learning Materials
+          </h4>
+
+          <p>
+            Selected digital instructional materials.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            Mathematics Enrichment
+          </h4>
+
+          <p>
+            Olympiad, enrichment and advanced Mathematics activities.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     04 LEARNER SUPPORT
+========================================================= -->
+
+<section id="support">
+
+  <div class="container">
+
+    <div class="folder-section">
+
+      <div class="folder-header">
+
+        <div class="folder-title">
+
+          <div class="folder-number">
+            04
+          </div>
+
+          <div>
+
+            <h3>
+              Learner Support & Intervention
+            </h3>
+
+            <p>
+              Evidence of identifying learner needs and responding through
+              intervention, differentiation and support.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-grid">
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            ARAL
+          </h4>
+
+          <p>
+            Main intervention evidence package.
+          </p>
+
+          <ul>
+            <li>Rationale</li>
+            <li>Objectives</li>
+            <li>Approved proposal</li>
+            <li>Intervention strategy</li>
+            <li>Monitoring tools</li>
+            <li>Implementation records</li>
+            <li>Reflection</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            IN DEVELOPMENT
+          </span>
+
+          <h4>
+            Classroom Behaviour Intervention
+          </h4>
+
+          <p>
+            Evidence package documenting the development of the
+            classroom behaviour intervention.
+          </p>
+
+          <ul>
+            <li>Proposal</li>
+            <li>Rationale</li>
+            <li>Objectives</li>
+            <li>Approval status</li>
+            <li>Intervention framework</li>
+            <li>Monitoring tool</li>
+            <li>Reflection</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            Differentiated Learning
+          </h4>
+
+          <p>
+            Examples of support provided to learners with different
+            readiness levels and learning needs.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            Learner Wellbeing
+          </h4>
+
+          <p>
+            Appropriate professional learning and school-based
+            practices related to learner wellbeing.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            Remediation & Catch-Up
+          </h4>
+
+          <p>
+            Evidence of responding to learning gaps and supporting
+            learners requiring additional assistance.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="package">
+
+        <h4>
+          Recommended ARAL Evidence Package
+        </h4>
+
+        <p>
+
+          One well-organized PDF can contain the proposal,
+          rationale, objectives, approval, intervention strategy,
+          monitoring tools, implementation records and teacher
+          reflection. Outcome evidence should be added later when
+          sufficient implementation data are available.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     05 LEADERSHIP
+========================================================= -->
+
+<section id="leadership">
+
+  <div class="container">
+
+    <div class="folder-section">
+
+      <div class="folder-header">
+
+        <div class="folder-title">
+
+          <div class="folder-number">
+            05
+          </div>
+
+          <div>
+
+            <h3>
+              Leadership & Collaboration
+            </h3>
+
+            <p>
+              Evidence of professional contribution beyond routine
+              classroom teaching.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-grid">
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            Training Chair
+          </h4>
+
+          <p>
+            Evidence of professional training coordination or leadership.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            LAC Leadership
+          </h4>
+
+          <p>
+            Documentation of leadership or contribution to LAC activities.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            ESSENTIAL
+          </span>
+
+          <h4>
+            LAC Certificate System
+          </h4>
+
+          <p>
+            Documentation of the digital certificate workflow.
+          </p>
+
+          <ul>
+            <li>Problem/rationale</li>
+            <li>System design</li>
+            <li>Implementation process</li>
+            <li>Templates</li>
+            <li>Evidence of use</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-future">
+            UPDATE AFTER AUG 27
+          </span>
+
+          <h4>
+            LAC GitHub Session
+          </h4>
+
+          <p>
+            Evidence of the planned professional learning session.
+          </p>
+
+          <ul>
+            <li>Invitation</li>
+            <li>Presentation</li>
+            <li>Attendance evidence</li>
+            <li>Certificate</li>
+            <li>Photos where appropriate</li>
+            <li>Reflection</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            DPDS Coordination
+          </h4>
+
+          <p>
+            Evidence of coordination, reporting, systems and
+            school-based contribution.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            Brigade Coordination
+          </h4>
+
+          <p>
+            Documentation of coordination and community support.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            School Partnerships
+          </h4>
+
+          <p>
+            Evidence of collaboration with external partners.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            Community Engagement
+          </h4>
+
+          <p>
+            Selected evidence of meaningful community participation.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     06 PROFESSIONAL DEVELOPMENT
+========================================================= -->
+
+<section id="development">
+
+  <div class="container">
+
+    <div class="folder-section">
+
+      <div class="folder-header">
+
+        <div class="folder-title">
+
+          <div class="folder-number">
+            06
+          </div>
+
+          <div>
+
+            <h3>
+              Professional Development
+            </h3>
+
+            <p>
+              Complete longitudinal record of professional learning
+              and training.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-grid">
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            MASTER DOCUMENT
+          </span>
+
+          <h4>
+            Master Professional Development Log
+          </h4>
+
+          <p>
+            Your comprehensive professional development record.
+          </p>
+
+          <ul>
+            <li>Year</li>
+            <li>Training provider</li>
+            <li>Training title</li>
+            <li>Description</li>
+            <li>CPD units where applicable</li>
+            <li>Certificate reference</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            CATEGORY
+          </span>
+
+          <h4>
+            Mathematics & Pedagogy
+          </h4>
+
+          <p>
+            Mathematics teaching, curriculum and pedagogy training.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            CATEGORY
+          </span>
+
+          <h4>
+            Digital Education
+          </h4>
+
+          <p>
+            OER, digital learning, cybersecurity, e-books and
+            educational technology.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            CATEGORY
+          </span>
+
+          <h4>
+            Learner Support & Wellbeing
+          </h4>
+
+          <p>
+            Intervention, mental health, safe spaces and learner
+            support training.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            CATEGORY
+          </span>
+
+          <h4>
+            Leadership & Management
+          </h4>
+
+          <p>
+            Strategic planning, budgeting, reporting and administrative
+            development.
+          </p>
+
+        </div>
+
+      </div>
+
+
+      <div class="package">
+
+        <h4>
+          Recommended Organization
+        </h4>
+
+        <p>
+
+          Keep the original certificates organized by year while
+          maintaining the Master Professional Development Log as
+          the index. The log should allow a reviewer—or you—to
+          quickly identify the supporting certificate.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     07 RECOGNITION
+========================================================= -->
+
+<section id="recognition">
+
+  <div class="container">
+
+    <div class="folder-section">
+
+      <div class="folder-header">
+
+        <div class="folder-title">
+
+          <div class="folder-number">
+            07
+          </div>
+
+          <div>
+
+            <h3>
+              Recognition & Special Roles
+            </h3>
+
+            <p>
+              Certificates and evidence supporting special professional
+              responsibilities and recognition.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="document-grid">
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            HIGH VALUE
+          </span>
+
+          <h4>
+            Regional Demonstration Teacher
+          </h4>
+
+          <p>
+            Regional K–12 training demonstration evidence.
+          </p>
+
+          <ul>
+            <li>Official certificate</li>
+            <li>Training information</li>
+            <li>Role description</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-essential">
+            HIGH VALUE
+          </span>
+
+          <h4>
+            Math Olympiad Coach
+          </h4>
+
+          <p>
+            Evidence of Mathematics competition coaching.
+          </p>
+
+          <ul>
+            <li>Certificate</li>
+            <li>Assignment</li>
+            <li>Competition information</li>
+            <li>Supporting documentation</li>
+          </ul>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            Training Chair
+          </h4>
+
+          <p>
+            Evidence supporting training coordination responsibilities.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            Competition Judge
+          </h4>
+
+          <p>
+            Formal judging assignments and certificates.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-supporting">
+            SUPPORTING
+          </span>
+
+          <h4>
+            Mass Demonstration Judge
+          </h4>
+
+          <p>
+            Evidence of formal evaluation responsibilities.
+          </p>
+
+        </div>
+
+
+        <div class="document-card">
+
+          <span class="tag tag-optional">
+            OPTIONAL
+          </span>
+
+          <h4>
+            Other Professional Roles
+          </h4>
+
+          <p>
+            Additional roles that strengthen the professional profile
+            but are not central to the application.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     EVIDENCE PACKAGING
+========================================================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="section-number">
+        Evidence Packaging
+      </div>
+
+      <h2>
+        One PDF or Multiple Documents?
+      </h2>
+
+      <p>
+        Use the simplest structure that allows another person to
+        understand the evidence quickly.
+      </p>
+
+    </div>
+
+
+    <div class="document-grid">
+
+
+      <div class="document-card">
+
+        <span class="tag tag-essential">
+          RECOMMENDED
+        </span>
+
+        <h4>
+          Consolidated Evidence PDF
+        </h4>
+
+        <p>
+          Use one PDF when several related pieces of evidence belong
+          to the same project.
+        </p>
+
+        <ul>
+          <li>Cover page</li>
+          <li>Context</li>
+          <li>Core document</li>
+          <li>Supporting evidence</li>
+          <li>Reflection</li>
+          <li>Appendices</li>
+        </ul>
+
+      </div>
+
+
+      <div class="document-card">
+
+        <span class="tag tag-essential">
+          USE WHEN NEEDED
+        </span>
+
+        <h4>
+          Separate Original Documents
+        </h4>
+
+        <p>
+          Keep documents separate when they have independent value
+          or need to remain in their original form.
+        </p>
+
+        <ul>
+          <li>Official certificates</li>
+          <li>Signed approvals</li>
+          <li>Letters</li>
+          <li>Official forms</li>
+          <li>Employment documents</li>
+        </ul>
+
+      </div>
+
+
+      <div class="document-card">
+
+        <span class="tag tag-supporting">
+          BEST PRACTICE
+        </span>
+
+        <h4>
+          Keep the Original
+        </h4>
+
+        <p>
+          Never replace an important original simply because you
+          created a polished evidence PDF.
+        </p>
+
+        <ul>
+          <li>Original certificate remains stored</li>
+          <li>Evidence PDF provides context</li>
+          <li>Public folder receives only appropriate copies</li>
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL AUDIT
+========================================================= -->
+
+<section id="audit">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="section-number">
+        Final Application Audit
+      </div>
+
+      <h2>
+        NZ Teaching Application Readiness
+      </h2>
+
+      <p>
+        Complete this audit before submitting your portfolio or
+        application materials.
+      </p>
+
+    </div>
+
+
+    <div class="audit-table-wrapper">
+
+      <table class="audit-table">
+
+        <thead>
+
+          <tr>
+
+            <th>
+              Area
+            </th>
+
+            <th>
+              Evidence Required
+            </th>
+
+            <th>
+              Status
+            </th>
+
+            <th>
+              Final Check
+            </th>
+
+          </tr>
+
+        </thead>
+
+        <tbody>
+
+          <tr>
+
+            <td>
+              CV
+            </td>
+
+            <td>
+              Current professional CV
+            </td>
+
+            <td>
+              ☐
+            </td>
+
+            <td>
+              Accurate and current
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Teaching Philosophy
+            </td>
+
+            <td>
+              Clear professional statement
+            </td>
+
+            <td>
+              ☐
+            </td>
+
+            <td>
+              Concise and evidence-informed
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Teaching Practice
+            </td>
+
+            <td>
+              Representative teaching evidence
+            </td>
+
+            <td>
+              ☐
+            </td>
+
+            <td>
+              Strong examples selected
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Mathematics
+            </td>
+
+            <td>
+              Mathematics teaching evidence
+            </td>
+
+            <td>
+              ☐
+            </td>
+
+            <td>
+              Curriculum connection clear
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Digital Learning
+            </td>
+
+            <td>
+              Website / digital resource evidence
+            </td>
+
+            <td>
+              ☐
+            </td>
+
+            <td>
+              Links tested
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Learner Support
+            </td>
+
+            <td>
+              ARAL / intervention evidence
+            </td>
+
+            <td>
+              ☐
+            </td>
+
+            <td>
+              No unsupported outcome claims
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Leadership
+            </td>
+
+            <td>
+              LAC / coordination evidence
+            </td>
+
+            <td>
+              ☐
+            </td>
+
+            <td>
+              Role clearly explained
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Professional Development
+            </td>
+
+            <td>
+              Master log + certificates
+            </td>
+
+            <td>
+              ☐
+            </td>
+
+            <td>
+              Dates and titles verified
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Recognition
+            </td>
+
+            <td>
+              Special roles and certificates
+            </td>
+
+            <td>
+              ☐
+            </td>
+
+            <td>
+              Supporting documents available
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Public Evidence
+            </td>
+
+            <td>
+              Curated reviewer-facing evidence
+            </td>
+
+            <td>
+              ☐
+            </td>
+
+            <td>
+              Links tested
+            </td>
+
+          </tr>
+
+
+          <tr>
+
+            <td>
+              Privacy
+            </td>
+
+            <td>
+              Sensitive information protected
+            </td>
+
+            <td>
+              ☐
+            </td>
+
+            <td>
+              No unnecessary personal/student data
+            </td>
+
+          </tr>
+
+        </tbody>
+
+      </table>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FINAL CHECKLIST
+========================================================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <div class="section-number">
+        Final Checklist
+      </div>
+
+      <h2>
+        Before You Call the Portfolio Finished
+      </h2>
+
+    </div>
+
+
+    <div class="checklist">
+
+
+      <div class="check-card">
+
+        <h4>
+          📁 Folder Check
+        </h4>
+
+        <ul>
+
+          <li>
+            All seven private folders exist.
+          </li>
+
+          <li>
+            Duplicate folders have been removed.
+          </li>
+
+          <li>
+            Documents are stored in the correct category.
+          </li>
+
+          <li>
+            File names are consistent.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="check-card">
+
+        <h4>
+          📄 Document Check
+        </h4>
+
+        <ul>
+
+          <li>
+            Important certificates are preserved.
+          </li>
+
+          <li>
+            Evidence PDFs have clear titles.
+          </li>
+
+          <li>
+            Dates and names are accurate.
+          </li>
+
+          <li>
+            No unsupported claims are made.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="check-card">
+
+        <h4>
+          🔗 Link Check
+        </h4>
+
+        <ul>
+
+          <li>
+            Every portfolio link opens correctly.
+          </li>
+
+          <li>
+            Google Drive permissions work.
+          </li>
+
+          <li>
+            Website links work.
+          </li>
+
+          <li>
+            Public links do not expose unnecessary private material.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="check-card">
+
+        <h4>
+          🔒 Privacy Check
+        </h4>
+
+        <ul>
+
+          <li>
+            Student personal information is protected.
+          </li>
+
+          <li>
+            Sensitive records are not publicly accessible.
+          </li>
+
+          <li>
+            Private originals remain private.
+          </li>
+
+          <li>
+            Only appropriate evidence is published.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="check-card">
+
+        <h4>
+          🇳🇿 Application Check
+        </h4>
+
+        <ul>
+
+          <li>
+            CV is current.
+          </li>
+
+          <li>
+            Teaching philosophy is ready.
+          </li>
+
+          <li>
+            References are prepared.
+          </li>
+
+          <li>
+            Evidence supports the claims in the CV.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+      <div class="check-card">
+
+        <h4>
+          🎯 Final Principle
+        </h4>
+
+        <ul>
+
+          <li>
+            Quality over quantity.
+          </li>
+
+          <li>
+            Evidence over claims.
+          </li>
+
+          <li>
+            Clear organization over excessive documents.
+          </li>
+
+          <li>
+            Honest status reporting.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     CLOSING
+========================================================= -->
+
+<section class="closing">
+
+  <div class="container">
+
+    <h2>
+      Build Evidence, Not Just Files
+    </h2>
+
+    <p>
+
+      The purpose of this private system is not to collect as many
+      documents as possible. It is to organize meaningful evidence
+      that demonstrates professional judgment, Mathematics teaching
+      capability, learner support, digital competence, collaboration
+      and continuous professional growth.
+
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+  <div class="container">
+
+    © 2026 Mary Grace Peral · Private Evidence Master Guide
+
+    <br>
+
+    NZ Teaching Application · Internal Use Only
+
+  </div>
+
+</footer>
+
+
+</body>
+</html>

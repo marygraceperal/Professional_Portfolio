@@ -594,6 +594,31 @@ section {
 .evidence-card {
   margin-bottom: 0 !important;
 }
+/* Navigation Bar Polish */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Adjusts spacing between links */
+  flex-wrap: wrap; /* Keeps links responsive on smaller screens */
+}
+
+nav a {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+/* REDUCE SPACE BELOW NAVIGATION */
+.nav-inner {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important; /* Shrinks the navbar height */
+}
+
+.hero {
+  padding-top: 25px !important; /* Reduces top gap above hero card */
+  padding-bottom: 35px !important;
+}
 </style>
 </head>
 <body id="top">
@@ -612,7 +637,6 @@ section {
       <a href="#support">Learner Support</a>
       <a href="#leadership">Leadership</a>
       <a href="#development">Professional Development</a>
-      <a href="#recognition">Recognition</a>
       <a href="#evidence">Evidence</a>
     </div>
   </div>

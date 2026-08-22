@@ -1,186 +1,1386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Access Restricted Modal</title>
-    <style>
-        .modal-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            background: rgba(0, 0, 0, 0.4);
-            backdrop-filter: blur(4px);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mary Grace Peral | Professional Teaching Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+:root {
+  --bg-main: #faf7f8;
+  --bg-card: #ffffff;
+  --border-color: #f0e3e6;
+  --accent: #c96f78;
+  --accent-light: #fdf1f3;
+  --accent-hover: #b85e67;
+  --green: #5f8a70;
+  --green-light: #eef6f0;
+  --blue: #6685a5;
+  --blue-light: #eef4f9;
+  --amber: #a9824e;
+  --amber-light: #faf4e9;
+  --text-primary: #34272a;
+  --text-secondary: #79696d;
+  --text-light: #9b898e;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.65;
+}
+a {
+  color: inherit;
+}
+.container {
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 22px;
+}
+/* =========================
+   NAVIGATION
+========================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255,255,255,0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-color);
+}
+.nav-inner {
+  max-width: 1180px;
+  margin: auto;
+  padding: 15px 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.brand {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+.nav-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.nav-links a {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+.nav-links a:hover {
+  color: var(--accent);
+}
+/* =========================
+   HERO
+========================= */
+.hero {
+  padding: 90px 0 70px;
+}
+.hero-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 55px;
+  box-shadow: 0 10px 40px rgba(100,60,70,0.05);
+}
+.eyebrow {
+  display: inline-block;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 7px 13px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: clamp(38px, 6vw, 62px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  margin-bottom: 12px;
+}
+.hero h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 22px;
+}
+.hero-description {
+  max-width: 780px;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+.hero-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+.button-primary {
+  background: var(--accent);
+  color: white;
+}
+.button-secondary {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+/* =========================
+   SECTIONS
+========================= */
+section {
+  padding: 65px 0;
+}
+.section-heading {
+  margin-bottom: 30px;
+}
+.section-number {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+.section-heading h2 {
+  font-size: 30px;
+  letter-spacing: -0.7px;
+  margin-bottom: 8px;
+}
+.section-heading p {
+  max-width: 760px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+/* =========================
+   FOCUS GRID
+========================= */
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 16px;
+}
+.focus-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 15px;
+  padding: 24px;
+}
+.focus-icon {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 50%;
+  margin-bottom: 16px;
+}
+.focus-card h3 {
+  font-size: 15px;
+  margin-bottom: 7px;
+}
+.focus-card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+/* =========================
+   EVIDENCE CARDS
+========================= */
+.evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+  gap: 20px;
+}
+.evidence-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 26px;
+  transition: 0.2s ease;
+}
+.evidence-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(80,50,60,0.06);
+}
+.evidence-card h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+.evidence-card p {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+}
+.evidence-card ul {
+  padding-left: 18px;
+  margin-bottom: 20px;
+}
+.evidence-card li {
+  font-size: 12px;
+  color: var(--text-secondary);
+  margin-bottom: 5px;
+}
+/* =========================
+   STATUS
+========================= */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 10px;
+  border-radius: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.status-active {
+  background: var(--green-light);
+  color: var(--green);
+}
+.status-approved {
+  background: var(--blue-light);
+  color: var(--blue);
+}
+.status-scheduled {
+  background: var(--amber-light);
+  color: var(--amber);
+}
+.status-completed {
+  background: var(--green-light);
+  color: var(--green);
+}
+.status-development {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+/* =========================
+   EVIDENCE BUTTON
+========================= */
+.evidence-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 700;
+}
+.evidence-link:hover {
+  text-decoration: underline;
+}
+/* =========================
+   FEATURE CARD
+========================= */
+.feature-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 32px;
+  display: grid;
+  grid-template-columns: 1.4fr 0.6fr;
+  gap: 35px;
+  align-items: center;
+}
+.feature-card h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+.feature-card p {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+.feature-side {
+  background: var(--accent-light);
+  border-radius: 15px;
+  padding: 25px;
+}
+.feature-side strong {
+  display: block;
+  font-size: 13px;
+  color: var(--accent);
+  margin-bottom: 5px;
+}
+.feature-side span {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+/* =========================
+   TIMELINE
+========================= */
+.timeline {
+  position: relative;
+  border-left: 2px solid var(--border-color);
+  margin-left: 10px;
+  padding-left: 30px;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: var(--accent);
+  border-radius: 50%;
+  left: -37px;
+  top: 7px;
+}
+.timeline-year {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 4px;
+}
+.timeline-item h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.timeline-item p {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
 
-        .modal-card {
-            background: #ffffff;
-            width: 90%;
-            max-width: 480px;
-            padding: 40px 30px 30px;
-            border-radius: 20px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
+/* =========================
+   ACCESS RESTRICTED CARD (SECTION 07)
+========================= */
+.access-card {
+  background: white;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 40px 30px;
+  max-width: 520px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(100,60,70,0.04);
+  text-align: center;
+}
+.access-icon {
+  width: 54px;
+  height: 54px;
+  background: var(--accent-light);
+  color: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  margin: 0 auto 18px;
+}
+.access-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+.access-card p {
+  font-size: 13.5px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin-bottom: 24px;
+}
+.contact-container {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+.contact-details {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+  overflow: hidden;
+}
+.contact-details i {
+  color: var(--accent);
+  font-size: 16px;
+  width: 18px;
+  text-align: center;
+  flex-shrink: 0;
+}
+.contact-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.btn-link {
+  background-color: var(--accent);
+  color: #ffffff;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-link:hover {
+  background-color: var(--accent-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
 
-        .modal-icon {
-            color: #d87076;
-            margin-bottom: 16px;
-        }
-
-        .modal-icon svg {
-            width: 48px;
-            height: 48px;
-            fill: currentColor;
-        }
-
-        .modal-title {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #1f2937;
-            margin: 0 0 12px 0;
-        }
-
-        .modal-description {
-            font-size: 0.95rem;
-            color: #6b7280;
-            line-height: 1.5;
-            margin: 0 0 24px 0;
-        }
-
-        .contact-container {
-            background-color: #f9fafb;
-            border: 1px solid #e5e7eb;
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: #ffffff;
-            padding: 10px 14px;
-            border-radius: 8px;
-            border: 1px solid #f3f4f6;
-        }
-
-        .contact-details {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            color: #374151;
-            overflow: hidden;
-        }
-
-        .contact-details svg {
-            width: 18px;
-            height: 18px;
-            fill: #d87076;
-            flex-shrink: 0;
-        }
-
-        .contact-text {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .btn-link {
-            background-color: #d87076;
-            color: #ffffff;
-            border: none;
-            padding: 6px 14px;
-            border-radius: 6px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: background-color 0.2s ease;
-            flex-shrink: 0;
-        }
-
-        .btn-link:hover {
-            background-color: #c55d63;
-        }
-
-        .btn-close {
-            background: none;
-            border: none;
-            color: #6b7280;
-            font-size: 0.9rem;
-            font-weight: 500;
-            cursor: pointer;
-        }
-
-        .btn-close:hover {
-            color: #1f2937;
-        }
-    </style>
+/* =========================
+   CLOSING
+========================= */
+.closing {
+  text-align: center;
+  background: white;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+.closing h2 {
+  font-size: 27px;
+  margin-bottom: 12px;
+}
+.closing p {
+  max-width: 750px;
+  margin: auto;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+/* =========================
+   FOOTER
+========================= */
+footer {
+  padding: 30px 0;
+  text-align: center;
+  color: var(--text-light);
+  font-size: 11px;
+}
+/* =========================
+   MOBILE
+========================= */
+@media(max-width:760px) {
+  .nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    justify-content: flex-start;
+  }
+  .hero-card {
+    padding: 32px 25px;
+  }
+  .feature-card {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding-top: 45px;
+  }
+}
+</style>
 </head>
-<body>
-
-    <div class="modal-overlay" id="accessModal">
-        <div class="modal-card">
-            
-            <div class="modal-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                    <path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 5a3 3 0 0 1 6 0v3H9V7zm3 6a1.5 1.5 0 0 1 1 2.618V18a1 1 0 1 1-2 0v-2.382A1.5 1.5 0 0 1 12 13z"/>
-                </svg>
-            </div>
-
-            <h2 class="modal-title">Access Restricted</h2>
-            <p class="modal-description">Personal documents are private but available to hiring committees and reviewers upon request.</p>
-
-            <div class="contact-container">
-                
-                <!-- Email Link -->
-                <div class="contact-item">
-                    <div class="contact-details">
-                        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-                        <span class="contact-text">marygraceperal@gmail.com</span>
-                    </div>
-                    <a href="mailto:marygraceperal@gmail.com?subject=Document%20Access%20Request%20-%20Mary%20Grace%20Peral%20Portfolio&body=Hello%20Mary%20Grace%2C%0D%0A%0D%0AI%20am%20reviewing%20your%20teaching%20portfolio%20and%20would%20like%20to%20request%20access%20to%20your%20restricted%20documents." class="btn-link">Email</a>
-                </div>
-
-                <!-- Call Link (Replace +639XXXXXXXXX with your mobile number) -->
-                <div class="contact-item">
-                    <div class="contact-details">
-                        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                        <span class="contact-text">+63 950 638 1725</span>
-                    </div>
-                    <a href="tel:+639506381725" class="btn-link">Call</a>
-                </div>
-
-                <!-- Messenger Link (Replace 'your.username' with your Facebook username) -->
-                <div class="contact-item">
-                    <div class="contact-details">
-                        <svg viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.455 5.512 3.734 7.218V22l3.34-1.834c.937.26 1.93.402 2.926.402 5.523 0 10-4.145 10-9.258S17.523 2 12 2zm1.03 12.381l-2.55-2.72-4.98 2.72 5.48-5.817 2.61 2.72 4.92-2.72-5.48 5.817z"/></svg>
-                        <span class="contact-text">Gracey Mondres Peral</span>
-                    </div>
-                    <a href="https://m.me/graceymondresperal" target="_blank" rel="noopener" class="btn-link">Chat</a>
-                </div>
-
-            </div>
-
-            <div>
-                <button class="btn-close" onclick="document.getElementById('accessModal').style.display='none'">Close</button>
-            </div>
-
+<body id="top">
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      Mary Grace Peral
+    </a>
+    <div class="nav-links">
+      <a href="#profile">Profile</a>
+      <a href="#practice">Teaching</a>
+      <a href="#digital">Digital Learning</a>
+      <a href="#support">Learner Support</a>
+      <a href="#leadership">Leadership</a>
+      <a href="#development">Professional Development</a>
+      <a href="#recognition">Recognition</a>
+      <a href="#evidence">Evidence</a>
+    </div>
+  </div>
+</nav>
+<!-- =========================================================
+     HERO
+========================================================= -->
+<header class="hero" id="profile">
+  <div class="container">
+    <div class="hero-card">
+      <span class="eyebrow">
+        Professional Teaching Portfolio
+      </span>
+      <h1>
+        Mary Grace Peral
+      </h1>
+      <h2>
+        Secondary Mathematics Educator
+      </h2>
+      <p class="hero-description">
+        Mathematics educator committed to purposeful,
+        evidence-informed teaching, learner support,
+        digital learning and continuous professional growth.
+        My professional practice includes secondary Mathematics
+        instruction, targeted intervention, digital learning
+        development, professional collaboration and school-based
+        leadership.
+      </p>
+      <div class="hero-buttons">
+        <a href="#evidence" class="button button-primary">
+          <i class="fas fa-folder-open"></i>
+          Explore Evidence
+        </a>
+        <a href="#development" class="button button-secondary">
+          <i class="fas fa-graduation-cap"></i>
+          Professional Development
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+<!-- =========================================================
+     PROFESSIONAL FOCUS
+========================================================= -->
+<section>
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-number">
+        Professional Focus
+      </div>
+      <h2>
+        Teaching with Purpose
+      </h2>
+      <p>
+        Four interconnected areas shape my professional practice
+        as a secondary Mathematics educator.
+      </p>
+    </div>
+    <div class="focus-grid">
+      <div class="focus-card">
+        <div class="focus-icon">
+          <i class="fas fa-square-root-variable"></i>
         </div>
+        <h3>
+          Mathematics Education
+        </h3>
+        <p>
+          Secondary Mathematics teaching and curriculum-aligned
+          instruction with emphasis on meaningful learning.
+        </p>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon">
+          <i class="fas fa-user-graduate"></i>
+        </div>
+        <h3>
+          Learner Support
+        </h3>
+        <p>
+          Targeted intervention, differentiated support and
+          progress monitoring based on identified learner needs.
+        </p>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon">
+          <i class="fas fa-laptop-code"></i>
+        </div>
+        <h3>
+          Digital Learning
+        </h3>
+        <p>
+          Development and practical use of digital learning
+          resources and educational technology.
+        </p>
+      </div>
+      <div class="focus-card">
+        <div class="focus-icon">
+          <i class="fas fa-people-group"></i>
+        </div>
+        <h3>
+          Professional Leadership
+        </h3>
+        <p>
+          School-based collaboration, professional learning,
+          innovation and contribution beyond classroom teaching.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =========================================================
+     01 TEACHING PRACTICE
+========================================================= -->
+<section id="practice">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-number">
+        01 · Teaching Practice
+      </div>
+      <h2>
+        Mathematics Teaching
+      </h2>
+      <p>
+        Selected evidence demonstrating secondary Mathematics
+        teaching, instructional resources and support for
+        accessible learning.
+      </p>
+    </div>
+    <div class="feature-card">
+      <div>
+        <span class="status status-active">
+          <i class="fas fa-circle"></i>
+          Active
+        </span>
+        <h3>
+          General Mathematics Digital Learning Website
+        </h3>
+        <p>
+          A digitized Mathematics learning resource currently
+          used to support students' access to instructional
+          materials, including situations where normal classroom
+          delivery may be disrupted.
+          The resource demonstrates curriculum support,
+          digital resource development and continuity of learning.
+        </p>
+        <br>
+        <a
+          href="https://marygraceperal.github.io/GeneralMathematicsSHS/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          <i class="fas fa-globe"></i>
+          Visit learning website
+        </a>
+        &nbsp;&nbsp;
+        <a
+          href="https://drive.google.com/drive/folders/1joKCojSZEj7plWIhHpD-PKFXT99Egrpx?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          <i class="fas fa-folder-open"></i>
+          Supporting evidence
+        </a>
+      </div>
+      <div class="feature-side">
+        <strong>
+          Professional Value
+        </strong>
+        <span>
+          Curriculum support · Digital learning ·
+          Learning continuity
+        </span>
+      </div>
+    </div>
+    <br><br>
+    <div class="evidence-grid">
+      <div class="evidence-card">
+        <span class="status status-active">
+          Active
+        </span>
+        <h3>
+          Teaching Practice Evidence
+        </h3>
+        <p>
+          Selected lesson materials, instructional resources
+          and supporting evidence from secondary Mathematics
+          teaching practice.
+        </p>
+        <ul>
+          <li>
+            Lesson materials
+          </li>
+          <li>
+            Instructional resources
+          </li>
+          <li>
+            Selected teaching evidence
+          </li>
+        </ul>
+        <a
+          href="https://drive.google.com/drive/folders/1joKCojSZEj7plWIhHpD-PKFXT99Egrpx?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          View teaching evidence →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =========================================================
+     02 DIGITAL LEARNING
+========================================================= -->
+<section id="digital">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-number">
+        02 · Mathematics & Digital Learning
+      </div>
+      <h2>
+        Technology as a Teaching Tool
+      </h2>
+      <p>
+        Evidence of using technology not simply as a technical
+        skill, but as a practical means of improving access,
+        organization and learning.
+      </p>
+    </div>
+    <div class="evidence-grid">
+      <!-- GITHUB LAC -->
+      <div class="evidence-card">
+        <span class="status status-scheduled">
+          Scheduled · Aug 27, 2026
+        </span>
+        <h3>
+          LAC Session: GitHub as a Tool for Teaching
+        </h3>
+        <p>
+          Invited as a school LAC Session speaker to discuss
+          practical ways GitHub can be used for organizing,
+          publishing and sharing educational resources.
+        </p>
+        <ul>
+          <li>
+            School-based professional learning
+          </li>
+          <li>
+            Digital resource organization
+          </li>
+          <li>
+            Educational technology sharing
+          </li>
+        </ul>
+        <a
+          href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          Leadership & LAC evidence →
+        </a>
+      </div>
+      <!-- CERTIFICATE SYSTEM -->
+      <div class="evidence-card">
+        <span class="status status-scheduled">
+          First Use · Aug 27, 2026
+        </span>
+        <h3>
+          LAC Session Certificate System
+        </h3>
+        <p>
+          A school-based digital certificate system developed
+          to streamline preparation and documentation of
+          LAC Session certificates.
+        </p>
+        <p>
+          The system is scheduled for its first actual use
+          on August 27, 2026.
+        </p>
+        <a
+          href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          View project evidence →
+        </a>
+      </div>
+      <!-- COMPUTER LITERACY -->
+      <div class="evidence-card">
+        <span class="status status-completed">
+          Completed · 2024
+        </span>
+        <h3>
+          Computer Literacy Activity
+        </h3>
+        <p>
+          School-based computer literacy initiative involving
+          Microsoft operating programs and collaboration with
+          community and partner institutions.
+        </p>
+        <ul>
+          <li>
+            Completed October 23, 2024
+          </li>
+          <li>
+            Completed October 30, 2024
+          </li>
+          <li>
+            Student computer literacy development
+          </li>
+          <li>
+            Community and institutional collaboration
+          </li>
+        </ul>
+        <a
+          href="https://drive.google.com/drive/folders/1bDYrwBY3vh6c-O8n1XzaEC5SEKHsC67N?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          View documentation →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =========================================================
+     03 LEARNER SUPPORT
+========================================================= -->
+<section id="support">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-number">
+        03 · Learner Support & Intervention
+      </div>
+      <h2>
+        Supporting Learners
+      </h2>
+      <p>
+        Intervention initiatives are presented according to
+        their actual implementation stage. Student outcome
+        claims will be added only when sufficient evidence
+        is available.
+      </p>
+    </div>
+    <div class="evidence-grid">
+      <!-- ARAL -->
+      <div class="evidence-card">
+        <span class="status status-approved">
+          Approved · Implementation
+        </span>
+        <h3>
+          ARAL Mathematics Intervention
+        </h3>
+        <p>
+          A targeted Mathematics intervention initiative
+          designed to identify learning needs, provide focused
+          support and monitor learner progress.
+        </p>
+        <p>
+          <strong>Evidence stage:</strong>
+          Approved for use and entering implementation.
+          Evidence of efficacy and learner outcomes is still
+          being collected.
+        </p>
+        <div style="
+          display:flex;
+          gap:16px;
+          flex-wrap:wrap;
+          margin-top:10px;
+        ">
+          <!-- ARAL WEBSITE -->
+          <a
+            href="https://marygraceperal.github.io/ParejaIS_ARAL_Math/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="evidence-link">
+            <i class="fas fa-globe"></i>
+            View Website →
+          </a>
+          <!-- ARAL DRIVE -->
+          <a
+            href="https://drive.google.com/drive/folders/1cJFG5y2HBA34f3aIjuAiwBUzVnQmTJl?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="evidence-link">
+            <i class="fas fa-folder-open"></i>
+            View ARAL Evidence →
+          </a>
+        </div>
+      </div>
+      <!-- BEHAVIOUR -->
+      <div class="evidence-card">
+        <span class="status status-development">
+          Under Approval / Implementation Preparation
+        </span>
+        <h3>
+          Classroom Behaviour Intervention
+        </h3>
+        <p>
+          A structured classroom behaviour intervention
+          designed to provide a supportive response to learner
+          behaviour and classroom participation needs.
+        </p>
+        <p>
+          The proposal is undergoing formal approval and
+          implementation preparation. Outcome evidence is
+          not yet being claimed.
+        </p>
+        <a
+          href="https://drive.google.com/drive/folders/1cJFG5y2HBA34f3aIjuAiwBUzVnQmTJl?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          View intervention evidence →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =========================================================
+     04 LEADERSHIP
+========================================================= -->
+<section id="leadership">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-number">
+        04 · Leadership & Collaboration
+      </div>
+      <h2>
+        Contributing Beyond the Classroom
+      </h2>
+      <p>
+        Professional contributions involving collaboration,
+        professional learning, training, school improvement
+        and development of practical systems for school use.
+      </p>
+    </div>
+    <div class="evidence-grid">
+      <!-- LAC SPEAKER -->
+      <div class="evidence-card">
+        <span class="status status-scheduled">
+          Scheduled · Aug 27, 2026
+        </span>
+        <h3>
+          LAC Session Speaker
+        </h3>
+        <p>
+          Invited as a school LAC Session speaker for a
+          professional learning session focused on GitHub
+          as a tool for teaching.
+        </p>
+        <p>
+          <strong>Role:</strong>
+          Professional learning contributor and session speaker.
+        </p>
+        <a
+          href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          View leadership evidence →
+        </a>
+      </div>
+      <!-- CERTIFICATE SYSTEM -->
+      <div class="evidence-card">
+        <span class="status status-scheduled">
+          First Use · Aug 27, 2026
+        </span>
+        <h3>
+          LAC Certificate System
+        </h3>
+        <p>
+          Development of a practical digital certificate
+          workflow intended to improve the preparation and
+          documentation of school LAC Session certificates.
+        </p>
+        <a
+          href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          View system evidence →
+        </a>
+      </div>
+      <!-- COLLABORATION -->
+      <div class="evidence-card">
+        <span class="status status-active">
+          Current
+        </span>
+        <h3>
+          School-Based Collaboration
+        </h3>
+        <p>
+          Participation in school coordination, collaborative
+          initiatives and professional activities supporting
+          school development.
+        </p>
+        <a
+          href="https://drive.google.com/drive/folders/1zzVx7VdwH23Ck9lk4Dqge53oNzJCmlQ_?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          View collaboration evidence →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =========================================================
+     05 PROFESSIONAL DEVELOPMENT
+========================================================= -->
+<section id="development">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-number">
+        05 · Professional Development
+      </div>
+      <h2>
+        Continuous Professional Learning
+      </h2>
+      <p>
+        A longitudinal record of professional learning in
+        Mathematics education, digital learning, learner
+        support, leadership, school administration and
+        professional practice.
+      </p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-year">
+          2025
+        </div>
+        <h3>
+          Pareja Integrated School
+        </h3>
+        <p>
+          Teacher's Performance Management ·
+          Maximizing Khan Academy ·
+          ARAL-Reading Program
+        </p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">
+          2021
+        </div>
+        <h3>
+          Mathematics Olympiad Coaching & Learning Delivery
+        </h3>
+        <p>
+          Effective Coaching: Math Olympiad ·
+          Learning Delivery Modalities (LDM2)
+        </p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">
+          2020
+        </div>
+        <h3>
+          Digital Learning & Open Educational Resources
+        </h3>
+        <p>
+          Open Educational Resources, digital e-book
+          development, mobile applications, instructional
+          videos, digital portfolios, cybersecurity,
+          digital citizenship and New Normal classroom practice.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">
+          2016–2017
+        </div>
+        <h3>
+          School Administration & Financial Management
+        </h3>
+        <p>
+          Budget proposal, budget monitoring, financial
+          reporting, strategic planning and team building.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">
+          2015
+        </div>
+        <h3>
+          Regional K–12 Training
+        </h3>
+        <p>
+          Served as a Mathematics demonstrator during
+          regional K–12 training. Official certificate is
+          the available evidence.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">
+          2013
+        </div>
+        <h3>
+          Division Catch-Up Training
+        </h3>
+        <p>
+          Strengthened subject-area expertise in addressing
+          learning gaps and remediation for secondary learners.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">
+          2010–2012
+        </div>
+        <h3>
+          Teaching, Coaching & Professional Development
+        </h3>
+        <p>
+          Curriculum implementation, Mathematics instruction,
+          student coaching, dispute resolution and educational
+          programs.
+        </p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-year">
+          2009
+        </div>
+        <h3>
+          Civil Service Eligibility & Teacher Development
+        </h3>
+        <p>
+          Certificate of Eligibility as an Honor Graduate
+          and participation in professional teacher development.
+        </p>
+      </div>
+    </div>
+    <br>
+    <a
+      href="https://drive.google.com/drive/folders/1RiDZ7Fr0dGpKA90r7PgTraN3IWr_0xo2?usp=drive_link"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="button button-secondary">
+      <i class="fas fa-folder-open"></i>
+      View Professional Development Evidence
+    </a>
+  </div>
+</section>
+<!-- =========================================================
+     06 RECOGNITION
+========================================================= -->
+<section id="recognition">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-number">
+        06 · Recognition & Special Roles
+      </div>
+      <h2>
+        Selected Professional Evidence
+      </h2>
+      <p>
+        Selected roles and responsibilities demonstrating
+        professional contribution beyond routine classroom
+        instruction.
+      </p>
+    </div>
+    <div class="evidence-grid">
+      <!-- REGIONAL DEMONSTRATION TEACHER -->
+      <div class="evidence-card">
+        <h3>
+          Regional Demonstration Teacher
+        </h3>
+        <p>
+          Served as a demonstrator during regional K–12
+          training, demonstrating Grade 10 Mathematics
+          practices.
+        </p>
+        <p>
+          <strong>Evidence:</strong>
+          Official certificate available.
+        </p>
+        <a
+          href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          View certificate →
+        </a>
+      </div>
+      <!-- MATHEMATICS COACHING -->
+      <div class="evidence-card">
+        <h3>
+          Mathematics Coaching
+        </h3>
+        <p>
+          Experience coaching students in academic and
+          Mathematics-related competitive activities,
+          including Mathematics Olympiad coaching.
+        </p>
+        <a
+          href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          View recognition evidence →
+        </a>
+      </div>
+      <!-- JUDGING -->
+      <div class="evidence-card">
+        <h3>
+          Judging & Assessment Roles
+        </h3>
+        <p>
+          Experience serving as a formal judge in student
+          competitions and performance demonstrations.
+        </p>
+        <ul>
+          <li>
+            Mass Demonstration Judge
+          </li>
+          <li>
+            Literary-Musical Competition Judge
+          </li>
+        </ul>
+        <a
+          href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          View supporting evidence →
+        </a>
+      </div>
+      <!-- PROFESSIONAL RECOGNITION -->
+      <div class="evidence-card">
+        <h3>
+          Professional Recognition
+        </h3>
+        <p>
+          Selected certificates and documentation supporting
+          professional roles, training assignments and special
+          responsibilities.
+        </p>
+        <a
+          href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="evidence-link">
+          View recognition repository →
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- =========================================================
+     07 PUBLIC EVIDENCE
+========================================================= -->
+<section id="evidence">
+  <div class="container">
+    <div class="section-heading">
+      <div class="section-number">
+        07 · Portfolio Public Evidence
+      </div>
+      <h2>
+        Supporting Documentation
+      </h2>
+      <p>
+        A curated evidence repository designed to allow
+        external reviewers to explore selected professional
+        documents without navigating the entire personal
+        Google Drive.
+      </p>
     </div>
 
+    <div class="access-card">
+      <div class="access-icon">
+        <i class="fas fa-lock"></i>
+      </div>
+      <h3>Access Restricted</h3>
+      <p>
+        Personal documents are private but available to hiring committees and reviewers upon request.
+      </p>
+
+      <div class="contact-container">
+        <!-- EMAIL -->
+        <div class="contact-item">
+          <div class="contact-details">
+            <i class="fas fa-envelope"></i>
+            <span class="contact-text">marygraceperal@gmail.com</span>
+          </div>
+          <a href="mailto:marygraceperal@gmail.com?subject=Document%20Access%20Request%20-%20Mary%20Grace%20Peral%20Portfolio&body=Hello%20Mary%20Grace%2C%0D%0A%0D%0AI%20am%20reviewing%20your%20teaching%20portfolio%20and%20would%20like%20to%20request%20access%20to%20your%20restricted%20documents." class="btn-link">Email</a>
+        </div>
+
+        <!-- CALL -->
+        <div class="contact-item">
+          <div class="contact-details">
+            <i class="fas fa-phone"></i>
+            <span class="contact-text">+63 950 638 1725</span>
+          </div>
+          <a href="tel:+639506381725" class="btn-link">Call</a>
+        </div>
+
+        <!-- MESSENGER -->
+        <div class="contact-item">
+          <div class="contact-details">
+            <i class="fab fa-facebook-messenger"></i>
+            <span class="contact-text">Gracey Mondres Peral</span>
+          </div>
+          <!-- Update 'your.username' with your exact Facebook handle -->
+          <a href="https://m.me/graceymondresperal" target="_blank" rel="noopener" class="btn-link">Chat</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- =========================================================
+     CLOSING
+========================================================= -->
+<section class="closing">
+  <div class="container">
+    <h2>
+      Teaching with Purpose, Evidence and Continuous Growth
+    </h2>
+    <p>
+      My professional practice is grounded in the belief that
+      Mathematics learning becomes more meaningful when teachers
+      understand learner needs, use appropriate instructional
+      strategies, monitor progress and continually reflect on
+      their practice.
+      I seek to combine sound Mathematics teaching with practical
+      intervention, responsible use of technology and meaningful
+      professional collaboration.
+    </p>
+  </div>
+</section>
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+<footer>
+  <div class="container">
+    © 2026 Mary Grace Peral · Professional Teaching Portfolio
+    <br>
+    Secondary Mathematics Education ·
+    Digital Learning ·
+    Learner Support ·
+    Professional Growth
+  </div>
+</footer>
 </body>
 </html>

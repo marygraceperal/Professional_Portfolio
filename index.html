@@ -8,6 +8,51 @@
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 <style>
+/* Card Grid Layout for Section 07 */
+.section-07-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Modal Styling */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-overlay .access-card {
+  position: relative;
+  width: 90%;
+  max-width: 520px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
 :root {
   --bg-main: #faf7f8;
   --bg-card: #ffffff;
@@ -39,6 +84,16 @@ body {
   color: var(--text-primary);
   line-height: 1.65;
 }
+
+/* REDUCED SECTION SPACING */
+section {
+  padding: 35px 0; /* Reduced from default padding */
+}
+
+.section-heading {
+  margin-bottom: 20px; /* Reduces space under titles */
+}
+
 a {
   color: inherit;
 }
@@ -522,6 +577,22 @@ footer {
   .hero {
     padding-top: 45px;
   }
+}
+/* FORCE REDUCED SPACING BETWEEN SECTIONS */
+section {
+  padding: 20px 0 !important; /* Forces smaller vertical padding */
+}
+
+.section-heading {
+  margin-bottom: 15px !important; /* Reduces gap under section headers */
+}
+
+/* REDUCE GAP BELOW CARDS / GRIDS */
+.section-07-grid,
+.grid,
+.cards-grid,
+.evidence-card {
+  margin-bottom: 0 !important;
 }
 </style>
 </head>
@@ -1182,119 +1253,12 @@ footer {
     </a>
   </div>
 </section>
-<!-- =========================================================
-     06 RECOGNITION
-========================================================= -->
-<section id="recognition">
-  <div class="container">
-    <div class="section-heading">
-      <div class="section-number">
-        06 · Recognition & Special Roles
-      </div>
-      <h2>
-        Selected Professional Evidence
-      </h2>
-      <p>
-        Selected roles and responsibilities demonstrating
-        professional contribution beyond routine classroom
-        instruction.
-      </p>
-    </div>
-    <div class="evidence-grid">
-      <!-- REGIONAL DEMONSTRATION TEACHER -->
-      <div class="evidence-card">
-        <h3>
-          Regional Demonstration Teacher
-        </h3>
-        <p>
-          Served as a demonstrator during regional K–12
-          training, demonstrating Grade 10 Mathematics
-          practices.
-        </p>
-        <p>
-          <strong>Evidence:</strong>
-          Official certificate available.
-        </p>
-        <a
-          href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="evidence-link">
-          View certificate →
-        </a>
-      </div>
-      <!-- MATHEMATICS COACHING -->
-      <div class="evidence-card">
-        <h3>
-          Mathematics Coaching
-        </h3>
-        <p>
-          Experience coaching students in academic and
-          Mathematics-related competitive activities,
-          including Mathematics Olympiad coaching.
-        </p>
-        <a
-          href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="evidence-link">
-          View recognition evidence →
-        </a>
-      </div>
-      <!-- JUDGING -->
-      <div class="evidence-card">
-        <h3>
-          Judging & Assessment Roles
-        </h3>
-        <p>
-          Experience serving as a formal judge in student
-          competitions and performance demonstrations.
-        </p>
-        <ul>
-          <li>
-            Mass Demonstration Judge
-          </li>
-          <li>
-            Literary-Musical Competition Judge
-          </li>
-        </ul>
-        <a
-          href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="evidence-link">
-          View supporting evidence →
-        </a>
-      </div>
-      <!-- PROFESSIONAL RECOGNITION -->
-      <div class="evidence-card">
-        <h3>
-          Professional Recognition
-        </h3>
-        <p>
-          Selected certificates and documentation supporting
-          professional roles, training assignments and special
-          responsibilities.
-        </p>
-        <a
-          href="https://drive.google.com/drive/folders/1LxR9tuZeYQCaVIQok0MIY6HUdAySfMgx?usp=drive_link"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="evidence-link">
-          View recognition repository →
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- =========================================================
-     07 PUBLIC EVIDENCE
-========================================================= -->
+<!-- UPDATED SECTION HEADER -->
 <section id="evidence">
   <div class="container">
     <div class="section-heading">
       <div class="section-number">
-        07 · Portfolio Public Evidence
+        06 · Supporting Documentation
       </div>
       <h2>
         Supporting Documentation
@@ -1306,8 +1270,49 @@ footer {
         Google Drive.
       </p>
     </div>
+    ...
 
+    <!-- THREE MAIN CARDS -->
+    <div class="section-07-grid">
+      <!-- CARD 1: PUBLIC EVIDENCE -->
+      <div class="evidence-card">
+        <h3>Public Evidence</h3>
+        <p>
+          Access verified certificates, public workshop presentations, and classroom project artifacts.
+        </p>
+        <a href="https://drive.google.com/drive/folders/1joKCojSZEj7plWIhHpD-PKFXT99Egrpx?usp=drive_link" target="_blank" rel="noopener noreferrer" class="evidence-link">
+          Explore Public Drive →
+        </a>
+      </div>
+
+      <!-- CARD 2: CV & APPLICATION -->
+      <div class="evidence-card">
+        <h3>CV & Application</h3>
+        <p>
+          View curriculum vitae, cover letters, and formal teaching application credentials.
+        </p>
+        <a href="https://drive.google.com/drive/folders/1RiDZ7Fr0dGpKA90r7PgTraN3IWr_0xo2?usp=drive_link" target="_blank" rel="noopener noreferrer" class="evidence-link">
+          View Application Files →
+        </a>
+      </div>
+
+      <!-- CARD 3: PERSONAL DOCUMENTS (Triggers Pop-up) -->
+      <div class="evidence-card" style="cursor: pointer;" onclick="openAccessModal()">
+        <h3>Personal Documents</h3>
+        <p>
+          Confidential transcripts, service records, and legal identification files.
+        </p>
+        <span class="evidence-link">
+          <i class="fas fa-lock"></i> Request Access →
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- POP-UP MODAL (Personal Documents) -->
+  <div class="modal-overlay" id="accessModal" onclick="if(event.target === this) closeAccessModal()">
     <div class="access-card">
+      <button class="modal-close" onclick="closeAccessModal()">&times;</button>
       <div class="access-icon">
         <i class="fas fa-lock"></i>
       </div>
@@ -1341,12 +1346,10 @@ footer {
             <i class="fab fa-facebook-messenger"></i>
             <span class="contact-text">Gracey Mondres Peral</span>
           </div>
-          <!-- Update 'your.username' with your exact Facebook handle -->
           <a href="https://m.me/graceymondresperal" target="_blank" rel="noopener" class="btn-link">Chat</a>
         </div>
       </div>
     </div>
-
   </div>
 </section>
 <!-- =========================================================
@@ -1382,5 +1385,14 @@ footer {
     Professional Growth
   </div>
 </footer>
+<script>
+  function openAccessModal() {
+    document.getElementById('accessModal').classList.add('active');
+  }
+
+  function closeAccessModal() {
+    document.getElementById('accessModal').classList.remove('active');
+  }
+</script>
 </body>
 </html>

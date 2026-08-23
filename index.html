@@ -53,6 +53,7 @@
   color: var(--text-secondary);
   cursor: pointer;
 }
+
 :root {
   --bg-main: #faf7f8;
   --bg-card: #ffffff;
@@ -70,85 +71,129 @@
   --text-secondary: #79696d;
   --text-light: #9b898e;
 }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   background: var(--bg-main);
   color: var(--text-primary);
   line-height: 1.65;
 }
 
-/* REDUCED SECTION SPACING */
 section {
-  padding: 35px 0; /* Reduced from default padding */
+  padding: 35px 0;
 }
 
 .section-heading {
-  margin-bottom: 20px; /* Reduces space under titles */
+  margin-bottom: 20px;
 }
 
 a {
   color: inherit;
 }
+
 .container {
   max-width: 1180px;
   margin: auto;
   padding: 0 22px;
 }
+
 /* =========================
-   NAVIGATION
+   NAVIGATION (DROPDOWN SETUP)
 ========================= */
 .navbar {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 1000;
-  background: rgba(255,255,255,0.94);
-  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.98);
   border-bottom: 1px solid var(--border-color);
 }
+
 .nav-inner {
   max-width: 1180px;
   margin: auto;
-  padding: 15px 22px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 20px;
+  padding: 12px 22px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  position: relative;
 }
+
 .brand {
   text-decoration: none;
   font-weight: 700;
   font-size: 15px;
   color: var(--text-primary);
 }
-.nav-links {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
+
+/* Menu Toggle Button */
+.menu-toggle {
+  display: flex !important;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text-primary);
+  cursor: pointer;
+  font-weight: 600;
 }
+
+.menu-toggle:hover {
+  background: var(--accent-light);
+  color: var(--accent);
+}
+
+/* Dropdown Menu Container */
+.nav-links {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%;
+  right: 22px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 15px 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  flex-direction: column;
+  gap: 12px;
+  min-width: 220px;
+  z-index: 1001;
+}
+
+.nav-links.active {
+  display: flex !important; /* Forces dropdown visible on toggle */
+}
+
 .nav-links a {
   text-decoration: none;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text-secondary);
+  transition: color 0.2s ease;
 }
+
 .nav-links a:hover {
   color: var(--accent);
 }
+
 /* =========================
    HERO
 ========================= */
 .hero {
-  padding: 90px 0 70px;
+  padding: 45px 0 35px !important;
 }
+
 .hero-card {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
@@ -156,6 +201,7 @@ a {
   padding: 55px;
   box-shadow: 0 10px 40px rgba(100,60,70,0.05);
 }
+
 .eyebrow {
   display: inline-block;
   background: var(--accent-light);
@@ -168,29 +214,34 @@ a {
   text-transform: uppercase;
   margin-bottom: 20px;
 }
+
 .hero h1 {
   font-size: clamp(38px, 6vw, 62px);
   line-height: 1.05;
   letter-spacing: -2px;
   margin-bottom: 12px;
 }
+
 .hero h2 {
   font-size: 20px;
   font-weight: 600;
   color: var(--accent);
   margin-bottom: 22px;
 }
+
 .hero-description {
   max-width: 780px;
   color: var(--text-secondary);
   font-size: 15px;
 }
+
 .hero-buttons {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   margin-top: 30px;
 }
+
 .button {
   display: inline-flex;
   align-items: center;
@@ -202,58 +253,37 @@ a {
   font-weight: 700;
   transition: 0.2s ease;
 }
+
 .button-primary {
   background: var(--accent);
   color: white;
 }
+
 .button-secondary {
   background: var(--accent-light);
   color: var(--accent);
 }
+
 .button:hover {
   transform: translateY(-2px);
 }
+
 /* =========================
-   SECTIONS
-========================= */
-section {
-  padding: 65px 0;
-}
-.section-heading {
-  margin-bottom: 30px;
-}
-.section-number {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  color: var(--accent);
-  text-transform: uppercase;
-  margin-bottom: 8px;
-}
-.section-heading h2 {
-  font-size: 30px;
-  letter-spacing: -0.7px;
-  margin-bottom: 8px;
-}
-.section-heading p {
-  max-width: 760px;
-  color: var(--text-secondary);
-  font-size: 14px;
-}
-/* =========================
-   FOCUS GRID
+   SECTIONS & GRIDS
 ========================= */
 .focus-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
   gap: 16px;
 }
+
 .focus-card {
   background: white;
   border: 1px solid var(--border-color);
   border-radius: 15px;
   padding: 24px;
 }
+
 .focus-icon {
   width: 42px;
   height: 42px;
@@ -265,22 +295,23 @@ section {
   border-radius: 50%;
   margin-bottom: 16px;
 }
+
 .focus-card h3 {
   font-size: 15px;
   margin-bottom: 7px;
 }
+
 .focus-card p {
   font-size: 13px;
   color: var(--text-secondary);
 }
-/* =========================
-   EVIDENCE CARDS
-========================= */
+
 .evidence-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
   gap: 20px;
 }
+
 .evidence-card {
   background: white;
   border: 1px solid var(--border-color);
@@ -288,31 +319,34 @@ section {
   padding: 26px;
   transition: 0.2s ease;
 }
+
 .evidence-card:hover {
   transform: translateY(-3px);
   box-shadow: 0 8px 25px rgba(80,50,60,0.06);
 }
+
 .evidence-card h3 {
   font-size: 17px;
   margin-bottom: 10px;
 }
+
 .evidence-card p {
   font-size: 13px;
   color: var(--text-secondary);
   margin-bottom: 16px;
 }
+
 .evidence-card ul {
   padding-left: 18px;
   margin-bottom: 20px;
 }
+
 .evidence-card li {
   font-size: 12px;
   color: var(--text-secondary);
   margin-bottom: 5px;
 }
-/* =========================
-   STATUS
-========================= */
+
 .status {
   display: inline-flex;
   align-items: center;
@@ -323,29 +357,13 @@ section {
   font-weight: 700;
   margin-bottom: 15px;
 }
-.status-active {
-  background: var(--green-light);
-  color: var(--green);
-}
-.status-approved {
-  background: var(--blue-light);
-  color: var(--blue);
-}
-.status-scheduled {
-  background: var(--amber-light);
-  color: var(--amber);
-}
-.status-completed {
-  background: var(--green-light);
-  color: var(--green);
-}
-.status-development {
-  background: var(--accent-light);
-  color: var(--accent);
-}
-/* =========================
-   EVIDENCE BUTTON
-========================= */
+
+.status-active { background: var(--green-light); color: var(--green); }
+.status-approved { background: var(--blue-light); color: var(--blue); }
+.status-scheduled { background: var(--amber-light); color: var(--amber); }
+.status-completed { background: var(--green-light); color: var(--green); }
+.status-development { background: var(--accent-light); color: var(--accent); }
+
 .evidence-link {
   display: inline-flex;
   align-items: center;
@@ -355,12 +373,7 @@ section {
   font-size: 12px;
   font-weight: 700;
 }
-.evidence-link:hover {
-  text-decoration: underline;
-}
-/* =========================
-   FEATURE CARD
-========================= */
+
 .feature-card {
   background: white;
   border: 1px solid var(--border-color);
@@ -371,42 +384,25 @@ section {
   gap: 35px;
   align-items: center;
 }
-.feature-card h3 {
-  font-size: 21px;
-  margin-bottom: 10px;
-}
-.feature-card p {
-  color: var(--text-secondary);
-  font-size: 13px;
-}
+
 .feature-side {
   background: var(--accent-light);
   border-radius: 15px;
   padding: 25px;
 }
-.feature-side strong {
-  display: block;
-  font-size: 13px;
-  color: var(--accent);
-  margin-bottom: 5px;
-}
-.feature-side span {
-  font-size: 12px;
-  color: var(--text-secondary);
-}
-/* =========================
-   TIMELINE
-========================= */
+
 .timeline {
   position: relative;
   border-left: 2px solid var(--border-color);
   margin-left: 10px;
   padding-left: 30px;
 }
+
 .timeline-item {
   position: relative;
   margin-bottom: 30px;
 }
+
 .timeline-item::before {
   content: "";
   position: absolute;
@@ -417,24 +413,14 @@ section {
   left: -37px;
   top: 7px;
 }
+
 .timeline-year {
   font-size: 12px;
   font-weight: 700;
   color: var(--accent);
   margin-bottom: 4px;
 }
-.timeline-item h3 {
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-.timeline-item p {
-  font-size: 13px;
-  color: var(--text-secondary);
-}
 
-/* =========================
-   ACCESS RESTRICTED CARD (SECTION 07)
-========================= */
 .access-card {
   background: white;
   border: 1px solid var(--border-color);
@@ -445,6 +431,7 @@ section {
   box-shadow: 0 10px 30px rgba(100,60,70,0.04);
   text-align: center;
 }
+
 .access-icon {
   width: 54px;
   height: 54px;
@@ -457,18 +444,7 @@ section {
   font-size: 22px;
   margin: 0 auto 18px;
 }
-.access-card h3 {
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 10px;
-}
-.access-card p {
-  font-size: 13.5px;
-  color: var(--text-secondary);
-  line-height: 1.5;
-  margin-bottom: 24px;
-}
+
 .contact-container {
   background-color: var(--bg-main);
   border: 1px solid var(--border-color);
@@ -478,6 +454,7 @@ section {
   flex-direction: column;
   gap: 12px;
 }
+
 .contact-item {
   display: flex;
   align-items: center;
@@ -487,6 +464,7 @@ section {
   border-radius: 10px;
   border: 1px solid var(--border-color);
 }
+
 .contact-details {
   display: flex;
   align-items: center;
@@ -496,18 +474,7 @@ section {
   color: var(--text-primary);
   overflow: hidden;
 }
-.contact-details i {
-  color: var(--accent);
-  font-size: 16px;
-  width: 18px;
-  text-align: center;
-  flex-shrink: 0;
-}
-.contact-text {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+
 .btn-link {
   background-color: var(--accent);
   color: #ffffff;
@@ -517,107 +484,26 @@ section {
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
-  flex-shrink: 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-.btn-link:hover {
-  background-color: var(--accent-hover);
-  color: #ffffff;
-  transform: translateY(-1px);
 }
 
-/* =========================
-   CLOSING
-========================= */
 .closing {
   text-align: center;
   background: white;
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
-.closing h2 {
-  font-size: 27px;
-  margin-bottom: 12px;
-}
-.closing p {
-  max-width: 750px;
-  margin: auto;
-  color: var(--text-secondary);
-  font-size: 14px;
-}
-/* =========================
-   FOOTER
-========================= */
+
 footer {
   padding: 30px 0;
   text-align: center;
   color: var(--text-light);
   font-size: 11px;
 }
-/* =========================
-   MOBILE
-========================= */
+
+/* Clean Media Queries for Cards */
 @media(max-width:760px) {
-  .nav-inner {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .nav-links {
-    justify-content: flex-start;
-  }
-  .hero-card {
-    padding: 32px 25px;
-  }
-  .feature-card {
-    grid-template-columns: 1fr;
-  }
-  .hero {
-    padding-top: 45px;
-  }
-}
-/* FORCE REDUCED SPACING BETWEEN SECTIONS */
-section {
-  padding: 20px 0 !important; /* Forces smaller vertical padding */
-}
-
-.section-heading {
-  margin-bottom: 15px !important; /* Reduces gap under section headers */
-}
-
-/* REDUCE GAP BELOW CARDS / GRIDS */
-.section-07-grid,
-.grid,
-.cards-grid,
-.evidence-card {
-  margin-bottom: 0 !important;
-}
-/* Navigation Bar Polish */
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px; /* Adjusts spacing between links */
-  flex-wrap: wrap; /* Keeps links responsive on smaller screens */
-}
-
-nav a {
-  font-size: 14px;
-  font-weight: 500;
-  text-decoration: none;
-  white-space: nowrap;
-}
-/* REDUCE SPACE BELOW NAVIGATION */
-.nav-inner {
-  padding-top: 10px !important;
-  padding-bottom: 10px !important; /* Shrinks the navbar height */
-}
-
-.hero {
-  padding-top: 25px !important; /* Reduces top gap above hero card */
-  padding-bottom: 35px !important;
+  .hero-card { padding: 32px 25px; }
+  .feature-card { grid-template-columns: 1fr; }
 }
 </style>
 </head>
@@ -630,7 +516,11 @@ nav a {
     <a href="#top" class="brand">
       Mary Grace Peral
     </a>
-    <div class="nav-links">
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation">
+      <i class="fas fa-bars"></i>
+      <span style="font-size: 13px;">Menu</span>
+    </button>
+    <div class="nav-links" id="navLinks">
       <a href="#profile">Profile</a>
       <a href="#practice">Teaching</a>
       <a href="#digital">Digital Learning</a>
@@ -659,10 +549,10 @@ nav a {
       <p class="hero-description">
         Mathematics educator committed to purposeful,
         evidence-informed teaching, learner support,
-        digital learning and continuous professional growth.
+        digital learning, and continuous professional growth.
         My professional practice includes secondary Mathematics
         instruction, targeted intervention, digital learning
-        development, professional collaboration and school-based
+        development, professional collaboration, and school-based
         leadership.
       </p>
       <div class="hero-buttons">
@@ -1409,13 +1299,41 @@ nav a {
     Professional Growth
   </div>
 </footer>
+
 <script>
+  // Modal toggle functions
   function openAccessModal() {
     document.getElementById('accessModal').classList.add('active');
   }
 
   function closeAccessModal() {
     document.getElementById('accessModal').classList.remove('active');
+  }
+
+  // Navigation dropdown toggle logic
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  if (menuToggle && navLinks) {
+    // Open/close menu on button click
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navLinks.classList.toggle('active');
+    });
+
+    // Close menu when clicking any link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // Close menu when clicking anywhere outside
+    document.addEventListener('click', (e) => {
+      if (!menuToggle.contains(e.target) && !navLinks.contains(e.target)) {
+        navLinks.classList.remove('active');
+      }
+    });
   }
 </script>
 </body>

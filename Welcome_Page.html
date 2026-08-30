@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Portfolio - Portrait Layout</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lora:ital,wght@0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #eef2f6;
+            font-family: 'Poppins', sans-serif;
+            color: #1e293b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            min-height: 100vh;
+        }
+
+        /* Portrait Page Container (A4 Aspect Ratio) */
+        .portrait-page {
+            width: 850px;
+            min-height: 1200px;
+            background-color: #ffffff;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        /* Top Banner Section */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 480px;
+            overflow: hidden;
+            background: #1e293b;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            opacity: 0.9;
+        }
+
+        /* Glassmorphism Card Overlay */
+        .hero-card {
+            position: absolute;
+            top: 50%;
+            right: 40px;
+            transform: translateY(-50%);
+            width: 440px;
+            background: rgba(255, 255, 255, 0.82);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 16px;
+            padding: 36px 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .hero-card .welcome-sub {
+            font-size: 16px;
+            color: #475569;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 6px;
+        }
+
+        .hero-card h1 {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 16px;
+            line-height: 1.25;
+        }
+
+        .hero-card p {
+            font-family: 'Lora', serif;
+            font-size: 15px;
+            line-height: 1.6;
+            color: #334155;
+            font-style: italic;
+            margin-bottom: 24px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: #9d174d;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 13px;
+            letter-spacing: 1px;
+            padding: 12px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(157, 23, 77, 0.3);
+            transition: background-color 0.2s ease;
+        }
+
+        .cta-btn:hover {
+            background-color: #831843;
+        }
+
+        /* Photo Collage Section */
+        .gallery-section {
+            padding: 40px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            background: #ffffff;
+        }
+
+        .section-header {
+            margin-bottom: 24px;
+            text-align: left;
+            border-bottom: 2px solid #f1f5f9;
+            padding-bottom: 12px;
+        }
+
+        .section-header h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .section-header p {
+            font-size: 14px;
+            color: #64748b;
+            margin-top: 4px;
+        }
+
+        /* Image Grid (3 Columns x 2 Rows) */
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 260px);
+            gap: 16px;
+            width: 100%;
+        }
+
+        .grid-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            background-color: #f8fafc;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .grid-item:hover img {
+            transform: scale(1.03);
+        }
+
+        /* Full Slide Fallback Preview Container */
+        .full-slide-preview {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        }
+
+        .full-slide-preview img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Footer Accent */
+        .page-footer {
+            padding: 20px 40px;
+            background-color: #f8fafc;
+            border-top: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #64748b;
+        }
+
+        .page-footer strong {
+            color: #1e293b;
+        }
+
+        @media print {
+            body {
+                background: none;
+                padding: 0;
+            }
+            .portrait-page {
+                box-shadow: none;
+                width: 100%;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="portrait-page">
+        <!-- Hero Header (Combined from Slide 1) -->
+        <div class="hero-section">
+            <img src="1830.jpg" alt="Academic Portfolio Cover Slide" class="hero-img">
+            
+            <div class="hero-card">
+                <div class="welcome-sub">Welcome to my</div>
+                <h1>Academic Portfolio</h1>
+                <p>"I am committed to contributing to Aotearoa's vibrant educational community and inspiring every learner to build lifelong confidence in Mathematics."</p>
+                <a href="#" class="cta-btn">View Full Portfolio</a>
+            </div>
+        </div>
+
+        <!-- Gallery / Highlights Section (Combined from Slide 2) -->
+        <div class="gallery-section">
+            <div class="section-header">
+                <h2>Teaching Highlights & Community Engagement</h2>
+                <p>Classroom teaching, recognition ceremonies, and student engagement activities.</p>
+            </div>
+
+            <!-- Full Slide Collage View -->
+            <div class="full-slide-preview">
+                <img src="1831.jpg" alt="Teaching Moments and School Events Gallery">
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="page-footer">
+            <span><strong>Mathematics Educator</strong> | Pareja Integrated School</span>
+            <span>Academic Portfolio Page</span>
+        </div>
+    </div>
+
+</body>
+</html>
+```eof
+
+I have consolidated both slides into a single portrait-oriented document page. The top section incorporates your introductory hero banner and commitment statement, while the bottom section presents your photo collage of school events and classroom moments.

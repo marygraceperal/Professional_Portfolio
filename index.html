@@ -1295,136 +1295,235 @@ footer {
     </a>
   </div>
 </section>
-<!-- UPDATED SECTION HEADER -->
+<!-- =========================================================
+     06 · SUPPORTING DOCUMENTATION
+========================================================= -->
 <section id="evidence">
+
   <div class="container">
+
     <div class="section-heading">
+
       <div class="section-number">
         06 · Supporting Documentation
       </div>
+
       <h2>
         Supporting Documentation
       </h2>
+
       <p>
         A curated evidence repository designed to allow
         external reviewers to explore selected professional
-        documents without navigating the entire personal
-        Google Drive.
+        documents and application materials.
       </p>
-    </div>
-    ...
 
-    <!-- THREE MAIN CARDS -->
+    </div>
+
+
+    <!-- =====================================================
+         TWO MAIN CARDS
+    ====================================================== -->
     <div class="section-07-grid">
-      <!-- CARD 1: PUBLIC EVIDENCE -->
+
+
+      <!-- ===================================================
+           CARD 1: CV & APPLICATION
+      ==================================================== -->
       <div class="evidence-card">
-        <h3>Public Evidence</h3>
+
+        <h3>
+          <i class="fas fa-file-user"></i>
+          CV & Application
+        </h3>
+
         <p>
-          Access verified certificates, public workshop presentations, and classroom project artifacts.
+          View my curriculum vitae and formal teaching application
+          documents, including professional experience,
+          qualifications, and supporting application credentials.
         </p>
-        <a href="https://drive.google.com/drive/folders/1124-iFIGScoRsf0kG7tSZTWlaERtYS_D?usp=sharing" target="_blank" rel="noopener noreferrer" class="evidence-link">
-          Explore Public Drive →
-        </a>
+
+        <div style="
+          display:flex;
+          gap:16px;
+          flex-wrap:wrap;
+          margin-top:10px;
+        ">
+
+          <!-- CV -->
+          <a
+            href="https://marygraceperal.github.io/Professional_Portfolio/Peral_Curriculum_Vitae.html"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="evidence-link">
+
+            <i class="fas fa-file-lines"></i>
+            View CV →
+
+          </a>
+
+
+          <!-- APPLICATION -->
+          <a
+            href="https://drive.google.com/drive/folders/1uayvD59KPVUO74yA0uyjdYkbr_wBWdY5?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="evidence-link">
+
+            <i class="fas fa-folder-open"></i>
+            View Application →
+
+          </a>
+
+        </div>
+
       </div>
 
-      <!-- CARD 2: CV & APPLICATION -->
-<div class="evidence-card">
 
-  <h3>
-    <i class="fas fa-file-user"></i>
-    CV & Application
-  </h3>
 
-  <p>
-    View my curriculum vitae and formal teaching application
-    documents, including professional experience, qualifications,
-    and supporting application credentials.
-  </p>
+      <!-- ===================================================
+           CARD 2: PERSONAL DOCUMENTS
+      ==================================================== -->
+      <div
+        class="evidence-card"
+        style="cursor: pointer;"
+        onclick="openAccessModal()">
 
-  <div style="
-    display:flex;
-    gap:16px;
-    flex-wrap:wrap;
-    margin-top:10px;
-  ">
+        <h3>
+          <i class="fas fa-lock"></i>
+          Personal Documents
+        </h3>
 
-    <!-- CV -->
-    <a
-      href="https://marygraceperal.github.io/Professional_Portfolio/Peral_Curriculum_Vitae.html"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="evidence-link">
-      <i class="fas fa-file-lines"></i>
-      View CV →
-    </a>
-
-    <!-- APPLICATION -->
-    <a
-      href="https://drive.google.com/drive/folders/1uayvD59KPVUO74yA0uyjdYkbr_wBWdY5?usp=sharing"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="evidence-link">
-      <i class="fas fa-folder-open"></i>
-      View Application →
-    </a>
-  </div>
-</div>
-
-      <!-- CARD 3: PERSONAL DOCUMENTS (Triggers Pop-up) -->
-      <div class="evidence-card" style="cursor: pointer;" onclick="openAccessModal()">
-        <h3>Personal Documents</h3>
         <p>
-          Confidential transcripts, service records, and legal identification files.
+          Confidential transcripts, service records, and legal
+          identification files.
         </p>
+
         <span class="evidence-link">
-          <i class="fas fa-lock"></i> Request Access →
+
+          <i class="fas fa-lock"></i>
+          Request Access →
+
         </span>
+
       </div>
+
     </div>
+
   </div>
 
-  <!-- POP-UP MODAL (Personal Documents) -->
-  <div class="modal-overlay" id="accessModal" onclick="if(event.target === this) closeAccessModal()">
+
+
+  <!-- =======================================================
+       POP-UP MODAL · PERSONAL DOCUMENTS
+  ======================================================== -->
+  <div
+    class="modal-overlay"
+    id="accessModal"
+    onclick="if(event.target === this) closeAccessModal()">
+
     <div class="access-card">
-      <button class="modal-close" onclick="closeAccessModal()">&times;</button>
+
+      <button
+        class="modal-close"
+        onclick="closeAccessModal()">
+        &times;
+      </button>
+
+
       <div class="access-icon">
         <i class="fas fa-lock"></i>
       </div>
-      <h3>Access Restricted</h3>
+
+
+      <h3>
+        Access Restricted
+      </h3>
+
+
       <p>
-        Personal documents are private but available to hiring committees and reviewers upon request.
+        Personal documents are private but available to hiring
+        committees and reviewers upon request.
       </p>
 
+
       <div class="contact-container">
+
+
         <!-- EMAIL -->
         <div class="contact-item">
+
           <div class="contact-details">
+
             <i class="fas fa-envelope"></i>
-            <span class="contact-text">marygraceperal@gmail.com</span>
+
+            <span class="contact-text">
+              marygraceperal@gmail.com
+            </span>
+
           </div>
-          <a href="mailto:marygraceperal@gmail.com?subject=Document%20Access%20Request%20-%20Mary%20Grace%20Peral%20Portfolio&body=Hello%20Mary%20Grace%2C%0D%0A%0D%0AI%20am%20reviewing%20your%20teaching%20portfolio%20and%20would%20like%20to%20request%20access%20to%20your%20restricted%20documents." class="btn-link">Email</a>
+
+          <a
+            href="mailto:marygraceperal@gmail.com?subject=Document%20Access%20Request%20-%20Mary%20Grace%20Peral%20Portfolio&body=Hello%20Mary%20Grace%2C%0D%0A%0D%0AI%20am%20reviewing%20your%20teaching%20portfolio%20and%20would%20like%20to%20request%20access%20to%20your%20restricted%20documents."
+            class="btn-link">
+            Email
+          </a>
+
         </div>
+
 
         <!-- CALL -->
         <div class="contact-item">
+
           <div class="contact-details">
+
             <i class="fas fa-phone"></i>
-            <span class="contact-text">+63 950 638 1725</span>
+
+            <span class="contact-text">
+              +63 950 638 1725
+            </span>
+
           </div>
-          <a href="tel:+639506381725" class="btn-link">Call</a>
+
+          <a
+            href="tel:+639506381725"
+            class="btn-link">
+            Call
+          </a>
+
         </div>
+
 
         <!-- MESSENGER -->
         <div class="contact-item">
+
           <div class="contact-details">
+
             <i class="fab fa-facebook-messenger"></i>
-            <span class="contact-text">Gracey Mondres Peral</span>
+
+            <span class="contact-text">
+              Gracey Mondres Peral
+            </span>
+
           </div>
-          <a href="https://m.me/graceymondresperal" target="_blank" rel="noopener" class="btn-link">Chat</a>
+
+          <a
+            href="https://m.me/graceymondresperal"
+            target="_blank"
+            rel="noopener"
+            class="btn-link">
+            Chat
+          </a>
+
         </div>
+
+
       </div>
+
     </div>
+
   </div>
+
 </section>
 <!-- =========================================================
      CLOSING

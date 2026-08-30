@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Mary Grace M. Peral | Secondary Mathematics Educator</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
+
+  <style>
+
+    /* =========================================================
+       BASE
+    ========================================================= */
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #f4f6f8;
+      color: #263238;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    /* =========================================================
+       CV PAGE
+    ========================================================= */
+
+    .cv-page {
+      width: 210mm;
+      max-width: 100%;
+      min-height: 297mm;
+      margin: 30px auto;
+      background: #ffffff;
+      padding: 22mm 20mm;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    }
+
+
+    /* =========================================================
+       HEADER
+    ========================================================= */
+
+    .header {
+      border-bottom: 2px solid #263238;
+      padding-bottom: 18px;
+      margin-bottom: 24px;
+    }
+
+    .header h1 {
+      font-size: 30px;
+      letter-spacing: 0.5px;
+      margin-bottom: 4px;
+    }
+
+    .header .title {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      font-size: 13px;
+    }
+
+    .contact span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .contact i {
+      font-size: 12px;
+    }
+
+
+    /* =========================================================
+       SECTION
+    ========================================================= */
+
+    .section {
+      margin-bottom: 23px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #cfd8dc;
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+
+
+    /* =========================================================
+       PROFILE
+    ========================================================= */
+
+    .profile {
+      font-size: 13.5px;
+      text-align: justify;
+    }
+
+
+    /* =========================================================
+       EXPERTISE
+    ========================================================= */
+
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px 25px;
+    }
+
+    .expertise-item h3 {
+      font-size: 13px;
+      margin-bottom: 4px;
+    }
+
+    .expertise-item p {
+      font-size: 12.5px;
+    }
+
+
+    /* =========================================================
+       EXPERIENCE
+    ========================================================= */
+
+    .job {
+      margin-bottom: 17px;
+    }
+
+    .job:last-child {
+      margin-bottom: 0;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: flex-start;
+    }
+
+    .job-title {
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .job-date {
+      font-size: 12px;
+      white-space: nowrap;
+      font-weight: 600;
+    }
+
+    .organization {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .sub-role {
+      font-weight: 700;
+      font-size: 13px;
+      margin-top: 9px;
+      margin-bottom: 3px;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      font-size: 12.5px;
+      margin-bottom: 3px;
+    }
+
+
+    /* =========================================================
+       CONTRIBUTIONS
+    ========================================================= */
+
+    .contribution {
+      margin-bottom: 11px;
+    }
+
+    .contribution:last-child {
+      margin-bottom: 0;
+    }
+
+    .contribution h3 {
+      font-size: 13px;
+      margin-bottom: 2px;
+    }
+
+    .contribution p {
+      font-size: 12.5px;
+    }
+
+
+    /* =========================================================
+       LEADERSHIP
+    ========================================================= */
+
+    .leadership-list {
+      font-size: 12.5px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       PROFESSIONAL DEVELOPMENT
+    ========================================================= */
+
+    .development-list {
+      font-size: 12.5px;
+      line-height: 1.7;
+    }
+
+
+    /* =========================================================
+       EDUCATION
+    ========================================================= */
+
+    .education-title {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .education-meta {
+      font-size: 12.5px;
+      margin-bottom: 5px;
+    }
+
+    .education-details {
+      font-size: 12.5px;
+    }
+
+
+    /* =========================================================
+       PROFESSIONAL APPROACH
+    ========================================================= */
+
+    .approach {
+      font-size: 13px;
+      font-style: italic;
+    }
+
+
+    /* =========================================================
+       PORTFOLIO
+    ========================================================= */
+
+    .portfolio-box {
+      padding: 13px 15px;
+      border-left: 4px solid #263238;
+      background: #f5f7f8;
+    }
+
+    .portfolio-box p {
+      font-size: 12.5px;
+    }
+
+    .portfolio-link {
+      display: inline-block;
+      margin-top: 6px;
+      font-weight: 700;
+      font-size: 13px;
+    }
+
+
+    /* =========================================================
+       REFERENCES
+    ========================================================= */
+
+    .references {
+      font-size: 12.5px;
+    }
+
+
+    /* =========================================================
+       PRINT
+    ========================================================= */
+
+    @media print {
+
+      body {
+        background: #ffffff;
+      }
+
+      .cv-page {
+        width: 100%;
+        max-width: none;
+        min-height: auto;
+        margin: 0;
+        padding: 15mm 16mm;
+        box-shadow: none;
+      }
+
+      .section {
+        break-inside: avoid;
+      }
+
+      .job,
+      .contribution {
+        break-inside: avoid;
+      }
+
+      a {
+        text-decoration: none;
+      }
+    }
+
+
+    /* =========================================================
+       MOBILE
+    ========================================================= */
+
+    @media (max-width: 700px) {
+
+      .cv-page {
+        margin: 0;
+        padding: 25px 20px;
+      }
+
+      .header h1 {
+        font-size: 25px;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .job-header {
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .job-date {
+        white-space: normal;
+      }
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <main class="cv-page">
+
+
+    <!-- =======================================================
+         HEADER
+    ======================================================== -->
+
+    <header class="header">
+
+      <h1>MARY GRACE M. PERAL</h1>
+
+      <div class="title">
+        Secondary Mathematics Educator
+      </div>
+
+      <div class="contact">
+
+        <span>
+          <i class="fas fa-location-dot"></i>
+          Butuan City, Philippines
+        </span>
+
+        <span>
+          <i class="fas fa-phone"></i>
+          +63 950 638 1725
+        </span>
+
+        <span>
+          <i class="fas fa-envelope"></i>
+          marygraceperal@gmail.com
+        </span>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- =======================================================
+         PROFESSIONAL PROFILE
+    ======================================================== -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        Professional Profile
+      </h2>
+
+      <p class="profile">
+        Secondary Mathematics educator with <strong>15 years of teaching
+        experience</strong> across private and public education, including
+        Junior High School, Senior High School, and tertiary teaching.
+        Experienced in Mathematics instruction, differentiated teaching,
+        assessment and feedback, learner intervention, remediation,
+        classroom management, digital learning, and professional
+        collaboration.
+      </p>
+
+      <br>
+
+      <p class="profile">
+        Develops purposeful, learner-centred and evidence-informed teaching
+        practices that respond to learner needs while promoting mathematical
+        understanding, confidence, independence, and continuous improvement.
+        Experienced in developing practical digital learning resources and
+        school-based systems that support instruction, learner monitoring,
+        professional learning, and school operations.
+      </p>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         CORE PROFESSIONAL EXPERTISE
+    ======================================================== -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        Core Professional Expertise
+      </h2>
+
+      <div class="expertise-grid">
+
+
+        <div class="expertise-item">
+
+          <h3>Mathematics Education</h3>
+
+          <p>
+            Secondary Mathematics · General Mathematics · Statistics &
+            Probability · Algebra · Geometry & Measurement · Problem Solving ·
+            Numeracy Development
+          </p>
+
+        </div>
+
+
+        <div class="expertise-item">
+
+          <h3>Teaching & Learner Support</h3>
+
+          <p>
+            Differentiated Instruction · Assessment & Feedback · Learner
+            Intervention · Mathematics Remediation · Classroom Management ·
+            Learner Self-Management · Progress Monitoring ·
+            Evidence-Informed Teaching
+          </p>
+
+        </div>
+
+
+        <div class="expertise-item">
+
+          <h3>Digital Learning & Educational Technology</h3>
+
+          <p>
+            Microsoft 365 · Google Workspace · Microsoft Copilot · Canva ·
+            GitHub · Digital Learning Resources · Educational Websites ·
+            Digital Monitoring Systems · Technology-Supported Instruction
+          </p>
+
+        </div>
+
+
+        <div class="expertise-item">
+
+          <h3>Leadership & Professional Contribution</h3>
+
+          <p>
+            Professional Learning · LAC Facilitation and Speaking ·
+            Mathematics Coaching · Regional Demonstration Teaching ·
+            School Coordination · Digital System Development ·
+            Professional Learning Resource Development
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         PROFESSIONAL EXPERIENCE
+    ======================================================== -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        Professional Experience
+      </h2>
+
+
+      <!-- DEPARTMENT OF EDUCATION -->
+
+      <div class="job">
+
+        <div class="job-header">
+
+          <div class="job-title">
+            Secondary Mathematics Teacher
+          </div>
+
+          <div class="job-date">
+            2013–Present
+          </div>
+
+        </div>
+
+        <div class="organization">
+          Department of Education, Philippines
+        </div>
+
+
+        <div class="sub-role">
+          Junior High School | 2013–2017
+        </div>
+
+        <ul>
+
+          <li>
+            Taught Grades 7–10 Mathematics, with emphasis on numeracy,
+            algebraic thinking, problem solving, and mathematical reasoning.
+          </li>
+
+          <li>
+            Developed curriculum-aligned lessons and learning resources
+            responsive to varied learner needs.
+          </li>
+
+          <li>
+            Used assessment information to identify learning gaps and
+            provide appropriate remediation and learner support.
+          </li>
+
+          <li>
+            Applied differentiated teaching strategies to support varying
+            levels of learner readiness.
+          </li>
+
+          <li>
+            Participated in Mathematics-related professional learning and
+            collaborative school activities.
+          </li>
+
+        </ul>
+
+
+        <div class="sub-role">
+          Senior High School | 2017–Present
+        </div>
+
+        <ul>
+
+          <li>
+            Teach General Mathematics and Statistics & Probability.
+          </li>
+
+          <li>
+            Design and develop print and digital Mathematics learning
+            resources.
+          </li>
+
+          <li>
+            Apply differentiated instruction, assessment, feedback, and
+            targeted learner support.
+          </li>
+
+          <li>
+            Develop classroom-based interventions and monitoring practices
+            to respond to learner needs.
+          </li>
+
+          <li>
+            Serve as Work Immersion Focal Person.
+          </li>
+
+          <li>
+            Develop and implement digital tools and systems supporting
+            learning resources, learner monitoring, and school-based
+            workflows.
+          </li>
+
+        </ul>
+
+      </div>
+
+
+
+      <!-- BUTUAN CITY COLLEGES -->
+
+      <div class="job">
+
+        <div class="job-header">
+
+          <div class="job-title">
+            College Instructor / High School Teacher
+          </div>
+
+          <div class="job-date">
+            2011–2012
+          </div>
+
+        </div>
+
+        <div class="organization">
+          Butuan City Colleges
+        </div>
+
+        <ul>
+
+          <li>
+            Taught College Algebra, Business Mathematics, Geometry, and
+            selected Science and Technology subjects.
+          </li>
+
+          <li>
+            Supported learners in developing mathematical understanding
+            and problem-solving skills.
+          </li>
+
+          <li>
+            Prepared instructional materials and learning activities for
+            tertiary and secondary learners.
+          </li>
+
+        </ul>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         SELECTED PROFESSIONAL CONTRIBUTIONS
+    ======================================================== -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        Selected Professional Contributions
+      </h2>
+
+
+      <div class="contribution">
+
+        <h3>
+          Regional Demonstration Teacher — Mathematics | 2015
+        </h3>
+
+        <p>
+          Selected to demonstrate Grade 10 Mathematics teaching practice
+          during regional K–12 professional development.
+        </p>
+
+      </div>
+
+
+      <div class="contribution">
+
+        <h3>
+          Mathematics Coaching
+        </h3>
+
+        <p>
+          Coached learners in Mathematics competitions and activities,
+          including DAMATH and Mathematics Olympiad.
+        </p>
+
+      </div>
+
+
+      <div class="contribution">
+
+        <h3>
+          ARAL Mathematics Intervention
+        </h3>
+
+        <p>
+          Developed a targeted Mathematics intervention initiative to
+          identify learning needs, provide focused support, and monitor
+          learner progress. Approved for implementation, with learner
+          outcome evidence being collected.
+        </p>
+
+      </div>
+
+
+      <div class="contribution">
+
+        <h3>
+          Academic-Life Harmony
+        </h3>
+
+        <p>
+          Developed and implemented a student self-management and growth
+          observation system supporting productive academic habits,
+          responsible routines, focused learning, appropriate help-seeking,
+          and learner reflection.
+        </p>
+
+      </div>
+
+
+      <div class="contribution">
+
+        <h3>
+          Teacher Monitoring System
+        </h3>
+
+        <p>
+          Developed a reusable digital monitoring system for organizing
+          student information, attendance, activities, scores, and learner
+          performance within a structured dashboard.
+        </p>
+
+      </div>
+
+
+      <div class="contribution">
+
+        <h3>
+          Digital Mathematics Learning
+        </h3>
+
+        <p>
+          Developed digital Mathematics resources and educational websites
+          to improve access to instructional materials and support continuity
+          of learning.
+        </p>
+
+      </div>
+
+
+      <div class="contribution">
+
+        <h3>
+          LAC Certificate System
+        </h3>
+
+        <p>
+          Developed and utilized a digital certificate workflow supporting
+          the preparation and documentation of school Learning Action Cell
+          certificates.
+        </p>
+
+      </div>
+
+
+      <div class="contribution">
+
+        <h3>
+          LAC Session Speaker
+        </h3>
+
+        <p>
+          Served as a school LAC Session speaker for professional learning
+          focused on GitHub as a tool for teaching.
+        </p>
+
+      </div>
+
+
+      <div class="contribution">
+
+        <h3>
+          Pareja IS Portal
+        </h3>
+
+        <p>
+          Currently developing a practical digital school portal intended
+          to support organized access to school information, resources,
+          services, and school-based workflows.
+        </p>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         LEADERSHIP & PROFESSIONAL CONTRIBUTIONS
+    ======================================================== -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        Leadership & Professional Contributions
+      </h2>
+
+      <p class="leadership-list">
+
+        <strong>Regional Demonstration Teacher — Mathematics | 2015</strong>
+        · Mathematics / DAMATH Coach · Mathematics Olympiad Coach ·
+        Competition Judge · Mass Demonstration Judge · Work Immersion
+        Focal Person · LAC Session Speaker · LAC / Professional Learning
+        Contributor · School-Based Coordination and Leadership · Digital
+        Learning Resource Developer · Educational System and Workflow
+        Developer · 11-Year Service Award | 2024
+
+      </p>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         PROFESSIONAL DEVELOPMENT
+    ======================================================== -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        Professional Development
+      </h2>
+
+      <p class="development-list">
+
+        <strong>
+          Mathematics Pedagogy and Curriculum Implementation
+        </strong> · Mathematics Coaching and Problem Solving ·
+        Differentiated Instruction and Learner Support · ARAL-Related
+        Professional Learning · Assessment and Remediation · Microsoft 365
+        and AI-Assisted Education · Open Educational Resources · Digital
+        Learning Resource Development · Digital Citizenship · Educational
+        Technology · Professional Learning and School Leadership
+
+      </p>
+
+      <p style="margin-top:8px; font-size:12px;">
+        Complete training records and supporting evidence are maintained
+        in the professional evidence repository.
+      </p>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         EDUCATION
+    ======================================================== -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        Education
+      </h2>
+
+      <div class="education-title">
+        Bachelor of Secondary Education, Major in Mathematics
+      </div>
+
+      <div class="education-meta">
+        Father Saturnino Urios University | 2009 | Cum Laude
+      </div>
+
+      <p class="education-details">
+
+        Algebra · Trigonometry · Calculus · Statistics & Probability ·
+        Geometry · Mathematics Education · Curriculum and Instruction ·
+        Assessment · Educational Technology
+
+      </p>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         PROFESSIONAL APPROACH
+    ======================================================== -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        Professional Approach
+      </h2>
+
+      <p class="approach">
+
+        I believe effective Mathematics teaching combines strong subject
+        knowledge with careful attention to learner needs. My practice
+        emphasizes clarity, inclusion, purposeful assessment,
+        evidence-informed instruction, learner support, and continuous
+        professional improvement. I aim to create Mathematics learning
+        environments where learners develop understanding, confidence,
+        independence, and increasing responsibility for their learning.
+
+      </p>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         PROFESSIONAL PORTFOLIO
+    ======================================================== -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        Professional Portfolio
+      </h2>
+
+      <div class="portfolio-box">
+
+        <p>
+          Supporting evidence for my teaching practice, learner
+          interventions, digital learning resources, professional
+          contributions, and educational systems is available through
+          my professional portfolio.
+        </p>
+
+        <a
+          href="https://tinyurl.com/graceyperalportfolio"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="portfolio-link">
+
+          <i class="fas fa-globe"></i>
+          View Professional Portfolio →
+
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =======================================================
+         REFERENCES
+    ======================================================== -->
+
+    <section class="section">
+
+      <h2 class="section-title">
+        References
+      </h2>
+
+      <p class="references">
+        Available upon request.
+      </p>
+
+    </section>
+
+
+  </main>
+
+</body>
+</html>
